@@ -1,10 +1,14 @@
 # Summary
 
 * [首页](README.md)
+* [客户](customer/README.md)
+    * [备货](customer/hoard.md)
 * [订单](order/README.md)
     * [备货](order/preparation.md)
 * [采购](purchasing/README.md)
     * [PlanItem](purchasing/plan-item.md)
+* [模型](models/README.md)
+    * [备货](models/hoard.md)
 * [专题](topics/README.md)
     * [Fake](topics/fake.md)
     * [新增模型后上传附件的两种方式](topics/model-attachment-workflow.md)
