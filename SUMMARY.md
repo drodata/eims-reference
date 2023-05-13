@@ -10,5 +10,6 @@
 * [模型](models/README.md)
     * [备货](models/hoard.md)
 * [专题](topics/README.md)
+    * [微信扫码登陆实现](topics/scan-login.md)
     * [Fake](topics/fake.md)
     * [新增模型后上传附件的两种方式](topics/model-attachment-workflow.md)
