@@ -15,7 +15,9 @@ Hoard, MicroDiamondHoard, RvdHoard, DiamondHoard
 
 作为 PlanItem 新的类型，使用 `plan_item.hoard_id` 关联。目的在于采购计划审批时能一个页面显示所有内容；
 
-Hoard 通过评审将 PlanItem 状态更新为 CONFIRMED, 之后就是通用的询价流程；
+Hoard 评审顺序：业务员 - 销售经理 - 备货采购员
+
+评审通过后，将 PlanItem 状态更新为 CONFIRMED, 之后就是通用的询价流程；
 
 ### 避免和订单备货冲突
 
