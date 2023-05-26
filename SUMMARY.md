@@ -19,6 +19,7 @@
     * [新增模型后上传附件的两种方式](topics/model-attachment-workflow.md)
 * [模型](models/README.md)
     * [备货](models/hoard.md)
+    * [内容变更](models/edition.md)
     * [匹配备货](models/match-hoard.md)
     * [工作逾期上报](models/overdue-report.md)
     * [订单终止交付](models/order-end.md)
