@@ -3,13 +3,15 @@
 ================ THIS IS THE TEMPLATE ==============
 
 ---------------------------------------------------------------------------
-Column                      | Type      | Null | Note
-----------------------------|-----------|------|-------
-`branch_id`                 | int       | No   | 
-`name`                      | varchar   | No   | 模型 key. `demand-item` 等
-`type`                      | int       | No   | `DELAY_DEADLINE` 等
-`reason`                    | varchar   | No   | 
-`status`                    | int       | No   | 1: 已创建 4: 已拒绝 9: 已完成
+Column                              | Type      | Null | Note
+------------------------------------|-----------|------|-------
+`id`                                | int       | No   | 
+`grinding_wheel_production_id`      | int       | No   | 生产编号
+`grinding_wheel_code`               | int       | No   | 砂轮内部编码 Lookup
+`mix_trace_id`                      | int       | Yes  | 追溯编码. `pack` scenario 时必填
+`weight`                            | int       | Yes  | 混料总重量. `pack` scenario 时必填
+`status`                            | int       | No   | 已创建(1)、已完成(9)
+`type`                              | int       | Yes  | 预留列。目前只有砂轮混料这一种类别；
 
 状态常量                | 状态值 | 值改变场景
 ------------------------|--------|------------

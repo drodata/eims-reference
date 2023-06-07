@@ -1,6 +1,12 @@
 # Summary
 
 * [首页](README.md)
+* [生产](production/README.md)
+    * [混料](production/mix.md)
+    * [压块](production/press.md)
+    * [磨料块](production/abrasive-block.md)
+    * [半成品](production/rough.md)
+    * [原辅料](production/bucket.md)
 * [客户](customer/README.md)
     * [备货](customer/hoard.md)
     * [月结帐单](customer/billing.md)
@@ -18,6 +24,7 @@
     * [Fake](topics/fake.md)
     * [新增模型后上传附件的两种方式](topics/model-attachment-workflow.md)
 * [模型](models/README.md)
+    * [追溯](models/trace.md)
     * [备货](models/hoard.md)
     * [内容变更](models/edition.md)
     * [匹配备货](models/match-hoard.md)
