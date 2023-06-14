@@ -1,8 +1,8 @@
 # 通用原辅料领用
 
-创建
+Bucket
 ---------------------------------------------------------------------------
-### Bucket
+### Schema
 Column                      | Type      | Null | Note
 ----------------------------|-----------|------|-------
 `id`                        | int       | No   | 
@@ -11,6 +11,9 @@ Column                      | Type      | Null | Note
 `is_lock`                   | int       | No   | 预留？
 `description`               | string    | Yes  | 申请说明。当 `is_standard` 为 0 时必填
 `status`                    | int       | No   | 已创建、准备中、已完成
+
+### 事件
+`Bucket::EVENT_DELIVERY_CHANGED` 原辅料交付签收后和原辅料数量变更后将触发该事件，完成原辅料状态的更新。
 
 ### BucketItem
 
@@ -53,5 +56,14 @@ Column                      | Type      | Null | Note
 `received_at`               | int       | Yes  |
 `status`                    | int       | No   | 
 
+其它常用操作
+---------------------------------------------------------------------------
+
+### 调整数量
+`bucket-item/tweak-quantity` 借助通用 Edition 模型实现。原辅料评审后允许改数。数量变更后会触发原辅料单状态更新，确保已完成交付的状态能更新。
+
 Change Logs
 ---------------------------------------------------------------------------
+
+- 2023-06-14 弃用 `bucket/confirm-delivery`, BucketDelivery 增加签收操作后，此操作已无存在意义；
+- 2023-06-14 新增 `bucket-item/tweak-quantity` 评审后可以微调数量;
