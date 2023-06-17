@@ -15,6 +15,7 @@
     * [取料](order/selection.md)
     * [匹配备货](order/match-hoard.md)
     * [终止交付](order/end.md)
+    * [样品试用](order/trial.md)
 * [采购](purchasing/README.md)
     * [PlanItem](purchasing/plan-item.md)
 * [物资](material/README.md)
