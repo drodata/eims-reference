@@ -24,6 +24,7 @@ Column                      | Type      | Null | Note
 `name`                      | int       | No   | 基体、磨料、结合剂等
 `specification`             | string    | No   | 规格
 `quantity`                  | int       | No   |
+`measurement_unit`          | int       | No   | 单位
 `note`                      | string    | Yes  |
 
 - `bucket_item.name` 可以判断出原辅料是否需要过程追溯，目前基体不需要过程追溯；
@@ -56,14 +57,19 @@ Column                      | Type      | Null | Note
 `received_at`               | int       | Yes  |
 `status`                    | int       | No   | 
 
+追溯
+---------------------------------------------------------------------------
+
+### BucketSelectionTrace Schema
+
+Column                              | Type      | Null | Note
+------------------------------------|-----------|------|-------
+`id`                                | int       | No   | Trace ID
+`bucket_selection_id`               | int       | No   | 取料编号
+`stock`                             | int       | No   | 库存
+
 其它常用操作
 ---------------------------------------------------------------------------
 
 ### 调整数量
 `bucket-item/tweak-quantity` 借助通用 Edition 模型实现。原辅料评审后允许改数。数量变更后会触发原辅料单状态更新，确保已完成交付的状态能更新。
-
-Change Logs
----------------------------------------------------------------------------
-
-- 2023-06-14 弃用 `bucket/confirm-delivery`, BucketDelivery 增加签收操作后，此操作已无存在意义；
-- 2023-06-14 新增 `bucket-item/tweak-quantity` 评审后可以微调数量;

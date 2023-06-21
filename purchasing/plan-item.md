@@ -51,5 +51,6 @@ HOARD | 客户备货 | 跟随 Hoard 创建，`micro-diamond-hoard/create` 等
 操作列表
 ---------------------------------------------------------------------------
 
+- `delete`: 通过 `./yii pile write` 生成的记录，仓库核对后如过发现不符，可以删除；
 - `inquire`: 询价
 - `cancel-inquire`: 撤销询价。这里使用了抽象的 `cancel` action, 携带一个 `$key` 参数标记撤销的操作类别。
