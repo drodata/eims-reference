@@ -21,6 +21,7 @@
     * [采购清单](purchasing/demand-item.md)
 * [物资](material/README.md)
     * [提前备货](material/pile.md)
+    * [消耗品领用](material/requisition.md)
 * [模型](models/README.md)
     * [追溯](models/trace.md)
     * [备货](models/hoard.md)
