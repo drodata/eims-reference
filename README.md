@@ -1,5 +1,18 @@
 # 首页
 
+Change Logs
+---------------------------------------------------------------------------
+
+日期        | 大类              | 类别      | 动作 | 说明
+------------|-------------------|-----------|------|-------------------
+2023-06-28  | Requisition       |           | 新增 | 消耗品领用模型,承载低值易耗品和劳保物资的领用
+2023-06-21  | BucketItem        | Schema    | 新增 | `measurement_unit` 单位列
+2023-06-14  | Bucket            | Action    | 弃用 | `bucket/confirm-delivery`, BucketDelivery 增加签收操作后，此操作已意义；
+2023-06-14  | BucketItem     | Action | 新增 | `bucket-item/tweak-quantity`, 评审后可以微调数量;
+
+
+================ FOLLOWING IS THE TEMPLATE ==============
+
 ---------------------------------------------------------------------------
 Column                              | Type      | Null | Note
 ------------------------------------|-----------|------|-------
@@ -17,4 +30,3 @@ Column                              | Type      | Null | Note
 `STATUS_REFUSED`        |   4    | 终审拒绝时 
 `STATUS_COMPLETED`      |   9    | 终审通过时
 
-================ THIS IS THE TEMPLATE ==============
