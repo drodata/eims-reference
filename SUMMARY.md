@@ -29,6 +29,7 @@
     * [匹配备货](models/match-hoard.md)
     * [工作逾期上报](models/overdue-report.md)
     * [订单终止交付](models/order-end.md)
+    * [数量异常上报](models/lapse.md)
 * [专题](topics/README.md)
     * [微信扫码登陆实现](topics/scan-login.md)
     * [Fake](topics/fake.md)
