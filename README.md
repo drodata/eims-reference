@@ -5,6 +5,7 @@ Change Logs
 
 日期        | 大类              | 类别      | 动作 | 说明
 ------------|-------------------|-----------|------|-------------------
+2023-07-04  | Withdrawal        |           | 新增 | [通用取料退回][generic-withdrawal]并应用到复合片加工退回
 2023-06-28  | Requisition       |           | 新增 | 消耗品领用模型,承载低值易耗品和劳保物资的领用
 2023-06-21  | BucketItem        | Schema    | 新增 | `measurement_unit` 单位列
 2023-06-14  | Bucket            | Action    | 弃用 | `bucket/confirm-delivery`, BucketDelivery 增加签收操作后，此操作已意义；
@@ -30,3 +31,4 @@ Column                              | Type      | Null | Note
 `STATUS_REFUSED`        |   4    | 终审拒绝时 
 `STATUS_COMPLETED`      |   9    | 终审通过时
 
+[generic-withdrawal]: /models/withdrawal.md
