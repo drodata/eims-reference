@@ -7,7 +7,11 @@ Column                      | Type      | Null | Note
 ----------------------------|-----------|------|-------
 `id`                        | int       | No   | 
 `type`                      | int       | No   | 标记具体领用类型，包括：通用、砂轮生产、砂轮实验
+`is_foreign`                | int       | No   | 标记是外用还是自用，前者有发货的功能；
 `is_standard`               | int       | No   | 1 表示有具体的生产单；0表示砂轮实验领用原辅料； 
+`business_id`               | int       | Yes  | 往来单位。适用于 foreign bucket
+`delivery_way`              | bool      | Yes  | 交付方式。适用于 foreign bucket
+`address_id`                | int       | Yes  | 往来单位的发货地址。适用于 foreign bucket
 `is_lock`                   | int       | No   | 预留？
 `description`               | string    | Yes  | 申请说明。当 `is_standard` 为 0 时必填
 `status`                    | int       | No   | 已创建、准备中、已完成
@@ -73,3 +77,8 @@ Column                              | Type      | Null | Note
 
 ### 调整数量
 `bucket-item/tweak-quantity` 借助通用 Edition 模型实现。原辅料评审后允许改数。数量变更后会触发原辅料单状态更新，确保已完成交付的状态能更新。
+
+Change Logs
+---------------------------------------------------------------------------
+
+- 2023-07-10: 改进 新增 `is_foreign`, `business_id`, `delivery_way` 和 `address_id` 四列，支持外用类的领料（和自用对应，此类领料是公司以外的人使用，出库后不再回来）；
