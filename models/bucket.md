@@ -57,8 +57,12 @@ Column                      | Type      | Null | Note
 ----------------------------|-----------|------|-------
 `id`                        | int       | No   | 
 `bucket_id`                 | int       | Yes  | 
+`is_foreign`                | int       | No   | 标记是外用还是自用，前者有发货的功能；
 `received_by`               | int       | Yes  |
 `received_at`               | int       | Yes  |
+`delivery_way`              | int       | Yes  | foreign 时必填
+`fetched_by`                | int       | Yes  | foreign 时必填
+`delivered_at`              | int       | Yes  | foreign 时必填
 `status`                    | int       | No   | 
 
 追溯
@@ -80,5 +84,7 @@ Column                              | Type      | Null | Note
 
 Change Logs
 ---------------------------------------------------------------------------
-
-- 2023-07-10: 改进 新增 `is_foreign`, `business_id`, `delivery_way` 和 `address_id` 四列，支持外用类的领料（和自用对应，此类领料是公司以外的人使用，出库后不再回来）；
+日期        | 类别              | 动作  | 说明
+------------|-------------------|-------|-------------------
+2023-07-10  | BucketDelivery    | 新增  | `is_foreign`, `delivery_way`, `fetched_by`, `delivered_at` 四列，支持外用类的领料
+2023-07-10  | Bucket            | 新增  | `is_foreign`, `business_id`, `delivery_way` 和 `address_id` 四列，支持外用类的领料
