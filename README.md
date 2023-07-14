@@ -5,6 +5,8 @@ Change Logs
 
 日期        | 大类              | 类别      | 动作 | 说明
 ------------|-------------------|-----------|------|-------------------
+2023-07-14  | Balance           | Action    | 新增 | `balance/correct-amount` 纠正紊乱的余额数量；
+2023-07-14  | Monito (C)        |           | 新增 | [客户余额一致性监测][console-monitor]
 2023-07-04  | Withdrawal        |           | 新增 | [通用取料退回][generic-withdrawal]并应用到复合片加工退回
 2023-06-28  | Requisition       |           | 新增 | 消耗品领用模型,承载低值易耗品和劳保物资的领用
 2023-06-21  | BucketItem        | Schema    | 新增 | `measurement_unit` 单位列
@@ -25,6 +27,13 @@ Column                              | Type      | Null | Note
 `status`                            | int       | No   | 已创建(1)、已完成(9)
 `type`                              | int       | Yes  | 预留列。目前只有砂轮混料这一种类别；
 
+Action List
+---------------------------------------------------------------------------
+Route                           | 说明
+--------------------------------|--------|------------
+`balance/correct-amount`        | 纠正为止 Bug 导致的余额表紊乱
+
+
 状态常量                | 状态值 | 值改变场景
 ------------------------|--------|------------
 `STATUS_CREATED`        |   1    | 
@@ -32,3 +41,4 @@ Column                              | Type      | Null | Note
 `STATUS_COMPLETED`      |   9    | 终审通过时
 
 [generic-withdrawal]: /models/withdrawal.md
+[console-monitor]: /console/monitor.md

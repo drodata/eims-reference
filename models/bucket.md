@@ -17,7 +17,12 @@ Column                      | Type      | Null | Note
 `status`                    | int       | No   | 已创建、准备中、已完成
 
 ### 事件
-`Bucket::EVENT_DELIVERY_CHANGED` 原辅料交付签收后和原辅料数量变更后将触发该事件，完成原辅料状态的更新。
+
+`Bucket::EVENT_DELIVERY_CHANGED` 以下将触发该事件，完成领料单状态的更新。
+
+- 自用型领料交付单签收时 (`bucket/receive`);
+- 外用型领料交付单交付时 (`bucket/deliver`);
+- 领料明细变更数量时 (`bucket-item/tweak-quantity`);
 
 ### BucketItem
 
