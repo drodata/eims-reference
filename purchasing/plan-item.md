@@ -43,14 +43,12 @@ HOARD | 客户备货 | 跟随 Hoard 创建，`micro-diamond-hoard/create` 等
 
 - PREPARATION: `purchasingpreparation/create` 同 `purchasing_preparation` 一起创建, 参见 `Preparation::build()`;
 
-变更交货期
----------------------------------------------------------------------------
-
-`demand-item/delay`.
-
 操作列表
 ---------------------------------------------------------------------------
-
-- `delete`: 通过 `./yii pile write` 生成的记录，仓库核对后如过发现不符，可以删除；
-- `inquire`: 询价
-- `cancel-inquire`: 撤销询价。这里使用了抽象的 `cancel` action, 携带一个 `$key` 参数标记撤销的操作类别。
+Route                           |   名称    | 说明
+--------------------------------|-----------|---------
+`plan-item/delay`               |延期       | 
+`plan-item/delete`              |删除       | 通过 `./yii pile write` 生成的记录，仓库核对后如过发现不符，可以删除；
+`plan-item/inquire`             |询价       | 
+`plan-item/cancel-inquire`      |撤销询价   | 这里使用了抽象的 `cancel` action, 携带一个 `$key` 参数标记撤销的操作类别。
+`plan-item/deny`                |拒绝       |发生在仓库确认后或总经理拒绝购买后
