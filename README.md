@@ -5,6 +5,7 @@ Change Logs
 
 日期        | 大类              | 类别      | 动作 | 说明
 ------------|-------------------|-----------|------|-------------------
+2023-07-18  | Product           | Action    | 新增 | `product/build-factory`, `product/factory` 新增和管理厂区标准粒度
 2023-07-18  | MixItem           | Action    | 新增 | `mix-item/append`向已存在的混料单追加明细；
 2023-07-14  | Balance           | Action    | 新增 | `balance/correct-amount` 纠正紊乱的余额数量；
 2023-07-14  | Monito (C)        |           | 新增 | [客户余额一致性监测][console-monitor]

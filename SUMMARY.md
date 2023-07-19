@@ -21,6 +21,7 @@
     * [PlanItem](purchasing/plan-item.md)
     * [采购清单](purchasing/demand-item.md)
 * [物资](material/README.md)
+    * [Product](material/product.md)
     * [提前备货](material/pile.md)
     * [消耗品领用](material/requisition.md)
 * [Console](console/README.md)
