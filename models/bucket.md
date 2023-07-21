@@ -1,8 +1,9 @@
-# 通用原辅料领用
+# 通用领料申请
 
-Bucket
+申请
 ---------------------------------------------------------------------------
-### Schema
+
+### Bucket Schema
 Column                      | Type      | Null | Note
 ----------------------------|-----------|------|-------
 `id`                        | int       | No   | 
@@ -81,6 +82,26 @@ Column                              | Type      | Null | Note
 `bucket_selection_id`               | int       | No   | 取料编号
 `stock`                             | int       | No   | 库存
 
+数量变动日志
+---------------------------------------------------------------------------
+对砂轮生产来说，发生的每一次数量变动都会记录，方便查询。
+
+### BucketSelectionTraceSnap Schema
+Column                              | Type      | Null | Note
+------------------------------------|-----------|------|-------
+`id`                                | int       | No   | 
+`bucket_selection_trace_id`         | int       | No   | 追溯码
+`action`                            | int       | No   | 动作 Lookup: '领料', '混料', '调整'
+`quantity`                          | int       | No   | 数量
+`mix_item_id`                       | int       | Yes  | 当动作是 '混料' 时必填
+
+此表的记录全部用用户的其它操作自动触发生成，包括：
+
+- `bucket-delivery/create`: 新建动作为 '领料' 的记录；
+- `mix-item/create`: 新建动作为 '混料' 的记录；
+
+每当新增或删除记录时将会触发更新 `bucket_selection_trace.stock` 的 handler (`syncTraceStock()`).
+
 其它常用操作
 ---------------------------------------------------------------------------
 
@@ -89,7 +110,8 @@ Column                              | Type      | Null | Note
 
 Change Logs
 ---------------------------------------------------------------------------
-日期        | 类别              | 动作  | 说明
-------------|-------------------|-------|-------------------
-2023-07-10  | BucketDelivery    | 新增  | `is_foreign`, `delivery_way`, `fetched_by`, `delivered_at` 四列，支持外用类的领料
-2023-07-10  | Bucket            | 新增  | `is_foreign`, `business_id`, `delivery_way` 和 `address_id` 四列，支持外用类的领料
+日期        | 类别                      | 动作  | 说明
+------------|---------------------------|-------|-------------------
+2023-07-21  | BucketSelectionTraceSnap  | 新增  | 数量变动日志，在追溯页面更好地呈现数量变动过程
+2023-07-10  | BucketDelivery            | 新增  | `is_foreign`, `delivery_way`, `fetched_by`, `delivered_at` 四列，支持外用类的领料
+2023-07-10  | Bucket                | 新增  | `is_foreign`, `business_id`, `delivery_way` 和 `address_id` 四列，支持外用类的领料

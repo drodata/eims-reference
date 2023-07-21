@@ -14,6 +14,6 @@ Column                              | Type      | Null | Note
 
 具体应用场景：
 
-- [press-lapse][砂轮压块过程中的破损丢块]需要扣除库存；
+- [砂轮压块过程中的破损丢块][press-lapse]需要扣除库存；
 
 [press-lapse]: /production/press.md
