@@ -110,8 +110,8 @@ Column                              | Type      | Null | Note
 
 Change Logs
 ---------------------------------------------------------------------------
-日期        | 类别                      | 动作  | 说明
-------------|---------------------------|-------|-------------------
-2023-07-21  | BucketSelectionTraceSnap  | 新增  | 数量变动日志，在追溯页面更好地呈现数量变动过程
-2023-07-10  | BucketDelivery            | 新增  | `is_foreign`, `delivery_way`, `fetched_by`, `delivered_at` 四列，支持外用类的领料
-2023-07-10  | Bucket                | 新增  | `is_foreign`, `business_id`, `delivery_way` 和 `address_id` 四列，支持外用类的领料
+日期        | 类别              | 动作  | 说明
+------------|-------------------|-------|-------------------
+2023-07-21  | Model             | 新增  | `BucketSelectionTraceSnap` 数量变动日志，在追溯页面更好地呈现数量变动过程
+2023-07-10  | BucketDelivery    | 新增  | `is_foreign`, `delivery_way`, `fetched_by`, `delivered_at` 四列，支持外用类的领料
+2023-07-10  | Bucket            | 新增  | `is_foreign`, `business_id`, `delivery_way` 和 `address_id` 四列，支持外用类的领料
