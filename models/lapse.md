@@ -15,5 +15,13 @@ Column                              | Type      | Null | Note
 具体应用场景：
 
 - [砂轮压块过程中的破损丢块][press-lapse]需要扣除库存；
+- [混料过程中的出现的原辅料损耗][mix-lapse]需要扣除库存；
+
+实现经验
+---------------------------------------------------------------------------
+
+- 新建、修改操作放在具体的模型上，例如 `mix-lapse/create`, `press-lapse/create`. 因为具体模型的属性五花八门，放在 `lapse/create` 实现会让代码显得不够明朗；
+- 删除操作放在通用模型上实现 `lapse/delete`;
 
 [press-lapse]: /production/press.md
+[mix-lapse]: /production/mix.md

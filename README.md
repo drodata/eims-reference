@@ -5,6 +5,7 @@ Change Logs
 
 日期        | 大类              | 类别      | 动作 | 说明
 ------------|-------------------|-----------|------|-------------------
+2023-07-22  | Lapse             | Model     | 扩展 | [混料阶段数量异常上报][schema-mix-lapse]
 2023-07-21  | Bucket            | Model     | 新增 | [数量变动日志][schema-bucket-selection-trace-snap]
 2023-07-18  | Product           | Action    | 新增 | `product/build-factory`, `product/factory` 新增和管理厂区标准粒度
 2023-07-18  | MixItem           | Action    | 新增 | `mix-item/append`向已存在的混料单追加明细；
@@ -19,3 +20,4 @@ Change Logs
 [generic-withdrawal]: /models/withdrawal.md
 [console-monitor]: /console/monitor.md
 [schema-bucket-selection-trace-snap]: /models/bucket.md#bucketselectiontracesnap-schema
+[schema-mix-lapse]: /production/mix.md#mixlapse-schema
