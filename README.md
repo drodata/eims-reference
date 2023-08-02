@@ -5,6 +5,7 @@ Change Logs
 
 日期        | 大类              | 类别      | 动作 | 说明
 ------------|-------------------|-----------|------|-------------------
+2023-08-01  | Review            | Model     | 新增 | [台帐一致性检查][generic-review]
 2023-07-23  | PurchaseItem      | Action    | 新增 | [共享检测报告][action-purchase-item-build-detection]
 2023-07-22  | Lapse             | Model     | 扩展 | [混料阶段数量异常上报][schema-mix-lapse]
 2023-07-21  | Bucket            | Model     | 新增 | [数量变动日志][schema-bucket-selection-trace-snap]
@@ -19,6 +20,7 @@ Change Logs
 2023-06-14  | BucketItem        | Action    | 新增 | `bucket-item/tweak-quantity`, 评审后可以微调数量;
 
 [generic-withdrawal]: /models/withdrawal.md
+[generic-review]: /models/review.md
 [console-monitor]: /console/monitor.md
 [schema-bucket-selection-trace-snap]: /models/bucket.md#bucketselectiontracesnap-schema
 [schema-mix-lapse]: /production/mix.md#mixlapse-schema
