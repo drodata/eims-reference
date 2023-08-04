@@ -5,6 +5,7 @@ Change Logs
 
 日期        | 大类              | 类别      | 动作 | 说明
 ------------|-------------------|-----------|------|-------------------
+2023-08-04  | Requisition       | Schema    | 新增 | `branch_id` 列
 2023-08-01  | Review            | Model     | 新增 | [台帐一致性检查][generic-review]
 2023-07-23  | PurchaseItem      | Action    | 新增 | [共享检测报告][action-purchase-item-build-detection]
 2023-07-22  | Lapse             | Model     | 扩展 | [混料阶段数量异常上报][schema-mix-lapse]

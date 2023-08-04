@@ -6,6 +6,7 @@ Schema
 Column                              | Type      | Null | Note
 ------------------------------------|-----------|------|-------
 `id`                                | int       | No   | 
+`branch_id`                         | int       | No   | 账套 
 `type`                              | bool      | No   | '易耗品' (1), '劳保物资' (2)
 `unit_id`                           | int       | No   | 
 `warehouse_id`                      | int       | No   | 
