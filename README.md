@@ -5,6 +5,7 @@ Change Logs
 
 日期        | 大类              | 类别      | 动作 | 说明
 ------------|-------------------|-----------|------|-------------------
+2023-08-05  | Specimen          | Model     | 新增 | 物资留样并应用在[采购检测环节][section-purchase-specimen]
 2023-08-04  | Requisition       | Schema    | 新增 | `branch_id` 列
 2023-08-01  | Review            | Model     | 新增 | [台帐一致性检查][generic-review]
 2023-07-23  | PurchaseItem      | Action    | 新增 | [共享检测报告][action-purchase-item-build-detection]
@@ -25,4 +26,5 @@ Change Logs
 [console-monitor]: /console/monitor.md
 [schema-bucket-selection-trace-snap]: /models/bucket.md#bucketselectiontracesnap-schema
 [schema-mix-lapse]: /production/mix.md#mixlapse-schema
+[section-purchase-specimen]: /purchasing/purchase.md#留样
 [action-purchase-item-build-detection]: /purchasing/purchase.md#purchase-item/build-detection
