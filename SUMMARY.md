@@ -3,6 +3,7 @@
 * [首页](README.md)
 * [生产](production/README.md)
     * [领料](production/bucket.md)
+    * [自加工](production/machining.md)
     * [混料](production/mix.md)
     * [压块](production/press.md)
     * [磨料块](production/abrasive-block.md)
