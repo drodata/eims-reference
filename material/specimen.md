@@ -12,7 +12,9 @@ Column                              | Type      | Null | Note
 ------------------------------------|-----------|------|-------
 `id`                                | int       | No   | 和 Unit 共用主键
 `branch_id`                         | int       | No   | 账套
-`quantity`                          | int       | No   | 留样数量
+`type`                              | int       | No   | Lookup 普通、共用和强制三种
+`parent_id`                         | int       | Yes  | 类别是“共用”时必填
+`quantity`                          | int       | No   | 留样数量.类别是“普通”时必填
 `status`                            | int       | No   | 已创建(1)、已交付(3)、已签收（9）、已归档（14）
 
 Action List
