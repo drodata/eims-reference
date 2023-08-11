@@ -5,6 +5,7 @@ Change Logs
 
 日期        | 大类              | 类别      | 动作 | 说明
 ------------|-------------------|-----------|------|-------------------
+2023-08-01  | Purchase          | Logic     | 调整 | 采购单检测支持[一键检测][section-purchase-inspection]
 2023-08-10  | Bucket            | Logic     | 调整 | 结合剂单位调整为“千克”, 且不再在生产领料单中出现；
 2023-08-09  | Specimen          | Schema    | 新增 | `type` 和 `parent_id`. 解决强制留样和共用留样的场景
 2023-08-08  | Fixture           | Logic     | 调整 | 采购员允许提交物资登记，承载原来采购单中的免费样品部分
@@ -30,4 +31,5 @@ Change Logs
 [schema-bucket-selection-trace-snap]: /models/bucket.md#bucketselectiontracesnap-schema
 [schema-mix-lapse]: /production/mix.md#mixlapse-schema
 [section-purchase-specimen]: /purchasing/purchase.md#留样
+[section-purchase-inspection]: /purchasing/purchase.md#检测
 [action-purchase-item-build-detection]: /purchasing/purchase.md#purchase-item/build-detection

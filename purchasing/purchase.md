@@ -1,9 +1,37 @@
 # 采购单
 
+Schema
+---------------------------------------------------------------------------
+### PurchaseItem Schema
+
+Column                              | Type      | Null | Note
+------------------------------------|-----------|------|-------
+`id`                                | int       | No   | 
+`refuse_id`                         | int       | Yes  | 退货编号
+`purchase_id`                       | int       | Yes  | 采购单号。退货也记录
+`type`                              | int       | No   | 类型 Lookup
+`sku_id`                            | int       | No   | 
+`inspection_methods`                | int       | Yes  | 
+`was_inspected`                     | int       | No   | 默认是 0,
+`demand_item_id`                    | int       | Yes  | 
+`refuse_detection_id`               | int       | Yes  | 退货单是必填
+`action`                            | int       | No   | 订货、退货、换货
+`price`                             | int       | Yes  | 
+`quantity`                          | int       | No   | 
+
 拆分
 ---------------------------------------------------------------------------
 
 换货也可以拆分, 换货本质上和采购单一样。
+
+检测
+---------------------------------------------------------------------------
+采购单的检测以采购明细为单位，签收以后进行。根据 `purchase_item.inspection_methods` 的值，分为两种情况：
+
+1. 值为 null: 普通物资，采购员可以快速检验（`purchase-item/check`）完成检测；
+2. 值不是 null: 需要质检员录入检测结果. 录入完成后，通过 `purchase-item/confirm-inspection` 完成检测；
+
+不管那种情况, 都会将 `purchase_item.was_inspected` 设置为 0, 标记检测完成，同时触发 `PurchaseItem::EVENT_INSPECTION_CONFIRMED` 事件，进而动态判断采购单状态是否可以设置为“已检测”。
 
 留样
 ---------------------------------------------------------------------------
@@ -22,6 +50,20 @@
 操作列表
 ---------------------------------------------------------------------------
 
+### purchase-item/inspection-portal
+质检员的检测入口页面。
+
+### purchase-item/confirm-inspection
+
+### purchase-item/check
+采购员一键检测
+
 ### purchase-item/build-detection
 
 另一种检测方式，省去重复录入上传报告，实现检测报告的共享使用。共享意味着 inspection 和 detection 可能存在一对多的可能，这就需要在 `detection/delete` 删除关联 inspection 前做一个判断：如果一个 inspection 还被其它 detection 使用，则仅删除关联表，否则连同 inspection 一并删除。详见 Issue 235.
+
+Change Logs
+---------------------------------------------------------------------------
+日期        | 类别      | 动作 | 说明
+------------|-----------|------|-------------------
+2023-08-11  | Scheme    | 新增 |`purchase_item.was_inspected`;
