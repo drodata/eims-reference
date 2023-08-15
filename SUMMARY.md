@@ -43,6 +43,7 @@
     * [往来单位](models/business.md)
     * [台帐一致性检查](models/review.md)
     * [联系地址](models/shipping-address.md)
+    * [不合格品让步接收](models/detection-concession.md)
 * [专题](topics/README.md)
     * [微信扫码登陆实现](topics/scan-login.md)
     * [Fake](topics/fake.md)
