@@ -5,6 +5,7 @@ Change Logs
 
 日期        | 大类              | 类别      | 动作 | 说明
 ------------|-------------------|-----------|------|-------------------
+2023-08-19  | Misc              | Filter    | 新增 | [用户作用域 Filter][topic-user-domain-filter]
 2023-08-14  | Purchase          | Logic     | 新增 | [让步接收评审][section-purchase-concession]
 2023-08-11  | Purchase          | Logic     | 调整 | 采购单检测支持[一键检测][section-purchase-inspection]
 2023-08-10  | Bucket            | Logic     | 调整 | 结合剂单位调整为“千克”, 且不再在生产领料单中出现；
@@ -35,3 +36,4 @@ Change Logs
 [section-purchase-inspection]: /purchasing/purchase.md#检测
 [section-purchase-concession]: /purchasing/purchase.md#让步接收
 [action-purchase-item-build-detection]: /purchasing/purchase.md#purchase-item/build-detection
+[topic-user-domain-filter]: /topics/user-domain-filter.md
