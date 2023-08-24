@@ -13,6 +13,7 @@
     * [备货](customer/hoard.md)
     * [月结帐单](customer/billing.md)
 * [订单](order/README.md)
+    * [明细](order/goods.md)
     * [备货](order/preparation.md)
     * [取料](order/selection.md)
     * [匹配备货](order/match-hoard.md)

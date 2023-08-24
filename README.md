@@ -5,6 +5,7 @@ Change Logs
 
 日期        | 大类              | 类别      | 动作 | 说明
 ------------|-------------------|-----------|------|-------------------
+2023-08-23  | Goods             | Schema    | 新增 | [研磨膏制作途径][section-goods-grinding-paste-via]区分
 2023-08-19  | Misc              | Filter    | 新增 | [用户作用域 Filter][topic-user-domain-filter]
 2023-08-14  | Purchase          | Logic     | 新增 | [让步接收评审][section-purchase-concession]
 2023-08-11  | Purchase          | Logic     | 调整 | 采购单检测支持[一键检测][section-purchase-inspection]
@@ -32,8 +33,11 @@ Change Logs
 [console-monitor]: /console/monitor.md
 [schema-bucket-selection-trace-snap]: /models/bucket.md#bucketselectiontracesnap-schema
 [schema-mix-lapse]: /production/mix.md#mixlapse-schema
+[action-purchase-item-build-detection]: /purchasing/purchase.md#purchase-item/build-detection
+[topic-user-domain-filter]: /topics/user-domain-filter.md
+
 [section-purchase-specimen]: /purchasing/purchase.md#留样
 [section-purchase-inspection]: /purchasing/purchase.md#检测
 [section-purchase-concession]: /purchasing/purchase.md#让步接收
-[action-purchase-item-build-detection]: /purchasing/purchase.md#purchase-item/build-detection
-[topic-user-domain-filter]: /topics/user-domain-filter.md
+[section-goods-grinding-paste-via]: /order/goods.md#研磨膏制作途径
+
