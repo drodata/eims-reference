@@ -5,6 +5,7 @@ Change Logs
 
 日期        | 大类              | 类别      | 动作 | 说明
 ------------|-------------------|-----------|------|-------------------
+2023-08-25  | Reject            | Logic     | 调整 | [不合格退货][section-reject-concession]改用 DetectionConcession 承载
 2023-08-23  | Goods             | Schema    | 新增 | [研磨膏制作途径][section-goods-grinding-paste-via]区分
 2023-08-19  | Misc              | Filter    | 新增 | [用户作用域 Filter][topic-user-domain-filter]
 2023-08-14  | Purchase          | Logic     | 新增 | [让步接收评审][section-purchase-concession]
@@ -40,4 +41,5 @@ Change Logs
 [section-purchase-inspection]: /purchasing/purchase.md#检测
 [section-purchase-concession]: /purchasing/purchase.md#让步接收
 [section-goods-grinding-paste-via]: /order/goods.md#研磨膏制作途径
+[section-reject-concession]: /order/reject.md#处理不合格品
 
