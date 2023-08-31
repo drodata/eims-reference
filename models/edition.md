@@ -47,3 +47,25 @@ Column                      | Type      | Null | Note
 
 - 率先部署在采购清单的延期上
 - 原辅料清单明细支持修改数量；
+- 订单交付明细中变更检测项目；
+
+### 实现步骤
+
+1. 搭建关联表 `edit_xxx` (新 name 时)
+2. Host：
+    - `getEditions()`;
+3. Lookup
+    `auditors()` 设定首个审批人
+3. Edit
+    - 新增 name 和 type 常量：`getIsXxx()`
+    - `hostParams()` (新 name 时)
+    - `getHost()` (新 name 时)
+    - `insertJunction()` (新 name 时)
+    - `getEditionForm()`: 让表单页面正常；
+    - `saveItems()`
+3. EditionController
+    - 改进 `findEditionHost()`
+4. EditionForm
+    - 新增 scenario
+5. views
+    - `edition/_form`
