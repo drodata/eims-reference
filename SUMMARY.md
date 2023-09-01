@@ -27,6 +27,8 @@
     * [采购单](purchasing/purchase.md)
 * [物资](material/README.md)
     * [Product](material/product.md)
+    * [Spu](material/spu.md)
+    * [Sku](material/sku.md)
     * [批次](material/unit.md)
     * [提前备货](material/pile.md)
     * [消耗品领用](material/requisition.md)
