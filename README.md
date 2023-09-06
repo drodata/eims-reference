@@ -6,6 +6,7 @@ Change Logs
 
 日期        | 大类              | 类别      | 动作 | 说明
 ------------|-------------------|-----------|------|-------------------
+2023-09-06  | Bucket            | Schame    | 改进 | 新增 `branch_id` 承载超硬系统内原自产微粉领料申请记录 (Picking)
 2023-09-01  | Sku               | Logic     | 改进 | 新建 SkuAdditionalProperty 接管[附加属性的设置][section-material-sku-additional-property]
 2023-09-01  | Order             | Logic     | 调整 | 订单交付单出库前[强制检测][section-order-delivery-detection]
 2023-08-25  | Reject            | Logic     | 调整 | [不合格退货][section-reject-concession]改用 DetectionConcession 承载

@@ -1,5 +1,26 @@
 # 通用领料申请
 
+涉及到的权限有：
+
+- `viewBucket`
+    - `manageBucket`: 仓库
+    - `receiveBucket`: “自用”领料交付后签收
+    - `deliverBucket`: “他用”领料交付后发货
+    - `createBucket`
+        - `createPersonalBucket`
+        - `createForeignBucket`
+        - `createExperimentBucket`
+        - `createHybridBucket`: 能创建上面三种领料中的至少两种。
+
+不用类型的领料单中对应列值一览表：
+
+类型    | `type`    | `is_foreign`  | `is_standard`
+--------|-----------|---------------|----------------
+自用    | 0         | 0             | 0
+他用    | 0         | 1             | 0
+生产    | 1         | 0             | 1
+试验    | 2         | 0             | 0
+
 申请
 ---------------------------------------------------------------------------
 
@@ -7,6 +28,7 @@
 Column                      | Type      | Null | Note
 ----------------------------|-----------|------|-------
 `id`                        | int       | No   | 
+`branch_id`                 | int       | No   | 
 `type`                      | int       | No   | 标记具体领用类型，包括：通用、砂轮生产、砂轮实验
 `is_foreign`                | int       | No   | 标记是外用还是自用，前者有发货的功能；
 `is_standard`               | int       | No   | 1 表示有具体的生产单；0表示砂轮实验领用原辅料； 
@@ -112,6 +134,7 @@ Change Logs
 ---------------------------------------------------------------------------
 日期        | 类别              | 动作  | 说明
 ------------|-------------------|-------|-------------------
+2023-09-04  | Schema            | 新增  | `bucket.branch_id`, 正式在超硬账套内使用，接下来弃用 Picking 模型（自产微粉领料申请）
 2023-07-21  | Model             | 新增  | `BucketSelectionTraceSnap` 数量变动日志，在追溯页面更好地呈现数量变动过程
 2023-07-10  | BucketDelivery    | 新增  | `is_foreign`, `delivery_way`, `fetched_by`, `delivered_at` 四列，支持外用类的领料
 2023-07-10  | Bucket            | 新增  | `is_foreign`, `business_id`, `delivery_way` 和 `address_id` 四列，支持外用类的领料
