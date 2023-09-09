@@ -52,4 +52,5 @@
     }
     ```
 
+ACF 本身就是一个强大的 filter, 添加一个 Rule 就能搞定，何必再去新建类似 CustomerOwnerFilter 呢？
 以后有其它需求，如法炮制。

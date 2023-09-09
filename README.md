@@ -6,6 +6,7 @@ Change Logs
 
 日期        | 大类              | 类别      | 动作 | 说明
 ------------|-------------------|-----------|------|-------------------
+2023-08-25  | RBAC              | Logic     | 新增 | [通用 HolderRule][topic-rbac-holder-rule]
 2023-09-06  | Bucket            | Schame    | 改进 | 新增 `branch_id` 承载超硬系统内原自产微粉领料申请记录 (Picking)
 2023-09-01  | Sku               | Logic     | 改进 | 新建 SkuAdditionalProperty 接管[附加属性的设置][section-material-sku-additional-property]
 2023-09-01  | Order             | Logic     | 调整 | 订单交付单出库前[强制检测][section-order-delivery-detection]
@@ -39,7 +40,9 @@ Change Logs
 [schema-bucket-selection-trace-snap]: /models/bucket.md#bucketselectiontracesnap-schema
 [schema-mix-lapse]: /production/mix.md#mixlapse-schema
 [action-purchase-item-build-detection]: /purchasing/purchase.md#purchase-item/build-detection
+
 [topic-user-domain-filter]: /topics/user-domain-filter.md
+[topic-rbac-holder-rule]: /topics/rbac-holder-rule.md
 
 [section-purchase-specimen]: /purchasing/purchase.md#留样
 [section-purchase-inspection]: /purchasing/purchase.md#检测
