@@ -52,6 +52,7 @@
     * [检测记录](models/detection.md)
     * [检验报告](models/inspection.md)
 * [专题](topics/README.md)
+    * [通用的 HolderRule 实现通用权限控制](topics/rbac-holder-rule.md)
     * [帐号作用域 Filter](topics/user-domain-filter.md)
     * [微信扫码登陆实现](topics/scan-login.md)
     * [Fake](topics/fake.md)
