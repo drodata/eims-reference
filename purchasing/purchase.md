@@ -46,10 +46,17 @@ Column                              | Type      | Null | Note
 2. 共用(shared)：由于采购清单的限制，采购单经常出现这样一种情况：系统内显示的批次不同，但实际上是同一包料。这时只需要创建一个“普通”类型的留样记录，其余批次和它共用留样即可；
 3. 强制(compulsory)：这是确保留样规则生效的最后一种情况，防止供应商不附带样品，此时将直接从大货中扣除样品；
 
-###启用和撤销
+权限表
+
+Role/Permission Name    | Parent        
+------------------------|---------------
+`createSpecimen`        | `qualityChecker`
+`viewSpecimen`          | `createSpecimen`, `warehouseKeeper', `gwDirecto`, `productionDirector`, `saleDirecto` 
+
+### 启用和撤销
 
 - `unit/enable-specimen`
-- `unit/revoke-specimen` (Edition 承载)
+- `unit/revoke-specimen` (Edition 承载, 评审：质检员 → 采购员 → 生产经理)
 
 操作列表
 ---------------------------------------------------------------------------

@@ -33,6 +33,7 @@
     * [提前备货](material/pile.md)
     * [消耗品领用](material/requisition.md)
     * [留样](material/specimen.md)
+    * [登记回收](material/fixture.md)
 * [Console](console/README.md)
     * [监控](console/monitor.md)
 * [通用模型](models/README.md)
