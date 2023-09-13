@@ -25,6 +25,7 @@
     * [PlanItem](purchasing/plan-item.md)
     * [采购清单](purchasing/demand-item.md)
     * [采购单](purchasing/purchase.md)
+    * [调配](purchasing/exchange.md)
 * [物资](material/README.md)
     * [Product](material/product.md)
     * [Spu](material/spu.md)
