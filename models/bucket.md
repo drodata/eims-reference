@@ -39,15 +39,7 @@ Column                      | Type      | Null | Note
 `description`               | string    | Yes  | 申请说明。当 `is_standard` 为 0 时必填
 `status`                    | int       | No   | 已创建、准备中、已完成
 
-### 事件
-
-`Bucket::EVENT_DELIVERY_CHANGED` 以下将触发该事件，完成领料单状态的更新。
-
-- 自用型领料交付单签收时 (`bucket/receive`);
-- 外用型领料交付单交付时 (`bucket/deliver`);
-- 领料明细变更数量时 (`bucket-item/tweak-quantity`);
-
-### BucketItem
+### BucketItem Schema
 
 Column                      | Type      | Null | Note
 ----------------------------|-----------|------|-------
@@ -60,6 +52,20 @@ Column                      | Type      | Null | Note
 `note`                      | string    | Yes  |
 
 - `bucket_item.name` 可以判断出原辅料是否需要过程追溯，目前基体不需要过程追溯；
+
+### 评审顺序
+超硬材料内，productionDirector 可同时新建自用和他用的普通领料单；saleDirector 仅能新建他用的普通领料单。申请人直接找 decisionMaker 评审即可。
+
+制品中心内, ”生产“和”实验“两种类型的领料单，顺序是：申请人 → 决策人；”普通“领料单的顺序：申请人 → 仓库 → 生产经理。
+
+### 事件
+
+`Bucket::EVENT_DELIVERY_CHANGED` 以下将触发该事件，完成领料单状态的更新。
+
+- 自用型领料交付单签收时 (`bucket/receive`);
+- 外用型领料交付单交付时 (`bucket/deliver`);
+- 领料明细变更数量时 (`bucket-item/tweak-quantity`);
+
 
 取料
 ---------------------------------------------------------------------------

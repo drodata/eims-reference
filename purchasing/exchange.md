@@ -13,4 +13,4 @@
 ### 出库
 `exchange/fetch`. 出库前会检查是否已付款。
 ### 交付
-`exchange/deliver`. 
+`exchange/deliver`. 交付后给制单员推送发货通知。
