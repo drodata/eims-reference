@@ -12,6 +12,10 @@ Column                              | Type      | Null | Note
 `quantity`                          | int       | No   | 
 `status`                            | int       | No   | 状态。已创建(1)、已完成(9)
 
+### 管理压块人
+
+`gwRecorder` role 可以通过 `/rough-item-presser/index` 页面管理压块人。
+
 签收
 ---------------------------------------------------------------------------
 签收操作做以下事情：

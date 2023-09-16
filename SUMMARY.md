@@ -38,6 +38,7 @@
 * [Console](console/README.md)
     * [监控](console/monitor.md)
 * [通用模型](models/README.md)
+    * [Inventory 库存日志](models/inventory.md)
     * [追溯](models/trace.md)
     * [备货](models/hoard.md)
     * [内容变更](models/edition.md)
