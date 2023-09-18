@@ -6,6 +6,7 @@ Change Logs
 
 日期        | 大类              | 类别      | 动作 | 说明
 ------------|-------------------|-----------|------|-------------------
+2023-09-18  | Billing           | Logic     | 调整 | 202308 账期开始的月结帐单改为[以订单交付为统计依据][section-customer-billing-modern-billing]
 2023-08-25  | RBAC              | Logic     | 新增 | [通用 HolderRule][topic-rbac-holder-rule]
 2023-09-06  | Bucket            | Schame    | 改进 | 新增 `branch_id` 承载超硬系统内原自产微粉领料申请记录 (Picking)
 2023-09-01  | Sku               | Logic     | 改进 | 新建 SkuAdditionalProperty 接管[附加属性的设置][section-material-sku-additional-property]
@@ -51,4 +52,5 @@ Change Logs
 [section-reject-concession]: /order/reject.md#处理不合格品
 [section-order-delivery-detection]: /order/delivery.md#检测
 [section-material-sku-additional-property]: /material/sku.md#附加属性
+[section-customer-billing-modern-billing]: /customer/billing.md#modern-billing
 
