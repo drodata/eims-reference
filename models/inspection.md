@@ -1,5 +1,27 @@
 # 检验报告
 
+新增步骤
+---------------------------------------------------------------------------
+- 表格: `Inspection Xxx`.
+- alter column `purchase_item.inspection_methods`
+- InspectionXxx
+    - `getInspection()`
+- Inspection
+    - `getXxx()`
+    - `hasXxx()` 是否含有检测项目的判断方法
+    - `deleteInspectionXxx()`
+    - `actionLink()` 增加检测按钮
+    - `validateMethods()`
+- Media (上传附件时)
+    - 新增对应的 CATEGORY
+- MediaForm (上传附件时)
+- InspectionWeidhtLossRatio Controller
+    - `use backend\models\MediaForm` (上传图片时)
+    - `actionCreate()`: 更新跳转链接
+    - `actionUpdate()`: 更新跳转链接
+- `inspection/_field-purchase`: 增加入口链接和结果展示
+- `inspection/_detail-table` 新增项目表格详情
+
 外观尺寸检测
 ---------------------------------------------------------------------------
 ### InspectionExterior Schema
@@ -21,3 +43,22 @@ Column                              | Type      | Null | Note
 `device`                            | int       | No   | Lookup `graphics-device`
 `shape`                             | int       | Yes  | Lookup `powder-shape`
 `mignification`                     | int       | Yes  | Lookup `sem-mignification`
+
+失重率
+---------------------------------------------------------------------------
+
+### InspectionWeightLossRatio Schema
+Column                              | Type      | Null | Note
+------------------------------------|-----------|------|-------
+`inspection_id`                     | int       | No   | 
+`value`                             | string    | No   | 
+
+耐火度
+---------------------------------------------------------------------------
+
+### InspectionRefractoriness Schema
+Column                              | Type      | Null | Note
+------------------------------------|-----------|------|-------
+`inspection_id`                     | int       | No   | 
+`value`                             | string    | No   | 
+`media_id`                          | int       | No   | 图片（单张）
