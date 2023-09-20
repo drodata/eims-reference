@@ -6,6 +6,7 @@ Change Logs
 
 日期        | 大类              | 类别      | 动作 | 说明
 ------------|-------------------|-----------|------|-------------------
+2023-09-20  | Purchase          | Logic     | 改进 | 检测项目可根据产品类别[自动填充][section-purchase-inspection-methods]
 2023-09-18  | Billing           | Logic     | 调整 | 202308 账期开始的月结帐单改为[以订单交付为统计依据][section-customer-billing-modern-billing]
 2023-08-25  | RBAC              | Logic     | 新增 | [通用 HolderRule][topic-rbac-holder-rule]
 2023-09-06  | Bucket            | Schame    | 改进 | 新增 `branch_id` 承载超硬系统内原自产微粉领料申请记录 (Picking)
@@ -47,6 +48,7 @@ Change Logs
 
 [section-purchase-specimen]: /purchasing/purchase.md#留样
 [section-purchase-inspection]: /purchasing/purchase.md#检测
+[section-purchase-inspection-methods]: /purchasing/purchase.md#检测项目
 [section-purchase-concession]: /purchasing/purchase.md#让步接收
 [section-goods-grinding-paste-via]: /order/goods.md#研磨膏制作途径
 [section-reject-concession]: /order/reject.md#处理不合格品
