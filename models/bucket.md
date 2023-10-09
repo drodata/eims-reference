@@ -50,6 +50,7 @@ Column                      | Type      | Null | Note
 `quantity`                  | int       | No   |
 `measurement_unit`          | int       | No   | 单位
 `note`                      | string    | Yes  |
+`need_pick`                 | bool      | No   | 是否需要取料
 
 - `bucket_item.name` 可以判断出原辅料是否需要过程追溯，目前基体不需要过程追溯；
 
@@ -76,11 +77,16 @@ Column                      | Type      | Null | Note
 `bucket_item_id`            | int       | No   | 
 `bucket_delivery_id`        | int       | Yes  |
 `bucket_selection_trace_id` | int       | Yes  | 在`SCENARIO_TRACE_DELIVERY`下必填
-`unit_id`                   | int       | No   | 
-`warehouse_id`              | int       | No   | 
+`unit_id`                   | int       | Yes  | `bucket_item.need_pick` 为 1 时必填 
+`warehouse_id`              | int       | Yes  | `bucket_item.need_pick` 为 1 时必填
 `quantity`                  | int       | No   |
 
 - 砂轮生产追溯引入 `bucket_selection_trace_id`: 仓库创建交付单时，如果领料名称是磨料，则强制输入追溯编号;
+
+### 无需取料
+类型是“默认”的领料申请单存在无法取料的情况：要发的料是检测样品，没有物资批号。为了解决这类情况。新增 `bucket_item.need_pick` 布尔列标记这类情况。
+
+默认情况下， `need_pick` 值是 1, 遇到特殊情况时，可通过“无需取料”操作 (`bucket-item/toggle-pickness`) 将值更新为 0. “无需取料”操作通过 Editon 承载。终审通过后，自动生成一条伪取料记录。“伪”的意思是 BucketSelection 的 `unit_id` 和 `warehouse_id` 值为 null.
 
 交付
 ---------------------------------------------------------------------------
@@ -140,6 +146,8 @@ Change Logs
 ---------------------------------------------------------------------------
 日期        | 类别              | 动作  | 说明
 ------------|-------------------|-------|-------------------
+2023-10-08  | Schema            | 改进  | `bucket_selection` 表内 `unti_id` 和 `warehouse_id` 两列类型改成可以为空,以便存储伪取料记录
+2023-10-08  | Schema            | 新增  | `bucket_item.need_pick` 区分取法取料的情况
 2023-09-04  | Schema            | 新增  | `bucket.branch_id`, 正式在超硬账套内使用，接下来弃用 Picking 模型（自产微粉领料申请）
 2023-07-21  | Model             | 新增  | `BucketSelectionTraceSnap` 数量变动日志，在追溯页面更好地呈现数量变动过程
 2023-07-10  | BucketDelivery    | 新增  | `is_foreign`, `delivery_way`, `fetched_by`, `delivered_at` 四列，支持外用类的领料

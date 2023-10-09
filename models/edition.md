@@ -51,12 +51,15 @@ Column                      | Type      | Null | Note
 
 ### 实现步骤
 
-0. host 表增加状态值 (e.g. bucket status ended)
+0. (可选) host 表增加状态值 (e.g. bucket status ended)
 1. 搭建关联表 `edit_xxx` (新 name 时)
+    - `edition.type` lookup 更新 (新 type 时)
 2. Host：
     - `getEditions()`;
     - `getDataProvider()` 增加 `editions` section;
     - `getActionOptios()` 增加 对应按钮
+4. EditionForm
+    - 新增 scenario (新 type 时)
 3. Edition
     - 新增 name 和 type 常量：`getIsXxx()`
     - `hostParams()` (新 name 时)
@@ -65,17 +68,15 @@ Column                      | Type      | Null | Note
     - `getJunction()` (新 name 时)
     - `getEditionForm()`: 让表单页面正常；
     - `saveItems()` (新 type 时)
-    - `applyChanges()` 修改生效的逻辑代码 (when new NAME)
+    - `applyChanges()` 修改生效的逻辑代码 (新 name 或 type 时)
+    - `getNextAuditorList()`: 下一个评审人（类似只有一个评审人的比较简单的评审可以跳过）
 3. Lookup
     `auditors()` 设定首个审批人
-4. EditionForm
-    - 新增 scenario (新 type 时)
 5. AuditForm
-    - `getNextAuditors()`
-    - `validateIsFinal()`
+    - `validateIsFinal()` (类似只有一个评审人的比较简单的评审可以跳过)
 3. EditionController
     - 订单增加 `use AR` (when new NAME)
-    - 改进 `findEditionHost()`
+    - 改进 `findEditionHost()` (新 name 时)
 5. views
     - host's `_detail-action` view, adds button
     - `edition/_form` (when there is a new type)

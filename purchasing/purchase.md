@@ -29,6 +29,29 @@ Column                              | Type      | Null | Note
 
 检测项目具有自动填充功能，在 `Lookup::spuDefaultInspectionMethods()` 根据产品类别设置默认的检测项目。
 
+付款
+---------------------------------------------------------------------------
+采购单付款方式分为三种：一次付清、分批付款和员工垫付。前两个适用于银行转帐；第三种适用采购报销。
+### PurchasePayment Schema
+
+Column                              | Type      | Null | Note
+------------------------------------|-----------|------|-------
+`id`                                | int       | No   | 和 Purchase 共用主键
+`type`                              | bool      | No   | Lookup: 一次付清、分批付款、员工垫付
+`divide_note`                       | string    | Yes  | 分批付款要求
+`category`                          | int       | No   | 支出分类. extends Cost
+`payment_way`                       | int       | No   | 付款方式. extends Cost
+`receiver_account_id`               | int       | Yes  | 收款帐号. extends Cost
+`account_id`                        | int       | Yes  | 付款帐号. extends Cost
+`has_receipt`                       | int       | Yes  | 是否发票. extends Cost
+`status`                            | int       | No   | 状态：已创建、已开始、已完成
+
+### 评审顺序
+
+- pilePurchaser → cfo 易耗品报销
+- hoardPurchaser → purchaseDirector → cfo 核心物资付款
+- hoardPurchaser → cfo (hoardPurchaser 和 purchaseDirector 是同一个人时)
+
 拆分
 ---------------------------------------------------------------------------
 
