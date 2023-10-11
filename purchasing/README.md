@@ -11,6 +11,14 @@
 
 purchaser 和 temporaryPurchaser 已弃用。
 
+### hoardNewbie 和 hoardPurchaser 的关系
+
+purchaseNewbie 提交的以下三种评审，需要先经过 hoardPurchase:
+
+- 新建采购计划
+- 新建采购单付款申请
+- 新建供应商付款申请
+
 工作交接
 ---------------------------------------------------------------------------
 
