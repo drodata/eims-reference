@@ -24,10 +24,10 @@ Column                              | Type      | Null | Note
 
 名称                        | 说明
 ----------------------------|---------------
-`viewRegisteredFixture`     | 查看物资登记列表. warehouseKeeper, qualityChecker 和 hoardPurchaser 拥有；
+`viewRegisteredFixture`     | 查看物资登记列表. warehouseKeeper, qualityChecker, hoardNewbie 和 hoardPurchaser 拥有；
 `viewRecycledFixture`       | 查看物资回收列表. (warehouseKeeper, qualityChecker)
 `viewFixture`               | 查看物资 base permission.
-`createRegisteredFixture`   | 新建物资登记 (warehouseKeeper, hoardPurchaser)
+`createRegisteredFixture`   | 新建物资登记 (warehouseKeeper, hoardNewbie and hoardPurchaser)
 `createRecycledFixture`     | 新建物资回收 (warehouseKeeper)
 `createFixture`             | 查看 base permission. 用于控制 fixture update/delete 操作
 
