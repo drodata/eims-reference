@@ -3,13 +3,14 @@
 角色权限
 ---------------------------------------------------------------------------
 - 角色: hoardNewbie, hoardPurchaser, pilePurchaser, purchaseDirector 等
-- 权限： handlePurchasing, handleHoard 等
+- 权限： handlePurchasing, handleHoard, handleSeller 等
 
 要点如下：
 
+- handleSeller 关联供应商新建、删除等相关操作。只有 pilePurchase 和 hoardPurchaser 拥有该权限；
 - hoardNewbie 和 hoardPurchaser 允许同时存在,但 hoardPurchaser **只能有一个(采购主帐号)**；前者表示刚入职的采购员，后者是正式的。区别：前者只能看到自己提交的采购单、前者看不到供应商信息；
 
-purchaser 和 temporaryPurchaser 已弃用。
+purchaser, purchaseDirector 和 temporaryPurchaser 逐步弃用。
 
 ### hoardNewbie 和 hoardPurchaser 的关系
 
