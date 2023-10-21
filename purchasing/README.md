@@ -9,8 +9,9 @@
 
 - handleSeller 关联供应商新建、删除等相关操作。只有 pilePurchase 和 hoardPurchaser 拥有该权限；
 - hoardNewbie 和 hoardPurchaser 允许同时存在,但 hoardPurchaser **只能有一个(采购主帐号)**；前者表示刚入职的采购员，后者是正式的。区别：前者只能看到自己提交的采购单、前者看不到供应商信息；
+- purchaseDirector 的作用：对采购单的任何修改(Edition 承载)需要评审时，需要此角色参与；
 
-purchaser, purchaseDirector 和 temporaryPurchaser 逐步弃用。
+purchaser 和 temporaryPurchaser 逐步弃用。
 
 ### hoardNewbie 和 hoardPurchaser 的关系
 
