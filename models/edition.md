@@ -58,10 +58,10 @@ Column                      | Type      | Null | Note
     - 新增 name 和 type 常量
         - `getIsXxx()`
     - `getHost()` (新 name 时)
-    - `hostParams()` (新 name 时)
-    - `insertJunction()` (新 name 时)
     - `getJunction()` (新 name 时)
+    - `insertJunction()` (新 name 时)
     - `getEditionForm()`: 让表单页面正常；
+    - `hostParams()` (新 name 时)
     - `saveItems()` (新 type 时)
     - `applyChanges()` 修改生效的逻辑代码 (新 name 或 type 时)
     - `getNextAuditorList()`: 下一个评审人（类似只有一个评审人的比较简单的评审可以跳过）
