@@ -6,6 +6,7 @@ Change Logs
 
 日期        | 大类              | 类别      | 动作 | 说明
 ------------|-------------------|-----------|------|-------------------
+2023-11-07  | OemDelivery       | Logic     | 改进 | 不合格品入库前增加[让步接收评审][section-oem-delivery-concession]
 2023-10-08  | BucketItem        | Schema    | 改进 | 领料申请支持[无需取料][section-bucket-item-toggle-pickness]
 2023-09-20  | Purchase          | Logic     | 改进 | 检测项目可根据产品类别[自动填充][section-purchase-inspection-methods]
 2023-09-18  | Billing           | Logic     | 调整 | 202308 账期开始的月结帐单改为[以订单交付为统计依据][section-customer-billing-modern-billing]
@@ -57,3 +58,4 @@ Change Logs
 [section-material-sku-additional-property]: /material/sku.md#附加属性
 [section-customer-billing-modern-billing]: /customer/billing.md#modern-billing
 [section-bucket-item-toggle-pickness]: /models/bucket.md#无需取料
+[section-oem-delivery-concession]: /purchasing/oem.md#处理不合格品
