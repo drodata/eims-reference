@@ -27,7 +27,7 @@ PREPARATION | 订单备货 | 跟随 PurchasingPreparation 创建，`Preparation:
 PILE | 易耗品提前备货 | 跟随 Pile 创建，`./yii pile write`
 HOARD | 客户备货 | 跟随 Hoard 创建，`micro-diamond-hoard/create` 等
 
-### 六种状态
+### 七种状态
 
 状态常量                | 状态值    | 值改变场景
 ------------------------|-----------|-------
@@ -37,6 +37,11 @@ HOARD | 客户备货 | 跟随 Hoard 创建，`micro-diamond-hoard/create` 等
 `STATUS_DISAPPROVED`    | 4         | 总经理拒绝购买
 `STATUS_APPROVED`       | 5         | 总经理同意购买
 `STATUS_ENDED`          | 6         | 仓库生成需求明细
+`STATUS_DISCARDED`      | 14        | 采购申请作废(客户备货), 采购拒绝备货(订单备货)
+
+- 已作废(discarded):
+    - 客户备货评审通过后，如遇其它原因不再采购，可以进行“作废”操作。该操作通过 Edition 承载，评审完成后将 PlanItem 状态知设置为“已作废”；
+    - 订单备货可以通过“拒绝”操作将状态设置为“已作废”。作废后，仓库不需要删除备货记录，系统自动判定为无效记录；
 
 创建时机
 ---------------------------------------------------------------------------
@@ -51,4 +56,8 @@ Route                           |   名称    | 说明
 `plan-item/delete`              |删除       | 通过 `./yii pile write` 生成的记录，仓库核对后如过发现不符，可以删除；
 `plan-item/inquire`             |询价       | 
 `plan-item/cancel-inquire`      |撤销询价   | 这里使用了抽象的 `cancel` action, 携带一个 `$key` 参数标记撤销的操作类别。
-`plan-item/deny`                |拒绝       |发生在仓库确认后或总经理拒绝购买后
+`plan-item/deny`                |拒绝       |发生在仓库确认后或总经理拒绝购买后,拒绝后状态变为“已作废”
+
+Change Logs
+--------------------------------------------------------------------------
+- 2023-10-24 `Enh` DetectRejectItem schema: xxx
