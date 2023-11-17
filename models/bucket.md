@@ -103,7 +103,7 @@ Column                      | Type      | Null | Note
 `delivery_way`              | int       | Yes  | foreign 时必填
 `fetched_by`                | int       | Yes  | foreign 时必填
 `delivered_at`              | int       | Yes  | foreign 时必填
-`status`                    | int       | No   | 
+`status`                    | int       | No   | 已创建、已领取、已完成
 
 追溯
 ---------------------------------------------------------------------------
@@ -146,6 +146,7 @@ Change Logs
 ---------------------------------------------------------------------------
 日期        | 类别              | 动作  | 说明
 ------------|-------------------|-------|-------------------
+2023-11-15  | Model             | 改进  | BucketDelivery 新增 'fetched' status, 自用领料创建后为“已领取”
 2023-10-08  | Schema            | 改进  | `bucket_selection` 表内 `unti_id` 和 `warehouse_id` 两列类型改成可以为空,以便存储伪取料记录
 2023-10-08  | Schema            | 新增  | `bucket_item.need_pick` 区分取法取料的情况
 2023-09-04  | Schema            | 新增  | `bucket.branch_id`, 正式在超硬账套内使用，接下来弃用 Picking 模型（自产微粉领料申请）
