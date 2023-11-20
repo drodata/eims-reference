@@ -23,6 +23,7 @@
     * [样品试用](order/trial.md)
     * [退货](order/reject.md)
 * [采购](purchasing/README.md)
+    * [备货申请](purchasing/hoard.md)
     * [PlanItem](purchasing/plan-item.md)
     * [采购清单](purchasing/demand-item.md)
     * [采购单](purchasing/purchase.md)
