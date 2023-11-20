@@ -39,5 +39,5 @@ Column                              | Type      | Null | Note
 `strength`                          | int       | No   | Lookup `diamond-strength`
 `size`                              | int       | No   | Lookup `diamond-size`
 
-[customer-hoard]: customer/hoard.md
-[company-hoard]: purchasing/hoard.md
+[customer-hoard]: /customer/hoard.md
+[company-hoard]: /purchasing/hoard.md
