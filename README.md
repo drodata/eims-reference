@@ -4,10 +4,10 @@
 Change Logs
 ---------------------------------------------------------------------------
 
-'section-oem-delivery-refuse'
+- 2023-11-22 Add OemDeliveryRefuse: 新增[代加工退货][section-oem-delivery-refuse]
+
 日期        | 大类              | 类别      | 动作 | 说明
 ------------|-------------------|-----------|------|-------------------
-2023-11-22  | OemDeliveryRefuse | Schema    | 新增 | [代加工退货][section-oem-delivery-refuse]
 2023-11-20  | Hoard             | Schema    | 扩展 | 承载[公司A类物资备货][company-hoard]
 2023-11-10  | Material          | Schema    | 改进 | [Material][material]增加 `cost` 和 `stored_at`
 2023-11-07  | OemDelivery       | Logic     | 改进 | 不合格品入库前增加[让步接收评审][section-oem-delivery-concession]
