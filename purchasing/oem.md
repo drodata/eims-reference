@@ -119,7 +119,10 @@ Column                              | Type      | Null | Note
 
 Change Logs
 ---------------------------------------------------------------------
+- 2023-12-06 改进 状态: 新增“镀覆”类型 (值是 0), 专用于[订单镀覆加工][coating]
 - 2023-11-21 新增 Logic: 不合格品退货；
 - 2023-11-07 改进 Logic: 代加工交付不合格品增加让步接收操作；
 - 2023-10-30 改进 Logic: 代加工取料使用单独的通用模型 Pickup 承载；
 - 2023-10-30 改进 Schema: OemItem 增加 `name`, `specification`, `measurement_unit` 和 `need_pick` 
+
+[coating]: /order/coating.md

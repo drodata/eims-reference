@@ -4,6 +4,7 @@
 Change Logs
 ---------------------------------------------------------------------------
 
+- 2023-11-30 Enh Coating: 和订单关联 [订单镀覆加工 Coating][coating]
 - 2023-11-22 Add OemDeliveryRefuse: 新增[代加工退货][section-oem-delivery-refuse]
 
 日期        | 大类              | 类别      | 动作 | 说明
@@ -45,6 +46,7 @@ Change Logs
 [generic-withdrawal]: /models/withdrawal.md
 [generic-review]: /models/review.md
 [material]: /material/material.md
+[coating]: /order/coating.md
 [console-monitor]: /console/monitor.md
 [company-hoard]: /purchasing/hoard.md
 [schema-bucket-selection-trace-snap]: /models/bucket.md#bucketselectiontracesnap-schema

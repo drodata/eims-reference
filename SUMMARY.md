@@ -22,6 +22,8 @@
     * [终止交付](order/end.md)
     * [样品试用](order/trial.md)
     * [退货](order/reject.md)
+    * [附加服务](order/service.md)
+    * [镀覆](order/coating.md)
 * [采购](purchasing/README.md)
     * [备货申请](purchasing/hoard.md)
     * [PlanItem](purchasing/plan-item.md)
