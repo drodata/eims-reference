@@ -4,6 +4,7 @@
 Change Logs
 ---------------------------------------------------------------------------
 
+- 2023-12-07 Add [AdminLTE 页面][topic-adminlte] `.table-detail` 全局类, 统一各种表单详情页的样式；
 - 2023-11-30 Enh Coating: 和订单关联 [订单镀覆加工 Coating][coating]
 - 2023-11-22 Add OemDeliveryRefuse: 新增[代加工退货][section-oem-delivery-refuse]
 
@@ -55,6 +56,7 @@ Change Logs
 
 [topic-user-domain-filter]: /topics/user-domain-filter.md
 [topic-rbac-holder-rule]: /topics/rbac-holder-rule.md
+[topic-adminlte]: /topics/adminlte.md
 
 [section-purchase-specimen]: /purchasing/purchase.md#留样
 [section-purchase-inspection]: /purchasing/purchase.md#检测
