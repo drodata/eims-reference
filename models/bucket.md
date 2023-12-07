@@ -24,7 +24,7 @@
 申请
 ---------------------------------------------------------------------------
 
-### Bucket Schema
+### Bucket
 Column                      | Type      | Null | Note
 ----------------------------|-----------|------|-------
 `id`                        | int       | No   | 
@@ -37,7 +37,7 @@ Column                      | Type      | Null | Note
 `address_id`                | int       | Yes  | 往来单位的发货地址。适用于 foreign bucket
 `is_lock`                   | int       | No   | 预留？
 `description`               | string    | Yes  | 申请说明。当 `is_standard` 为 0 时必填
-`status`                    | int       | No   | 已创建、准备中、已完成
+`status`                    | int       | No   | 已创建、准备中、已完成、已结束
 
 ### BucketItem Schema
 
@@ -61,10 +61,9 @@ Column                      | Type      | Null | Note
 
 ### 事件
 
-`Bucket::EVENT_DELIVERY_CHANGED` 以下将触发该事件，完成领料单状态的更新。
+`Bucket::EVENT_DELIVERY_CHANGED` 以下操作将触发该事件，完成领料单状态的更新。
 
-- 自用型领料交付单签收时 (`bucket/receive`);
-- 外用型领料交付单交付时 (`bucket/deliver`);
+- 领料交付单交付时 (`bucket-delivery/create`);
 - 领料明细变更数量时 (`bucket-item/tweak-quantity`);
 
 
@@ -90,6 +89,7 @@ Column                      | Type      | Null | Note
 
 交付
 ---------------------------------------------------------------------------
+支持分批交付、终止交付。
 
 ### BucketDelivery
 
@@ -142,7 +142,24 @@ Column                              | Type      | Null | Note
 ### 调整数量
 `bucket-item/tweak-quantity` 借助通用 Edition 模型实现。原辅料评审后允许改数。数量变更后会触发原辅料单状态更新，确保已完成交付的状态能更新。
 
+### 终止交付
+
+`bucket/terminate`. 借助 Editon 实现，本质是将领料单状态设置为“已结束”。
+
+假如领料单是分批交付, 申请人可以提交终止交付申请。此操作的前置条件必须满足：
+
+- 领料单状态是“交付中”（存在至少一个已完成的交付单）；
+- 不能含有已取料但未交付的取料记录；
+- 不能存在尚未完成的交付记录；
+
 Change Logs
+
+- 2023-11-15 Enh `logic`: 调整`Bucket::EVENT_DELIVERY_CHANGED` 触发时机
+  
+  对仓库来说，领料单取完料以后，这个领料单就结束了，不需要再显示在首页。
+  剩下的就是交付单的处理（签收或发货）, 这一点和订单和订单交付类似。
+  调整触发时机后,就能解决该问题；
+
 ---------------------------------------------------------------------------
 日期        | 类别              | 动作  | 说明
 ------------|-------------------|-------|-------------------
