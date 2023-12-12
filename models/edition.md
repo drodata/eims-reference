@@ -1,12 +1,10 @@
 # 内容变更
 
 这是一个通用模型，记录各个模型内容变更的过程。每次变更都需要评审来决定变更是否生效。
-
-Schema
----------------------------------------------------------------------------
 包含 `edition`, `edition_item` 两个表格，和 Audit 类似，通过关联表`edit_xxx` 和宿主模型建立关联。
 
-### `edition`
+Edition
+---------------------------------------------------------------------------
 
 Column                      | Type      | Null | Note
 ----------------------------|-----------|------|-------
@@ -16,7 +14,29 @@ Column                      | Type      | Null | Note
 `reason`                    | varchar   | No   | 
 `status`                    | int       | No   | 1: 已创建 4: 已拒绝 9: 已完成
 
-### `edition_item`
+
+### 名称
+### 类别
+- **标记已完成** `TYPE_MARK_COMPLETED` = 1.
+- **延期** `TYPE_DELAY_DEADLINE` = 2
+- **调整数量** `TYPE_TWEAK_QUANTITY` = 3
+- **作废** `TYPE_DISCARD` = 4
+- **变更检测项目** `TYPE_CHANGE_INSPECTION_METHODS` = 5
+- **设置无需取料** `TYPE_TOGGLE_PICKNESS` = 6
+  
+  BucketItem 和 OemItem 设置为无需取料；
+- **终止交付** `TYPE_TERMINATE` = 14
+
+### 状态
+
+状态常量                | 状态值 | 值改变场景
+------------------------|--------|------------
+`STATUS_CREATED`        |   1    | 
+`STATUS_REFUSED`        |   4    | 终审拒绝时 
+`STATUS_COMPLETED`      |   9    | 终审通过时
+
+EditionItem
+---------------------------------------------------------------------------
 
 Column                      | Type      | Null | Note
 ----------------------------|-----------|------|-------
@@ -33,15 +53,6 @@ Column                      | Type      | Null | Note
 
 但是 Edition 和 Audit 的区别在于： Edition 关联表写入发生在 Edition 写入后；而 Audit 的关联表发生在宿主模型建立后。
 
-状态
----------------------------------------------------------------------------
-
-状态常量                | 状态值 | 值改变场景
-------------------------|--------|------------
-`STATUS_CREATED`        |   1    | 
-`STATUS_REFUSED`        |   4    | 终审拒绝时 
-`STATUS_COMPLETED`      |   9    | 终审通过时
-
 部署列表
 ---------------------------------------------------------------------------
 
@@ -54,6 +65,7 @@ Column                      | Type      | Null | Note
 0. (可选) host 表增加状态值 (e.g. bucket status ended)
 1. 搭建关联表 `edit_xxx` (新 name 时)
     - `edition.type` lookup 更新 (新 type 时)
+    - Gii 关联表模型
 3. Edition
     - 新增 name 和 type 常量
         - `getIsXxx()`

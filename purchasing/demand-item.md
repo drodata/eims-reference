@@ -1,15 +1,46 @@
-# 采购清单
+# 购买清单
 
+使用场景
+---------------------------------------------------------------------------
+
+### 1. 采购需求 Demand 的子条目
+新建采购需求时，`demand_item.status` 默认值为 null. 
+当采购需求被批准购买 (`Plan::decide()`)后，
+再将 status 设置为 CREATED, 正式列入清单。**对于不批准购买的记录,
+不再在 demand-item/index 显示**.
+
+### 2. in Hoard, Pile and Preparation
+
+这类清单需要采购员通过 `plan-item/generate` 手动生成.
+
+状态
+---------------------------------------------------------------------------
+
+Purchase::syncDemandItemStatus()
+新建、修改、删除、入库
+
+DemandItem
 ---------------------------------------------------------------------------
 Column                              | Type      | Null | Note
 ------------------------------------|-----------|------|-------
 `id`                                | int       | No   | 
-`grinding_wheel_production_id`      | int       | No   | 生产编号
-`grinding_wheel_code`               | int       | No   | 砂轮内部编码 Lookup
-`mix_trace_id`                      | int       | Yes  | 追溯编码. `pack` scenario 时必填
-`weight`                            | int       | Yes  | 混料总重量. `pack` scenario 时必填
-`status`                            | int       | No   | 已创建(1)、已完成(9)
-`type`                              | int       | Yes  | 预留列。目前只有砂轮混料这一种类别；
+`branch_id`                         | int       | No   |
+`type`                              | int       | No   | Lookup. 采购需求、订单备货、消耗品、公司或客户备货
+`demand_id`                         | int       | Yes  | 需求单
+`purchasing_preparation_id`         | int       | Yes  | 订单备货
+`pile_id`                           | int       | Yes  | Pile
+`plan_item_id`                      | int       | Yes  | 由于 Hoard 和 PlanItem 同时存在，用此为外键
+`assigned_by`                       | int       | Yes  | 指派人
+`name`                              | string    | No   | 
+`quantity`                          | int       | No   | 
+`unbought_quantity`                 | int       | Yes  | 
+`deadline`                          | string    | Yes  | 
+`bought_by`                         | int       | Yes  | 
+`created_by`                        | int       | Yes  |
+`price`                             | decimal   | Yes  | 选填项 
+`supplier`                          | string    | Yes  | 选填项
+`status`                            | int       | Yes  | 已创建、采购中、已完成
+`frozen_level`                      | int       | No   | 已创建(1)、已完成(9)
 
 删除
 ---------------------------------------------------------------------------

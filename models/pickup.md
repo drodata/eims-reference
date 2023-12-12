@@ -6,6 +6,8 @@
 
 1. `pickup` 表核心属性：`warehouse_id`, `unit_id`, `quantity` 和 `note`;
 2. 关联表模型命名采用 `xxx_pickup` (`oem_item_pickup`), 连接宿主模型；
+   库存写入使用 `pickup_inventory` 表连接；这种命名可以形成一个容易记忆的链条：
+   `oem_item` - `oem_item_pickup` - `pickup` - `pickup_inventory`
 
 模型结构
 ---------------------------------------------------------------------
@@ -21,3 +23,5 @@ Column                              | Type      | Null | Note
 `note`                              | string    | Yes  | 取料备注
 
 - 关联表 `pickup_inventory`: 连接库存写入模块；
+- 有的模型存在不需要取料的情况，此时 `unit_id` 和 `warehouse_id` 可以为空，
+  即生成一条“假”取料记录。这点和领料取料类似 (BucketSelection);
