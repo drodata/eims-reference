@@ -27,7 +27,7 @@
 * [采购](purchasing/README.md)
     * [备货申请](purchasing/hoard.md)
     * [PlanItem](purchasing/plan-item.md)
-    * [采购清单](purchasing/demand-item.md)
+    * [购买清单](purchasing/demand-item.md)
     * [采购单](purchasing/purchase.md)
     * [调配](purchasing/exchange.md)
     * [供应商](purchasing/supplier.md)
