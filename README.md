@@ -4,6 +4,11 @@
 Change Logs
 ---------------------------------------------------------------------------
 
+### 231215 订单终止交付后余额数量未同步
+业务员反应 20985 订单出现终止交付后，订单关联的余额记录仍旧是终止前的金额。
+检查 `OrderEnd::apply()` 逻辑后确认没有问题。
+因此该订单可能是终止交付启用前的旧订单。保持关注；
+
 - 2023-12-07 Add [AdminLTE 页面][topic-adminlte] `.table-detail` 全局类, 统一各种表单详情页的样式；
 - 2023-11-30 Enh Coating: 和订单关联 [订单镀覆加工 Coating][coating]
 - 2023-11-22 Add OemDeliveryRefuse: 新增[代加工退货][section-oem-delivery-refuse]
