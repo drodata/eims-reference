@@ -16,7 +16,7 @@ Column                      | Type      | Null | Note
 
 
 ### 名称
-### 类别
+### Editon Type
 - **标记已完成** `TYPE_MARK_COMPLETED` = 1.
 - **延期** `TYPE_DELAY_DEADLINE` = 2
 - **调整数量** `TYPE_TWEAK_QUANTITY` = 3
@@ -26,6 +26,8 @@ Column                      | Type      | Null | Note
   
   BucketItem 和 OemItem 设置为无需取料；
 - **终止交付** `TYPE_TERMINATE` = 14
+- **取消留样** `TYPE_REVOKE_SPECIMEN` = 21
+- **变更备注** `TYPE_TWEAK_NOTE` = 51
 
 ### 状态
 
