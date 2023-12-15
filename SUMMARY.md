@@ -9,6 +9,8 @@
     * [磨料块](production/abrasive-block.md)
     * [半成品](production/rough.md)
     * [砂轮](production/grinding-wheel-production.md)
+* [销售](sale/README.md)
+    * [Deal 订单](sale/deal.md)
 * [客户](customer/README.md)
     * [余额表](customer/balance.md)
     * [备货](customer/hoard.md)

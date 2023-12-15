@@ -4,11 +4,12 @@
 Change Logs
 ---------------------------------------------------------------------------
 
-### 231215 订单终止交付后余额数量未同步
-业务员反应 20985 订单出现终止交付后，订单关联的余额记录仍旧是终止前的金额。
-检查 `OrderEnd::apply()` 逻辑后确认没有问题。
-因此该订单可能是终止交付启用前的旧订单。保持关注；
-
+- 2023-12-15 `Enh` [GrindingWheelProduction ][gwp]: 增加 `is_oem` 列，承载代加工砂轮生产；
+- 2023-12-14 Feedback 订单终止交付后余额数量未同步
+  
+  业务员反应 20985 订单出现终止交付后，订单关联的余额记录仍旧是终止前的金额。
+  检查 `OrderEnd::apply()` 逻辑后确认没有问题。
+  因此该订单可能是终止交付启用前的旧订单。保持关注；
 - 2023-12-07 Add [AdminLTE 页面][topic-adminlte] `.table-detail` 全局类, 统一各种表单详情页的样式；
 - 2023-11-30 Enh Coating: 和订单关联 [订单镀覆加工 Coating][coating]
 - 2023-11-22 Add OemDeliveryRefuse: 新增[代加工退货][section-oem-delivery-refuse]
@@ -55,9 +56,8 @@ Change Logs
 [coating]: /order/coating.md
 [console-monitor]: /console/monitor.md
 [company-hoard]: /purchasing/hoard.md
-[schema-bucket-selection-trace-snap]: /models/bucket.md#bucketselectiontracesnap-schema
-[schema-mix-lapse]: /production/mix.md#mixlapse-schema
-[action-purchase-item-build-detection]: /purchasing/purchase.md#purchase-item/build-detection
+[gwp]: /production/grinding-wheel-production.md
+[deal]: /sale/deal.md
 
 [topic-user-domain-filter]: /topics/user-domain-filter.md
 [topic-rbac-holder-rule]: /topics/rbac-holder-rule.md
@@ -75,3 +75,7 @@ Change Logs
 [section-bucket-item-toggle-pickness]: /models/bucket.md#无需取料
 [section-oem-delivery-concession]: /purchasing/oem.md#处理不合格品
 [section-oem-delivery-refuse]: /purchasing/oem.md#退货
+
+[action-purchase-item-build-detection]: /purchasing/purchase.md#purchase-item/build-detection
+[schema-bucket-selection-trace-snap]: /models/bucket.md#bucketselectiontracesnap-schema
+[schema-mix-lapse]: /production/mix.md#mixlapse-schema
