@@ -80,6 +80,7 @@ Column                      | Type      | Null | Note
     - `applyChanges()` 修改生效的逻辑代码 (新 name 或 type 时)
     - `getNextAuditorList()`: 下一个评审人（类似只有一个评审人的比较简单的评审可以跳过）
 2. Host：
+    - `init()`: 增加 `deleteEditions()` handler;
     - `getEditions()`;
     - `getDataProvider()` 增加 `editions` section;
     - `getActionOptios()` 增加 对应按钮

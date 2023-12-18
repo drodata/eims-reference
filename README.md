@@ -4,8 +4,9 @@
 Change Logs
 ---------------------------------------------------------------------------
 
+- 2023-12-17 `Fix` [Outflow ][outflow] AB类客户流失生成逻辑, 超过 90 天没有大货交付需上报原因；
 - 2023-12-15 `Enh` [GrindingWheelProduction ][gwp]: 增加 `is_oem` 列，承载代加工砂轮生产；
-- 2023-12-14 Feedback 订单终止交付后余额数量未同步
+- 2023-12-14 `Feedback` 订单终止交付后余额数量未同步
   
   业务员反应 20985 订单出现终止交付后，订单关联的余额记录仍旧是终止前的金额。
   检查 `OrderEnd::apply()` 逻辑后确认没有问题。
@@ -58,6 +59,7 @@ Change Logs
 [company-hoard]: /purchasing/hoard.md
 [gwp]: /production/grinding-wheel-production.md
 [deal]: /sale/deal.md
+[outflow]: /customer/outflow.md
 
 [topic-user-domain-filter]: /topics/user-domain-filter.md
 [topic-rbac-holder-rule]: /topics/rbac-holder-rule.md
