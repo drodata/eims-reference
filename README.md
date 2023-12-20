@@ -4,6 +4,7 @@
 Change Logs
 ---------------------------------------------------------------------------
 
+- 2023-12-19 `Enh` [Exchange][exchange] 简化 ExchangeItem, 舍弃 `sku_id`; 改用通用 Pickup 承载取料过程；
 - 2023-12-17 `Fix` [Outflow ][outflow] AB类客户流失生成逻辑, 超过 90 天没有大货交付需上报原因；
 - 2023-12-15 `Enh` [GrindingWheelProduction ][gwp]: 增加 `is_oem` 列，承载代加工砂轮生产；
 - 2023-12-14 `Feedback` 订单终止交付后余额数量未同步
@@ -57,6 +58,7 @@ Change Logs
 [coating]: /order/coating.md
 [console-monitor]: /console/monitor.md
 [company-hoard]: /purchasing/hoard.md
+[exchange]: /purchasing/exchange.md
 [gwp]: /production/grinding-wheel-production.md
 [deal]: /sale/deal.md
 [outflow]: /customer/outflow.md

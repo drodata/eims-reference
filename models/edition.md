@@ -17,6 +17,7 @@ Column                      | Type      | Null | Note
 
 ### 名称
 ### Editon Type
+- **通用修改** `TYPE_COMMON` = 0. 涉及多个字段，例如客户地址的变更
 - **标记已完成** `TYPE_MARK_COMPLETED` = 1.
 - **延期** `TYPE_DELAY_DEADLINE` = 2
 - **调整数量** `TYPE_TWEAK_QUANTITY` = 3
@@ -61,6 +62,7 @@ Column                      | Type      | Null | Note
 - 率先部署在采购清单的延期上
 - 原辅料清单明细支持修改数量；
 - 订单交付明细中变更检测项目；
+- `address/edit`: 变更客户地址中联系人、电话等关键字段；
 
 ### 实现步骤
 
