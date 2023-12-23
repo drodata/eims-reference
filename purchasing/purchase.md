@@ -1,6 +1,6 @@
 # 采购单
 
-Schema
+Structure
 ---------------------------------------------------------------------------
 ### PurchaseItem Schema
 
@@ -18,6 +18,31 @@ Column                              | Type      | Null | Note
 `action`                            | int       | No   | 订货、退货、换货
 `price`                             | int       | Yes  | 
 `quantity`                          | int       | No   | 
+
+### Schema PurchaseItemFactor
+类似微粉这些特定的商品，需要搜集更精确的数据要求，而不是简单地写在备注栏内。单独创建一个表进行扩展。
+
+Column                              | Type      | Null | Note
+------------------------------------|-----------|------|-------
+`id`                                | int       | No   | `purchase_item.id` 共用主键
+`type`                              | bool      | No   | 类型 Lookup
+`base_d50`                          | decimal   | Yes  | 
+`offset_d50`                        | decimal   | Yes  |
+`shape`                             | bool      | Yes  |
+`shop_name`                         | string    | Yes  |
+`note`                              | string    | Yes  | reserved
+
+- **type**: 共用 `spu.type`. 指是 0 代表是店铺，此时 `shop_name` 必填；
+    - `Spu::TYPE_MICRO_DIAMOND`： `base_d50`, `offset_d50` 和 `shape` 必填；
+    - `Spu::TYPE_DIAMOND`： `shape` 必填；
+    - `Spu::TYPE_RVD`： `shape` 必填；
+    - `Spu::TYPE_ZXL`： `shape` 必填；
+
+其它要点：
+
+- 对采购单创建、修改、删除、拆分和退换货都有影响；
+- 店铺名称的搜集依赖于供应商名称（必须是“实体店铺”）, 因此选择商品时要求供应商先得选好；
+- 退货明细不需要；
 
 新建
 ---------------------------------------------------------------------------
@@ -116,6 +141,7 @@ Change Logs
 ---------------------------------------------------------------------------
 日期        | 类别      | 动作 | 说明
 ------------|-----------|------|-------------------
+2023-12-22  | Schema    | 新增 | PurchaseItemFactor 承载具体要求
 2023-08-15  | Action    | 新增 | 让步接收申请评审
 2023-08-11  | Scheme    | 新增 |`purchase_item.was_inspected`;
 

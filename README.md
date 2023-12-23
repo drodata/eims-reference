@@ -4,7 +4,7 @@
 Change Logs
 ---------------------------------------------------------------------------
 
-- 2023-12-22 `Enh` CG-6237 以后的采购单开始生效；
+- 2023-12-22 `Enh` Purchase: 新增[采购明细具体数据要求 PurchaseItemFactor][schema-purchase-item-factor]. CG-6237 以后的采购单开始生效；
 - 2023-12-22 `Bug` [采购单确认合格(`purchase-item/check`)出现脏数据][fault-trigger-not-in-transition]
 - 2023-12-19 `Enh` [Exchange][exchange] 简化 ExchangeItem, 舍弃 `sku_id`; 改用通用 Pickup 承载取料过程；
 - 2023-12-17 `Fix` [Outflow ][outflow] AB类客户流失生成逻辑, 超过 90 天没有大货交付需上报原因；
@@ -83,7 +83,9 @@ Change Logs
 [section-oem-delivery-refuse]: /purchasing/oem.md#退货
 
 [action-purchase-item-build-detection]: /purchasing/purchase.md#purchase-item/build-detection
+
 [schema-bucket-selection-trace-snap]: /models/bucket.md#bucketselectiontracesnap-schema
 [schema-mix-lapse]: /production/mix.md#mixlapse-schema
+[schema-purchase-item-factor]: /purchasing/purchase.md#schema-purchaseitemfactor
 
 [fault-trigger-not-in-transition]: /faults/trigger-not-in-transition.md
