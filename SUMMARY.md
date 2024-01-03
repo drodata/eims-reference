@@ -42,6 +42,7 @@
     * [Spu](material/spu.md)
     * [Sku](material/sku.md)
     * [批次](material/unit.md)
+    * [定向物资](material/dedicated-unit.md)
     * [Material](material/material.md)
     * [提前备货](material/pile.md)
     * [消耗品领用](material/requisition.md)

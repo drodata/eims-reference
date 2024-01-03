@@ -1,5 +1,12 @@
 # Material
 
+### 权限列表
+
+- viewDiamondMaterial: 控制原生料物资(`diamond-material/index`)访问；
+- searchMicroDiamondMaterial: 控制微粉、破碎料、整形料和容器页面访问；
+- viewDedicatedMaterial: 访问定向物资(`dedicated-material/``)页面；
+- viewAllMaterial: 控制所有物资(`material/index`)访问
+
 ### Schema
 Column                              | Type      | Null | Note
 ------------------------------------|-----------|------|-------
@@ -12,6 +19,13 @@ Column                              | Type      | Null | Note
 `stored_at`                         | int       | Yes  | 库龄
 
 - `unit_id` 和 `warehouse_id` 复合主键；
+
+类别
+--------------------------------------------------------------------------
+
+### 定向物资
+业务员申请的客户备货 (Hoard) 入库的物资。通过关联模型 DedicatedUnit 连接。
+权限 viewDedicatedMaterial 控制访问权限。
 
 Change Logs
 --------------------------------------------------------------------------

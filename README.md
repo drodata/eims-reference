@@ -4,6 +4,8 @@
 Change Logs
 ---------------------------------------------------------------------------
 
+- 2024-01-03 `Add` [定向物资页面 (dedicated-material/index)][section-material-dedicated], 业务员和仓库能直观看到当前的定向物资；
+- 2023-12-29 `Adj` Order: 取消[订单评审前的匹配备货限制][match-hoard], 不再强制匹配备货；
 - 2023-12-22 `Enh` Purchase: 新增[采购明细具体数据要求 PurchaseItemFactor][schema-purchase-item-factor]. CG-6237 以后的采购单开始生效；
 - 2023-12-22 `Bug` [采购单确认合格(`purchase-item/check`)出现脏数据][fault-trigger-not-in-transition]
 - 2023-12-19 `Enh` [Exchange][exchange] 简化 ExchangeItem, 舍弃 `sku_id`; 改用通用 Pickup 承载取料过程；
@@ -58,6 +60,7 @@ Change Logs
 [generic-review]: /models/review.md
 [material]: /material/material.md
 [coating]: /order/coating.md
+[match-hoard]: /order/match-hoard.md
 [console-monitor]: /console/monitor.md
 [company-hoard]: /purchasing/hoard.md
 [exchange]: /purchasing/exchange.md
@@ -81,6 +84,7 @@ Change Logs
 [section-bucket-item-toggle-pickness]: /models/bucket.md#无需取料
 [section-oem-delivery-concession]: /purchasing/oem.md#处理不合格品
 [section-oem-delivery-refuse]: /purchasing/oem.md#退货
+[section-material-dedicated]: /material/material.md#定向物资
 
 [action-purchase-item-build-detection]: /purchasing/purchase.md#purchase-item/build-detection
 
