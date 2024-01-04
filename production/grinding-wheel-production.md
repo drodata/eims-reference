@@ -25,11 +25,21 @@ Column                              | Type      | Null | Note
 
 交付
 ---------------------------------------------------------------------------
-### GrindingWheelProductionDelivery
+### Schema GrindingWheelProductionDelivery
+Column                              | Type      | Null | Note
+------------------------------------|-----------|------|-------
+`id`                                | int       | No   | 
+`grinding_wheel_production_id`      | int       | No   | 
+`quantity`                          | int       | No   |
+`status`                            | int       | No   | Lookup 状态：
+`purpose`                           | int       | No   | Lookup 状态：自用、销售
+
+- 'purpose' 列是中途新增的，因此早期记录中该列的值是 null;
 
 ### 数据导出
 为确保数据安全性，仅 warehouseKeeper 可通过 `export/grinding-wheel-production-delivery` 下载交付明细表。
 
 Change Logs
 --------------------------------------------------------------------------
-- 2023-12-15 Schema `Enh` 增加 `is_oem` 列，区分自产还是代工；
+- 2024-01-04 `Enh` Schema: `grinding_wheel_production_delivery.purpose` 列，记录是自用还是销售
+- 2023-12-15 `Enh` Schema: 增加 `is_oem` 列，区分自产还是代工；
