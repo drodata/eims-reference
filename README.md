@@ -4,6 +4,7 @@
 Change Logs
 ---------------------------------------------------------------------------
 
+- 2024-01-05 `Add` [hoard newbie 工作迁移操作][section-purchase-handover-hoard-newbie], 应对采购离职后的工作交接；
 - 2024-01-03 `Add` [定向物资页面 (dedicated-material/index)][section-material-dedicated], 业务员和仓库能直观看到当前的定向物资；
 - 2023-12-29 `Adj` Order: 取消[订单评审前的匹配备货限制][match-hoard], 不再强制匹配备货；
 - 2023-12-22 `Enh` Purchase: 新增[采购明细具体数据要求 PurchaseItemFactor][schema-purchase-item-factor]. CG-6237 以后的采购单开始生效；
@@ -72,6 +73,7 @@ Change Logs
 [topic-rbac-holder-rule]: /topics/rbac-holder-rule.md
 [topic-adminlte]: /topics/adminlte.md
 
+[section-purchase-handover-hoard-newbie]: /purchasing/README.md#hoard-newbie
 [section-purchase-specimen]: /purchasing/purchase.md#留样
 [section-purchase-inspection]: /purchasing/purchase.md#检测
 [section-purchase-inspection-methods]: /purchasing/purchase.md#检测项目
