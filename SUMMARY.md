@@ -16,6 +16,7 @@
 * [客户](customer/README.md)
     * [客户](customer/customer.md)
     * [余额表](customer/balance.md)
+    * [对账单 BalanceStatement](customer/balance-statement.md)
     * [备货](customer/hoard.md)
     * [Outflow 流失](customer/outflow.md)
     * [Statement 单笔帐单](customer/statement.md)
