@@ -24,6 +24,15 @@ purchaseNewbie 提交的以下三种评审，需要先经过 hoardPurchase:
 工作交接
 ---------------------------------------------------------------------------
 
+### Hoard Newbie
+见习采购离职后，先把帐号下未处理的 notifications 处理完，然后执行 `./yii handover/hoard-newbie id1 id2` 即可将其未完成的工作合并的采购主管帐号下。此操作依次更新以下内容：
+
+0. 已评审但未列入计划的采购需求的购买负责人；
+1. 未完成的购买清单的购买负责人；
+2. 未完成的采购单：修改 `created_by` 和 `keeped_by` (影响后续的签收操作)；
+3. 未完成的物资登记单：修改 `created_by`;
+
+### Hoard Purchaser
 hoardPurchaser 交接工作时执行 `./yii handover/hoard-purchaser id1 id2`. 其中 `id1` 是原负责人用户 ID, `id2` 是新负责人。
 
 交接工作要点：
