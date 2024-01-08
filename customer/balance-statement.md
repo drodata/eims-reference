@@ -33,3 +33,8 @@ Column                              | Type      | Null | Note
 - `ended_at`
 - `advance`
 - `balance`
+
+### 逾期未对账的限制
+
+开关 `Yii::$ap->params['restrictionSwitches']['balanceStatement']` (common/configs) 用来控制对逾期未完成对账的限制。
+此开关默认为开启。在下单页面(`order/create`)进行限制。
