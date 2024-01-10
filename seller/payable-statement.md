@@ -34,6 +34,15 @@ Column                              | Type      | Null | Note
 - `prepayment`
 - `payable`
 
+关联影响
+---------------------------------------------------------------------
+
+### 对账期间的锁定
+
+`Seller::getLockHint()` 会检查供应商是否存在已确认、未核实的记录，是则视为被锁定. 为保证采购员确认以后、财务核实之前这段时间不再新增 payable statment 记录，将影响以下操作：
+
+- 采购单入库；
+
 ### 逾期未对账的限制
 
 开关 `Yii::$ap->params['restrictionSwitches']['payableStatement']` (common/configs) 用来控制对逾期未完成对账的限制。
