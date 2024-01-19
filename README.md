@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2024-01-19 `Enh` 混料单增加[`need_press` 列控制压块可见性][section-mix-toggle-press],避免压块页面混料列表越来越长；
 - 2024-01-19 `Add` [压块新增“作废”操作][section-press-discard], 应对录入错误的情况.装块操作类似；
 - 2024-01-05 `Add` [hoard newbie 工作迁移操作][section-purchase-handover-hoard-newbie], 应对采购离职后的工作交接；
 - 2024-01-03 `Add` [定向物资页面 (dedicated-material/index)][section-material-dedicated], 业务员和仓库能直观看到当前的定向物资；
@@ -88,6 +89,7 @@ Change Logs
 [section-oem-delivery-refuse]: /purchasing/oem.md#退货
 [section-material-dedicated]: /material/material.md#定向物资
 [section-press-discard]: /production/press.md#作废
+[section-mix-toggle-press]: /production/mix.md#控制压块可见性
 
 [action-purchase-item-build-detection]: /purchasing/purchase.md#purchase-item/build-detection
 

@@ -31,6 +31,7 @@ Column                              | Type      | Null | Note
 `mix_trace_id`                      | int       | Yes  | 追溯编码. `pack` scenario 时必填
 `package_amount`                    | int       | Yes  | 总袋数. `pack` scenario 时必填
 `status`                            | int       | No   | 状态。已创建、已完成
+`need_press`                        | int       | No   | “是否需要压块”列
 `type`                              | int       | Yes  | 预留列。目前只有砂轮混料这一种类别；
 `weight`                            | int       | Yes  | 预留列
 
@@ -52,8 +53,18 @@ Column                              | Type      | Null | Note
 `quantity`                          | int       | No   | 异常数量
 `status`                            | int       | No   | 预留，作用不大
 
+其它
+---------------------------------------------------------------------------
+### 控制压块可见性
+
+新建压块页面会将当前所有混料单列表显示出来。这当中有很多其实已经压完。
+系统目前没有很好的办法隐藏这些记录。
+
+新增 `need_press` 列，让 gwRecroder 手动将这些记录标记设为不可见。
+
 Change Logs
 ---------------------------------------------------------------------------
 
+- 2024-01-19 改进 Mix, 增加 `need_press` 布尔列，控制压块页面混料单的显示；
 - 2023-07-22 新增 `mix_lapse` 表，数量上报
 - 2023-06-07 新增 `mix.package_amount` 列，混料单包装时搜集袋数而不是总重量；
