@@ -6,8 +6,11 @@
 
 取料退回的核心属性包括：物资批号、仓库编号、退回数量。仓库签收入库后，此表和通用 Inventory 表再建立关联，实现库存变化记账操作。
 
-Withdrawal Schema
+结构
 ---------------------------------------------------------------------------
+
+### Schema Withdrawal 
+
 Column                              | Type      | Null | Note
 ------------------------------------|-----------|------|-------
 `id`                                | int       | No   | 
@@ -17,5 +20,19 @@ Column                              | Type      | Null | Note
 `warehouse_id`                      | int       | No   | 
 `quantity`                          | int       | Yes  | 退回数量
 `status`                            | int       | No   | 已创建(1)、已交付(3)、已完成(9)
+
+### 关联表
+以自加工退回关联表为例, 关联表 `WithdrawMachining`
+
+Column                              | Type      | Null | Note
+------------------------------------|-----------|------|-------
+`machining_id`                      | int       | No   | 
+`withdrawal_id`                     | int       | No   | 
+
+操作
+---------------------------------------------------------------------------
+### 新建
+### 交付
+### 签收
 
 [generic-pickup]: /models/pickup.md
