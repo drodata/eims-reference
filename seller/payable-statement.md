@@ -11,6 +11,7 @@ Column                              | Type      | Null | Note
 `ended_at`                          | int       | No   | 结束时间
 `status`                            | int       | No   | Lookup 状态：
 `deadline`                          | int       | Yes  | 对账截止时间
+`delay_count`                       | int       | No   | 延期操作计数
 `prepayment`                        | string    | Yes  | 预付金额
 `payable`                           | string    | Yes  | 应付金额
 
@@ -33,6 +34,9 @@ Column                              | Type      | Null | Note
 - `ended_at`
 - `prepayment`
 - `payable`
+
+### 延期
+`payable-statement/delay`. 财务主管可通过此操作推迟对账截止日期. `delay_count` 列控制延期上限。
 
 关联影响
 ---------------------------------------------------------------------

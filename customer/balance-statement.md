@@ -10,6 +10,7 @@ Column                              | Type      | Null | Note
 `started_at`                        | int       | No   | 起始时间 
 `ended_at`                          | int       | No   | 结束时间
 `status`                            | int       | No   | Lookup 状态：
+`delay_count`                       | int       | No   | 延期操作计数
 `deadline`                          | int       | Yes  | 对账截止时间
 `receivable`                        | string    | Yes  | 
 `advance`                           | string    | Yes  | 
@@ -34,7 +35,12 @@ Column                              | Type      | Null | Note
 - `advance`
 - `balance`
 
+### 延期
+`balance-statement/delay`. 财务主管可通过此操作推迟对账截止日期. `delay_count` 列控制延期上限。
+
 ### 逾期未对账的限制
 
 开关 `Yii::$ap->params['restrictionSwitches']['balanceStatement']` (common/configs) 用来控制对逾期未完成对账的限制。
 此开关默认为开启。在下单页面(`order/create`)进行限制。
+
+此限制仅在生产环境下使用。
