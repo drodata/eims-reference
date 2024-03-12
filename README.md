@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2024-03-12 `Enh` 评审通过的采购需求,在列入计划前，支持[作废操作][section-demand-discard];
 - 2024-01-19 `Enh` 混料单增加[`need_press` 列控制压块可见性][section-mix-toggle-press],避免压块页面混料列表越来越长；
 - 2024-01-19 `Add` [压块新增“作废”操作][section-press-discard], 应对录入错误的情况.装块操作类似；
 - 2024-01-05 `Add` [hoard newbie 工作迁移操作][section-purchase-handover-hoard-newbie], 应对采购离职后的工作交接；
@@ -79,6 +80,7 @@ Change Logs
 [section-purchase-inspection]: /purchasing/purchase.md#检测
 [section-purchase-inspection-methods]: /purchasing/purchase.md#检测项目
 [section-purchase-concession]: /purchasing/purchase.md#让步接收
+[section-demand-discard]: /purchasing/purchase.md#作废
 [section-goods-grinding-paste-via]: /order/goods.md#研磨膏制作途径
 [section-reject-concession]: /order/reject.md#处理不合格品
 [section-order-delivery-detection]: /order/delivery.md#检测
