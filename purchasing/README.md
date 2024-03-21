@@ -4,6 +4,7 @@
 ---------------------------------------------------------------------------
 - 角色: hoardNewbie, hoardPurchaser, pilePurchaser, purchaseDirector 等
 - 权限： handlePurchasing, handleHoard, handleSeller 等
+    - `viewPurchasePrice`: 查看单价: `saleDirector`, `finance`, `handlePurchasing`
 
 要点如下：
 

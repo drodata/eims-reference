@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2024-03-21 `Enh` [物资借调][transfer]. 启用评审、录入单价操作；
 - 2024-03-15 `Add` 权限 `managePress` 和 `createPress`;
 - 2024-03-12 `Enh` 评审通过的采购需求,在列入计划前，支持[作废操作][section-demand-discard];
 - 2024-01-19 `Enh` 混料单增加[`need_press` 列控制压块可见性][section-mix-toggle-press],避免压块页面混料列表越来越长；
@@ -63,6 +64,7 @@ Change Logs
 [generic-withdrawal]: /models/withdrawal.md
 [generic-review]: /models/review.md
 [material]: /material/material.md
+[transfer]: /material/transfer.md
 [coating]: /order/coating.md
 [match-hoard]: /order/match-hoard.md
 [console-monitor]: /console/monitor.md
