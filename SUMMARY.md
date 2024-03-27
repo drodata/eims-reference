@@ -4,6 +4,7 @@
 * [杂项](misc/README.md)
     * [数据导出](misc/export.md)
 * [生产](production/README.md)
+    * [Warehousing 微粉生产](production/warehousing.md)
     * [自加工](production/machining.md)
     * [领料](production/bucket.md)
     * [混料](production/mix.md)

@@ -89,7 +89,7 @@ Column                      | Type      | Null | Note
 4. EditionForm
     - 新增 scenario (新 type 时)
 3. Lookup
-    `auditors()` 设定首个审批人
+    `auditors()` `TYPE_EDITION` 部分， 设定首个审批人
 5. AuditForm
     - `validateIsFinal()` (类似只有一个评审人的比较简单的评审可以跳过)
 3. EditionController
@@ -98,4 +98,4 @@ Column                      | Type      | Null | Note
 5. views
     - host's `_detail-action` view, adds button
     - `edition/_form` (when there is a new type)
-    - `edition/_detail-audit` (新 type 时)
+    - `edition/_detail-audit` (评审详情页面，主要用于新 type 时)

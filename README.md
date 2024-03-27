@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2024-03-27 `Enh` [生产单增加变更操作][warehousing], 允许修改强度、厂家等信息；
 - 2024-03-21 `Enh` [物资借调][transfer]. 启用评审、录入单价操作；
 - 2024-03-15 `Add` 权限 `managePress` 和 `createPress`;
 - 2024-03-12 `Enh` 评审通过的采购需求,在列入计划前，支持[作废操作][section-demand-discard];
@@ -71,6 +72,7 @@ Change Logs
 [company-hoard]: /purchasing/hoard.md
 [exchange]: /purchasing/exchange.md
 [gwp]: /production/grinding-wheel-production.md
+[warehousing]: /production/warehousing.md
 [deal]: /sale/deal.md
 [outflow]: /customer/outflow.md
 
