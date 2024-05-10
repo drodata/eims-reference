@@ -18,3 +18,8 @@ Column                              | Type      | Null | Note
 - `order/init-delivery` 时动态填充 (借助 `Product::getDefaultInspectionMethods`) `inspection_methods` 和 `inspection_flag` 两列：
 - 只能检测一次,即只能有一个 detection. 后期如有多次检验的需求，再放开；
 
+打印
+---------------------------------------------------------------------------
+
+### 打印页一律不显示批号
+交付详情页面显示，打印的交付清单不显示该列。
