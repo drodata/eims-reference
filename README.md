@@ -3,6 +3,8 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+'section-purchase-audit'
+- 2024-05-13 `Enh` [采购单和采购调配单增加评审环节][section-purchase-audit], hoardNewbie 新建的单子必须经 hoardPurchaser 评审；
 - 2024-03-27 `Enh` [生产单增加变更操作][warehousing], 允许修改强度、厂家等信息；
 - 2024-03-21 `Enh` [物资借调][transfer]. 启用评审、录入单价操作；
 - 2024-03-15 `Add` 权限 `managePress` 和 `createPress`;
@@ -85,6 +87,7 @@ Change Logs
 [section-purchase-inspection]: /purchasing/purchase.md#检测
 [section-purchase-inspection-methods]: /purchasing/purchase.md#检测项目
 [section-purchase-concession]: /purchasing/purchase.md#让步接收
+[section-purchase-audit]: /purchasing/purchase.md#评审
 [section-demand-discard]: /purchasing/purchase.md#作废
 [section-goods-grinding-paste-via]: /order/goods.md#研磨膏制作途径
 [section-reject-concession]: /order/reject.md#处理不合格品

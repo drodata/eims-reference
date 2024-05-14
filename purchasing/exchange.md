@@ -17,6 +17,9 @@ Column                              | Type      | Null | Note
 
 操作列表
 ---------------------------------------------------------------------------
+### 评审
+和[采购单评审][purchase-audit]一样。
+
 ### 新建
 采购员可以创建调配单
 ### 取料 
@@ -34,5 +37,8 @@ Column                              | Type      | Null | Note
 
 Change Logs
 --------------------------------------------------------------------------
+- 2024-05-13 `Adj` 增加评审环节；
 - 2023-12-19 `Enh` Schema：借鉴 OemItem, 新增 `name`, `specification`, `measurement_unit` 列，简化提交过程；使用通用 Pickup 模型承载取料过程；
 - 2023-11-16 `Enh` 逻辑：记账后仍可以修改；
+
+[purchase-audit]: /purchasing/purchase.md#评审

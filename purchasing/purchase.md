@@ -71,11 +71,13 @@ Column                              | Type      | Null | Note
 `has_receipt`                       | int       | Yes  | 是否发票. extends Cost
 `status`                            | int       | No   | 状态：已创建、已开始、已完成
 
-### 评审顺序
+### 评审
 
-- pilePurchaser → cfo 易耗品报销
-- hoardPurchaser → purchaseDirector → cfo 核心物资付款
-- hoardPurchaser → cfo (hoardPurchaser 和 purchaseDirector 是同一个人时)
+根据用户身份，评审分两种情况：
+
+- hoardNewbie 提交的单子，必须经过 hoardPurchaser 评审；
+- hoardPurchaser 和 pilePurchaser 提交的单子自动设置为“已评审”，简化操作；
+
 
 拆分
 ---------------------------------------------------------------------------
