@@ -3,7 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
-'section-purchase-audit'
+- 2024-05-19 `Enh` [制品中心追溯码改为自动生成，不再手动录入][section-trace-usage]. 不再打印追溯码
 - 2024-05-13 `Enh` [采购单和采购调配单增加评审环节][section-purchase-audit], hoardNewbie 新建的单子必须经 hoardPurchaser 评审；
 - 2024-03-27 `Enh` [生产单增加变更操作][warehousing], 允许修改强度、厂家等信息；
 - 2024-03-21 `Enh` [物资借调][transfer]. 启用评审、录入单价操作；
@@ -95,6 +95,7 @@ Change Logs
 [section-material-sku-additional-property]: /material/sku.md#附加属性
 [section-customer-billing-modern-billing]: /customer/billing.md#modern-billing
 [section-bucket-item-toggle-pickness]: /models/bucket.md#无需取料
+[section-trace-usage]: /models/trace.md#使用
 [section-oem-delivery-concession]: /purchasing/oem.md#处理不合格品
 [section-oem-delivery-refuse]: /purchasing/oem.md#退货
 [section-material-dedicated]: /material/material.md#定向物资
