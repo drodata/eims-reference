@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2024-05-23 `Enh` [采购需求明细 (DemandItem)支持询价 (补录单价)][section-demand-item-inquire].
 - 2024-05-19 `Enh` [制品中心追溯码改为自动生成，不再手动录入][section-trace-usage]. 不再打印追溯码
 - 2024-05-13 `Enh` [采购单和采购调配单增加评审环节][section-purchase-audit], hoardNewbie 新建的单子必须经 hoardPurchaser 评审；
 - 2024-03-27 `Enh` [生产单增加变更操作][warehousing], 允许修改强度、厂家等信息；
@@ -89,6 +90,7 @@ Change Logs
 [section-purchase-concession]: /purchasing/purchase.md#让步接收
 [section-purchase-audit]: /purchasing/purchase.md#评审
 [section-demand-discard]: /purchasing/purchase.md#作废
+[section-demand-item-inquire]: /purchasing/demand-item.md#询价
 [section-goods-grinding-paste-via]: /order/goods.md#研磨膏制作途径
 [section-reject-concession]: /order/reject.md#处理不合格品
 [section-order-delivery-detection]: /order/delivery.md#检测
