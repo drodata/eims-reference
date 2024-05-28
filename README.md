@@ -3,6 +3,8 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2024-05-27 `Enh` 扩展 Manufacture, 增加 `branch_id`, `section_id`, `type` 列，承载组团磨料生产单；
+- 2024-05-25 `Add` [核算部门 Section][section], 区分制品2部和微粉部.
 - 2024-05-23 `Enh` [采购需求明细 (DemandItem)支持询价 (补录单价)][section-demand-item-inquire].
 - 2024-05-19 `Enh` [制品中心追溯码改为自动生成，不再手动录入][section-trace-usage]. 不再打印追溯码
 - 2024-05-13 `Enh` [采购单和采购调配单增加评审环节][section-purchase-audit], hoardNewbie 新建的单子必须经 hoardPurchaser 评审；
@@ -67,6 +69,7 @@ Change Logs
 
 [generic-withdrawal]: /models/withdrawal.md
 [generic-review]: /models/review.md
+[section]: /models/section.md
 [material]: /material/material.md
 [transfer]: /material/transfer.md
 [coating]: /order/coating.md
