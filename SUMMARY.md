@@ -15,6 +15,7 @@
     * [砂轮](production/grinding-wheel-production.md)
 * [销售](sale/README.md)
     * [Deal 订单](sale/deal.md)
+    * [Buyer 客户](sale/buyer.md)
 * [客户](customer/README.md)
     * [客户](customer/customer.md)
     * [余额表](customer/balance.md)
