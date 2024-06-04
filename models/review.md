@@ -21,3 +21,10 @@ Console 端增加 `ReviewController` 完成记录的创建，目前有：
 
 - `review/labour-protection` 用于生成劳保用品台帐；
 - `review/consumable` 用于生成低值易耗品台帐；
+
+评审
+---------------------------------------------------------------------------
+> warehouseKeeper → pilePurchaser → root
+
+- 仓库核对手工台帐无误后，交给 pilePurchaser;
+- pilePurchaser 扫描上传系统；

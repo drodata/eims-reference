@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2024-06-03 `Add` [物资调拨单 Allotment][allotment], 解决同一账套内、不同部门间物资的流动；
 - 2024-05-27 `Enh` 扩展 Manufacture, 增加 `branch_id`, `section_id`, `type` 列，承载组团磨料生产单；
 - 2024-05-25 `Add` [核算部门 Section][section], 区分制品2部和微粉部.
 - 2024-05-23 `Enh` [采购需求明细 (DemandItem)支持询价 (补录单价)][section-demand-item-inquire].
@@ -72,6 +73,7 @@ Change Logs
 [section]: /models/section.md
 [material]: /material/material.md
 [transfer]: /material/transfer.md
+[allotment]: /material/allotment.md
 [coating]: /order/coating.md
 [match-hoard]: /order/match-hoard.md
 [console-monitor]: /console/monitor.md

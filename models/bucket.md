@@ -3,7 +3,7 @@
 涉及到的权限有：
 
 - `viewBucket`
-    - `manageBucket`: 仓库
+    - `manageBucket`: materialKeeper
     - `receiveBucket`: “自用”领料交付后签收
     - `deliverBucket`: “他用”领料交付后发货
     - `createBucket`
@@ -29,6 +29,7 @@ Column                      | Type      | Null | Note
 ----------------------------|-----------|------|-------
 `id`                        | int       | No   | 
 `branch_id`                 | int       | No   | 
+`section_id`                | int       | No   | 使用部门
 `type`                      | int       | No   | 标记具体领用类型，包括：通用、砂轮生产、砂轮实验
 `is_foreign`                | int       | No   | 标记是外用还是自用，前者有发货的功能；
 `is_standard`               | int       | No   | 1 表示有具体的生产单；0表示砂轮实验领用原辅料； 
@@ -161,6 +162,7 @@ Column                              | Type      | Null | Note
 
 Change Logs
 
+- 2024-05-28 Enh 增加 `section_id` 列，区分使用部门；
 - 2023-11-15 Enh `logic`: 调整`Bucket::EVENT_DELIVERY_CHANGED` 触发时机
   
   对仓库来说，领料单取完料以后，这个领料单就结束了，不需要再显示在首页。

@@ -42,3 +42,14 @@ hoardPurchaser 交接工作时执行 `./yii handover/hoard-purchaser id1 id2`. �
 1. 更新所有未完成的 DemandItem 的 `bought_by` 值；
 2. 更新所有未完成的 Purchase 的 `created_by`, `keeped_by` 值. 后者会影响到签收操作；
 3. 更新 `seller.owned_by` 为新负责人
+
+### Pile Purchaser
+
+```
+# id1 是原负责人用户 ID, id2 是新负责人。
+`./yii handover/pile-purchaser id1 id2`. 
+```
+
+交接工作要点：
+
+2. 更新所有未完成的 Purchase 的 `created_by`, `keeped_by` 值. 后者会影响到签收操作；
