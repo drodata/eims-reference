@@ -35,7 +35,7 @@
         ],
     ],
     ```
-3. 在 HolderRule 内添加逻辑代码：
+3. 在 backend\rbac\HolderRule 内添加逻辑代码：
     
     ```php
     public function execute($userId, $item, $params)
