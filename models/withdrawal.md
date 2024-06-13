@@ -9,6 +9,10 @@
 结构
 ---------------------------------------------------------------------------
 
+### 权限
+- `requestWithdrawal`: 申请退回单。gwPieceWorker, gwMixer 拥有；
+- `operateWithdrawal`: 操作退回单。warehouseKeeper, gwPieceWorker 和 gwMixer
+
 ### Schema Withdrawal 
 
 Column                              | Type      | Null | Note
@@ -29,10 +33,23 @@ Column                              | Type      | Null | Note
 `machining_id`                      | int       | No   | 
 `withdrawal_id`                     | int       | No   | 
 
+其它部署的表格还包括：
+
+- `withdraw_bucket_selection_trace`
+
 操作
 ---------------------------------------------------------------------------
 ### 新建
 ### 交付
+
 ### 签收
+
+> 领料交付计量单位问题
+>
+> 磨料和结合剂签收时单位都是“克”，这里入库时需要进行额外单位转换。
+
+变更日志
+--------------------------------------------------------------------------
+- 2024-06-13 扩展, 承载领料交付的退回
 
 [generic-pickup]: /models/pickup.md

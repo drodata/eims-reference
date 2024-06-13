@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2024-06-13 `Enh` 扩展 [Withdrawal][withdrawal], 承载领料交付后重新退还仓库的情形；
 - 2024-06-03 `Add` [物资调拨单 Allotment][allotment], 解决同一账套内、不同部门间物资的流动；
 - 2024-05-27 `Enh` 扩展 Manufacture, 增加 `branch_id`, `section_id`, `type` 列，承载组团磨料生产单；
 - 2024-05-25 `Add` [核算部门 Section][section], 区分制品2部和微粉部.
@@ -69,6 +70,7 @@ Change Logs
 2023-06-14  | BucketItem        | Action    | 新增 | `bucket-item/tweak-quantity`, 评审后可以微调数量;
 
 [generic-withdrawal]: /models/withdrawal.md
+[withdrawal]: /models/withdrawal.md
 [generic-review]: /models/review.md
 [section]: /models/section.md
 [material]: /material/material.md

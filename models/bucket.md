@@ -133,14 +133,17 @@ Column                              | Type      | Null | Note
 ------------------------------------|-----------|------|-------
 `id`                                | int       | No   | 
 `bucket_selection_trace_id`         | int       | No   | 追溯码
-`action`                            | int       | No   | 动作 Lookup: '领料', '混料', '调整'
+`action`                            | int       | No   | 动作 Lookup: '领料'(1), '混料'(2), '丢失'(3)、'退回'(4)
 `quantity`                          | int       | No   | 数量
 `mix_item_id`                       | int       | Yes  | 当动作是 '混料' 时必填
+`lapse_id`                          | int       | Yes  | 当动作是 '丢失' 时必填
+`withdrawal_id`                     | int       | Yes  | 当动作是 '退回' 时必填
 
 此表的记录全部用用户的其它操作自动触发生成，包括：
 
 - `bucket-delivery/create`: 新建动作为 '领料' 的记录；
 - `mix-item/create`: 新建动作为 '混料' 的记录；
+- `withdrawal/deliver`: 退回单交付时新建动作为 '退回' 的记录；
 
 每当新增或删除记录时将会触发更新 `bucket_selection_trace.stock` 的 handler (`syncTraceStock()`).
 
@@ -162,6 +165,7 @@ Column                              | Type      | Null | Note
 
 Change Logs
 
+- 2024-06-13 Enh BucketSelectionTraceSnap. 增加 `withdrawal_id` 列，新增退货动作；
 - 2024-05-28 Enh 增加 `section_id` 列，区分使用部门；
 - 2023-11-15 Enh `logic`: 调整`Bucket::EVENT_DELIVERY_CHANGED` 触发时机
   

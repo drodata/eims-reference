@@ -4,6 +4,7 @@
 
 - viewDiamondMaterial: 控制原生料物资(`diamond-material/index`)访问；
 - searchMicroDiamondMaterial: 控制微粉、破碎料、整形料和容器页面访问；
+- searchGroupedAbrasiveMaterial: 控制组团磨料物资页面访问；
 - viewDedicatedMaterial: 访问定向物资(`dedicated-material/``)页面；
 - viewAllMaterial: 控制所有物资(`material/index`)访问
 
