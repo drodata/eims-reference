@@ -5,9 +5,11 @@
 结构
 ---------------------------------------------------------------------
 ### 权限
-- `manageManufacture`: 管理生产单基础权限
-- `manageCbnManufacture`: 管理 CBN 生产单. qualityChecker, productionDirector, saleDirector 和 warehouseKeeper 拥有
-- `manageGroupedAbrasiveManufacture` 管理组团磨料生产单. qualityChecker, productionDirector, saleDirector 和 gaWarehouseKeeper 拥有
+Role/Permission Name                | Description           |  Parents
+------------------------------------|-----------------------|-----------------
+`manageManufacture`                 |管理生产单基础权限     | manageCbnManufacture, manageGroupedAbrasiveManufacture
+`manageCbnManufacture`              |管理 CBN 生产单        | qualityChecker, productionDirector, saleDirector, warehouseKeeper
+`manageGroupedAbrasiveManufacture`  |管理组团磨料生产单     | qualityChecker, productionDirector, saleDirector, gaWarehouseKeeper
 
 ### Schema
 Column                              | Type      | Null | Note

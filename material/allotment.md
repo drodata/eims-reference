@@ -1,5 +1,10 @@
 # Allotment 调拨
 
+> :bell: 暂停使用
+>
+> 在 `transfer` 表增加 `source_section_id` 和 `target_section_id` 列后就能实现此功能。
+> 换句话说，Transfer 由原来的账套之间更进一步，精确到账套内的部门 (Section) 之间。
+
 新增部门(Section)后，记录物资在同一账套内、不同部门间的流动。
 
 结构
