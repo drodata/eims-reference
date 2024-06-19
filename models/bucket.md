@@ -124,6 +124,11 @@ Column                              | Type      | Null | Note
 `bucket_selection_id`               | int       | No   | 取料编号
 `stock`                             | int       | No   | 库存
 
+### 领料退回
+领料开始追溯的物资，会因为工艺调整等原因重新退回仓库。借助通用的 Withdrawal 模型，使用关联表 `withdraw_bucket_selection_trace` 将其和 BucketSelectionTrace 关联起来。
+
+gwMixer 根据追溯编码，在追溯详情页面发起退回申请。仓库确认入库后，自动生成一条数量变动记录 (BucketSelectionTraceSnap)
+
 数量变动日志
 ---------------------------------------------------------------------------
 对砂轮生产来说，发生的每一次数量变动都会记录，方便查询。

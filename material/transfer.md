@@ -1,8 +1,10 @@
 # Transfer 借调
 
+物资借调用来记录部门间物资的借调，可用于各部门成本核算。
+
 相关角色及权限：
-- `createTaansfer`: warehouseKeeper 拥有；
-- `manageTransfer`: productionDirector, gwDirector, saleDirector, warehouseKeeper, cfo;
+- `createTaansfer`: materialKeeper 拥有；
+- `manageTransfer`: productionDirector, gwDirector, saleDirector, materialKeeper, cfo;
 - `viewTransfer`: createTransfer, manageTransfer;
 
 ### Schema
@@ -11,6 +13,8 @@ Column                              | Type      | Null | Note
 `id`                                | int       | No   | 
 `source_branch_id`                  | int       | No   | 
 `target_branch_id`                  | int       | No   | 
+`source_section_id`                 | int       | No   | 发出部门
+`target_section_id`                 | int       | No   | 接收部门
 `status`                            | int       | No   | 已创建、已取料、已完成
 `inventory_id`                      | int       | No   | 关联 inventory
 
@@ -30,9 +34,10 @@ Column                              | Type      | Null | Note
 有仓管提交。
 
 ### 评审
-如果涉及制品中心，则需要评审，否则不需要。
 
-接收仓管 (→ 销售经理) → 发出仓管 → 发出生产经理
+> 申请人 (→ 销售经理) → 发出部门物资保管员 → 发出部门生产经理
+
+- 销售经理参与的目的是确认借调物资的单价,方便将来部门成本核算；
 
 ### 确定单价
 对于非采购类物资，需要销售经理录入单价至 `transfer_item.price`, 以备将来到处使用。
@@ -46,4 +51,5 @@ Column                              | Type      | Null | Note
 
 变更日志
 --------------------------------------------------------------------------
+- 2024-06-18 `Enh` schema: 增加 `source_section_id` 和 `target_section_id`, 更改为以部门 (Section) 为单位的借调；
 - 2024-03-21 `Enh` schema: 增加 `transfer_item.price`, 方便销售录入单价；
