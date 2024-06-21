@@ -3,6 +3,8 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2024-06-20 `Enh` [Requisition][requisition]: 增加`section_id`, 物资领用精确到以小部门为单位
+- 2024-06-20 `Enh` [User][user]: 增加`user.section_id`, 同时解决消耗品领用和采购需求申请时申请部门不明确的问题；
 - 2024-06-18 `Enh` 改进 [Transfer 物资借调][transfer]: 改成以部门 (Section)为单位. 同时停用早前的 Allotment 模型；
 - 2024-06-13 `Enh` 扩展 [Withdrawal][withdrawal], 承载领料交付后重新退还仓库的情形；
 - 2024-06-03 `Add` [物资调拨单 Allotment][allotment], 解决同一账套内、不同部门间物资的流动；
@@ -72,6 +74,8 @@ Change Logs
 
 [generic-withdrawal]: /models/withdrawal.md
 [withdrawal]: /models/withdrawal.md
+[requisition]: /models/Requisition.md
+[user]: /models/user.md
 [generic-review]: /models/review.md
 [section]: /models/section.md
 [material]: /material/material.md

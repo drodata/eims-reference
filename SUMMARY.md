@@ -63,6 +63,7 @@
 * [Console](console/README.md)
     * [监控](console/monitor.md)
 * [通用模型](models/README.md)
+    * [User](models/user.md)
     * [Inventory 库存日志](models/inventory.md)
     * [Section 核算部门](models/section.md)
     * [Trace 追溯](models/trace.md)
