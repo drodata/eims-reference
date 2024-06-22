@@ -1,12 +1,14 @@
 # 采购单
 
-Structure
+结构
 ---------------------------------------------------------------------------
 ### PurchaseItem Schema
 
 Column                              | Type      | Null | Note
 ------------------------------------|-----------|------|-------
 `id`                                | int       | No   | 
+`branch_id`                         | int       | No   | 账套
+`section_id`                        | int       | No   | 所属部门
 `refuse_id`                         | int       | Yes  | 退货编号
 `purchase_id`                       | int       | Yes  | 采购单号。退货也记录
 `type`                              | int       | No   | 类型 Lookup
@@ -18,6 +20,8 @@ Column                              | Type      | Null | Note
 `action`                            | int       | No   | 订货、退货、换货
 `price`                             | int       | Yes  | 
 `quantity`                          | int       | No   | 
+
+- `section_id`: 采购明细内关联的需求单对应的申请部门，必须和采购单的所属部门一致；
 
 ### Schema PurchaseItemFactor
 类似微粉这些特定的商品，需要搜集更精确的数据要求，而不是简单地写在备注栏内。单独创建一个表进行扩展。
@@ -150,8 +154,12 @@ Role/Permission Name    | Parent
 
 Change Logs
 ---------------------------------------------------------------------------
+
+- 2024-06-22 `Enh` Schema, 增加 `section_id` 列，精确到小部门；
+
 日期        | 类别      | 动作 | 说明
 ------------|-----------|------|-------------------
+2024-06-22  | Schema    | 改进 | 增加 `purchase.section_id`
 2023-12-22  | Schema    | 新增 | PurchaseItemFactor 承载具体要求
 2023-08-15  | Action    | 新增 | 让步接收申请评审
 2023-08-11  | Scheme    | 新增 |`purchase_item.was_inspected`;

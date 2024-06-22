@@ -3,6 +3,8 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2024-06-22 `Enh` [DemandItem][demand] 和 [Demand][demand]: 增加`section_id`, 按照小部门生成对应记录；
+- 2024-06-21 `Enh` [Review][review]: 增加`section_id`, 按照小部门生成台帐检查
 - 2024-06-20 `Enh` [Requisition][requisition]: 增加`section_id`, 物资领用精确到以小部门为单位
 - 2024-06-20 `Enh` [User][user]: 增加`user.section_id`, 同时解决消耗品领用和采购需求申请时申请部门不明确的问题；
 - 2024-06-18 `Enh` 改进 [Transfer 物资借调][transfer]: 改成以部门 (Section)为单位. 同时停用早前的 Allotment 模型；
@@ -77,6 +79,7 @@ Change Logs
 [requisition]: /models/Requisition.md
 [user]: /models/user.md
 [generic-review]: /models/review.md
+[review]: /models/review.md
 [section]: /models/section.md
 [material]: /material/material.md
 [transfer]: /material/transfer.md
@@ -85,6 +88,8 @@ Change Logs
 [match-hoard]: /order/match-hoard.md
 [console-monitor]: /console/monitor.md
 [company-hoard]: /purchasing/hoard.md
+[demand]: /purchasing/demand.md
+[demand-item]: /purchasing/demand-item.md
 [exchange]: /purchasing/exchange.md
 [gwp]: /production/grinding-wheel-production.md
 [warehousing]: /production/warehousing.md
