@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2024-07-01 `Enh` PurchaseItemFactor Schema, 增大 `base_d50` 和 `offset_d50` 精度各一位，解决类似 1.75 的中值无法填写的问题；
 - 2024-06-22 `Enh` [DemandItem][demand] 和 [Demand][demand]: 增加`section_id`, 按照小部门生成对应记录；
 - 2024-06-21 `Enh` [Review][review]: 增加`section_id`, 按照小部门生成台帐检查
 - 2024-06-20 `Enh` [Requisition][requisition]: 增加`section_id`, 物资领用精确到以小部门为单位

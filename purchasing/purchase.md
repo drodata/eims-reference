@@ -30,8 +30,8 @@ Column                              | Type      | Null | Note
 ------------------------------------|-----------|------|-------
 `id`                                | int       | No   | `purchase_item.id` 共用主键
 `type`                              | bool      | No   | 类型 Lookup
-`base_d50`                          | decimal   | Yes  | 
-`offset_d50`                        | decimal   | Yes  |
+`base_d50`                          | decimal   | Yes  | decimal(5,2)
+`offset_d50`                        | decimal   | Yes  | decimal(4,3)
 `shape`                             | bool      | Yes  |
 `shop_name`                         | string    | Yes  |
 `note`                              | string    | Yes  | reserved
@@ -155,6 +155,7 @@ Role/Permission Name    | Parent
 Change Logs
 ---------------------------------------------------------------------------
 
+- 2024-07-01 `Enh` PurchaseItemFactor Schema, 增大 `base_d50` 和 `offset_d50` 精度各一位
 - 2024-06-22 `Enh` Schema, 增加 `section_id` 列，精确到小部门；
 
 日期        | 类别      | 动作 | 说明
