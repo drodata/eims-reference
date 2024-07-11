@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2024-07-04 `Enh` 增加 `dangerousSkuIds` 参数：危险品名称只显示编码；
 - 2024-07-01 `Enh` PurchaseItemFactor Schema, 增大 `base_d50` 和 `offset_d50` 精度各一位，解决类似 1.75 的中值无法填写的问题；
 - 2024-06-22 `Enh` [DemandItem][demand] 和 [Demand][demand]: 增加`section_id`, 按照小部门生成对应记录；
 - 2024-06-21 `Enh` [Review][review]: 增加`section_id`, 按照小部门生成台帐检查

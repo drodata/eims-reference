@@ -6,8 +6,10 @@
 
 `unit.has_specimen` 列用来判断一个 purchase item 是否需要留样。对于需要留样的采购单，入库前会进行额外检查，确保留操作按照要求操作。
 
-Specimen Schema
+结构
 ---------------------------------------------------------------------------
+
+### Specimen Schema
 Column                              | Type      | Null | Note
 ------------------------------------|-----------|------|-------
 `id`                                | int       | No   | 和 Unit 共用主键
@@ -17,7 +19,13 @@ Column                              | Type      | Null | Note
 `quantity`                          | int       | No   | 留样数量.类别是“普通”时必填
 `status`                            | int       | No   | 已创建(1)、已交付(3)、已签收（9）、已归档（14）
 
-Action List
+### 权限
+Role/Permission Name    | Description   |  Parents
+------------------------|---------------|-----------------
+`viewSpecimen`          |               | `createSpecimen`, materialKeeper, productionDirector, saleDirector, gwDirector
+`createSpecimen`        |               | qualityChecker
+
+操作
 ---------------------------------------------------------------------------
 Route                           |   名称    | 说明
 --------------------------------|-----------|---------
