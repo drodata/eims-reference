@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2024-07-17 `Enh` [Company schema,][customer], 新增 `type` 和 `email`. 外贸客户邮箱为必填项;
 - 2024-07-17 `Enh` [Bucket 增加“作废”操作][section-bucket-discard];
 - 2024-07-17 `Enh` [Transfer 增加“作废”操作][section-transfer-discard];
 - 2024-07-04 `Enh` 增加 `dangerousSkuIds` 参数：危险品名称只显示编码；
@@ -99,6 +100,7 @@ Change Logs
 [warehousing]: /production/warehousing.md
 [deal]: /sale/deal.md
 [outflow]: /customer/outflow.md
+[customer]: /customer/customer.md
 
 [topic-user-domain-filter]: /topics/user-domain-filter.md
 [topic-rbac-holder-rule]: /topics/rbac-holder-rule.md

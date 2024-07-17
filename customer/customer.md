@@ -7,6 +7,8 @@ Column                              | Type      | Null | Note
 ------------------------------------|-----------|------|-------
 `id`                                | int       | No   | 
 `category`                          | bool      | No   | Lookup 类别。客户(1)
+`type`                              | bool      | Yes  | 客户类别：内贸(1)、外贸(2)
+`email`                             | string    | Yes  | (外贸)客户邮箱地址
 `last_deal_time`                    | int       | Yes  | 最后一次大货交付时间 
 `recycles_at`                       | int       | Yes  | 下一次回收时间
 
@@ -22,3 +24,7 @@ Column                              | Type      | Null | Note
 - **变更地址** 
   
   `address/edit`. 记录关键字段的修改过程。
+
+变更日志
+--------------------------------------------------------------------------
+- 2024-07-17 `Enh` Schema, 新增`type` 和 `email` 列，记录外贸客户邮箱；
