@@ -3,6 +3,8 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2024-07-17 `Enh` [Bucket 增加“作废”操作][section-bucket-discard];
+- 2024-07-17 `Enh` [Transfer 增加“作废”操作][section-transfer-discard];
 - 2024-07-04 `Enh` 增加 `dangerousSkuIds` 参数：危险品名称只显示编码；
 - 2024-07-01 `Enh` PurchaseItemFactor Schema, 增大 `base_d50` 和 `offset_d50` 精度各一位，解决类似 1.75 的中值无法填写的问题；
 - 2024-06-22 `Enh` [DemandItem][demand] 和 [Demand][demand]: 增加`section_id`, 按照小部门生成对应记录；
@@ -116,12 +118,14 @@ Change Logs
 [section-material-sku-additional-property]: /material/sku.md#附加属性
 [section-customer-billing-modern-billing]: /customer/billing.md#modern-billing
 [section-bucket-item-toggle-pickness]: /models/bucket.md#无需取料
+[section-bucket-discard]: /models/bucket.md#作废
 [section-trace-usage]: /models/trace.md#使用
 [section-oem-delivery-concession]: /purchasing/oem.md#处理不合格品
 [section-oem-delivery-refuse]: /purchasing/oem.md#退货
 [section-material-dedicated]: /material/material.md#定向物资
 [section-press-discard]: /production/press.md#作废
 [section-mix-toggle-press]: /production/mix.md#控制压块可见性
+[section-transfer-discard]: /material/transfer.md#作废
 
 [action-purchase-item-build-detection]: /purchasing/purchase.md#purchase-item/build-detection
 

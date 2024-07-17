@@ -64,7 +64,7 @@ Column                      | Type      | Null | Note
 
 `Bucket::EVENT_DELIVERY_CHANGED` 以下操作将触发该事件，完成领料单状态的更新。
 
-- 领料交付单交付时 (`bucket-delivery/create`);
+- 领料交付单交付时 (`bucket-delivery/create`). 若所有条目均已交付则状态更新为“已完成”，否则更新为“准备中”；
 - 领料明细变更数量时 (`bucket-item/tweak-quantity`);
 
 
@@ -158,6 +158,15 @@ Column                              | Type      | Null | Note
 ### 调整数量
 `bucket-item/tweak-quantity` 借助通用 Edition 模型实现。原辅料评审后允许改数。数量变更后会触发原辅料单状态更新，确保已完成交付的状态能更新。
 
+### 作废
+在评审完成后、尚未交付前的这段时间，申请人可以作废单据。
+
+> 评审顺序: 申请人 → 所在部门物资保管员
+
+作废按钮同时满足以下条件才会显示：
+- 具有 `createBucket` 权限；
+- 状态是“已创建”
+
 ### 终止交付
 
 `bucket/terminate`. 借助 Editon 实现，本质是将领料单状态设置为“已结束”。
@@ -170,6 +179,7 @@ Column                              | Type      | Null | Note
 
 Change Logs
 
+- 2024-07-17 Add 增加“作废"操作；
 - 2024-06-13 Enh BucketSelectionTraceSnap. 增加 `withdrawal_id` 列，新增退货动作；
 - 2024-05-28 Enh 增加 `section_id` 列，区分使用部门；
 - 2023-11-15 Enh `logic`: 调整`Bucket::EVENT_DELIVERY_CHANGED` 触发时机

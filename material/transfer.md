@@ -15,7 +15,7 @@ Column                              | Type      | Null | Note
 `target_branch_id`                  | int       | No   | 
 `source_section_id`                 | int       | No   | 发出部门
 `target_section_id`                 | int       | No   | 接收部门
-`status`                            | int       | No   | 已创建、已取料、已完成
+`status`                            | int       | No   | 已创建(1)、已交付(3)、已作废(4)、已完成(5)
 `inventory_id`                      | int       | No   | 关联 inventory
 
 ### TransferItem Schema
@@ -44,6 +44,10 @@ Column                              | Type      | Null | Note
 
 ### 交付
 `confirm-pick`. 发出部门仓管操作，仅起到标记作用。
+### 作废
+在评审通过后、入库前的这段时间，申请人可以申请作废单据。
+
+> 申请人 →  发出部门物资保管员 → 发出部门生产经理
 
 ### 入库
 `store`. 接收部门仓管操作。入库后将生成对应的 inventory 记录，使库存生效。
@@ -51,5 +55,6 @@ Column                              | Type      | Null | Note
 
 变更日志
 --------------------------------------------------------------------------
+- 2024-07-17 `Add` 新增作废操作
 - 2024-06-18 `Enh` schema: 增加 `source_section_id` 和 `target_section_id`, 更改为以部门 (Section) 为单位的借调；
 - 2024-03-21 `Enh` schema: 增加 `transfer_item.price`, 方便销售录入单价；
