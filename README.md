@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2024-07-18 `Add` [Defect 瑕疵问题][defect], 记录检验合格且已入库物资又发现的小问题；
 - 2024-07-17 `Enh` [Company schema,][customer], 新增 `type` 和 `email`. 外贸客户邮箱为必填项;
 - 2024-07-17 `Enh` [Bucket 增加“作废”操作][section-bucket-discard];
 - 2024-07-17 `Enh` [Transfer 增加“作废”操作][section-transfer-discard];

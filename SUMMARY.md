@@ -60,6 +60,7 @@
     * [登记回收](material/fixture.md)
     * [Transfer 借调](material/transfer.md)
     * [Allotment 调拨](material/allotment.md)
+    * [Defect 瑕疵](material/defect.md)
 * [Console](console/README.md)
     * [监控](console/monitor.md)
 * [通用模型](models/README.md)
