@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2024-07-19 `Enh` [Seller 增加 'level' 列][section-purchase-supplier-level], 分 A, B 和 C 三个分类，记录供应商分类；
 - 2024-07-18 `Add` [Defect 瑕疵问题][defect], 记录检验合格且已入库物资又发现的小问题；
 - 2024-07-17 `Enh` [Company schema,][customer], 新增 `type` 和 `email`. 外贸客户邮箱为必填项;
 - 2024-07-17 `Enh` [Bucket 增加“作废”操作][section-bucket-discard];
@@ -113,6 +114,7 @@ Change Logs
 [section-purchase-inspection]: /purchasing/purchase.md#检测
 [section-purchase-inspection-methods]: /purchasing/purchase.md#检测项目
 [section-purchase-concession]: /purchasing/purchase.md#让步接收
+[section-purchase-supplier-level]: /purchasing/supplier.md#类别
 [section-purchase-audit]: /purchasing/purchase.md#评审
 [section-demand-discard]: /purchasing/purchase.md#作废
 [section-demand-item-inquire]: /purchasing/demand-item.md#询价
