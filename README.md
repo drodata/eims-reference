@@ -90,6 +90,7 @@ Change Logs
 [material]: /material/material.md
 [transfer]: /material/transfer.md
 [allotment]: /material/allotment.md
+[defect]: /material/defect.md
 [coating]: /order/coating.md
 [match-hoard]: /order/match-hoard.md
 [console-monitor]: /console/monitor.md
