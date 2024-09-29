@@ -7,8 +7,9 @@ DetectionConcession 之所以和 Detection 共用主键, 是因为所有的让�
 
 - 采购单检测；
 - 退货单检测；
+- 代加工交付单检测；
 
-###更加通用的 Concession
+### 更加通用的 Concession
 这个 DetectionConcession 可以抽象出更加通用的 Concession, 本来打算用在 Selection 取料(防止外购料高买低卖)上，后来取消。以后出现类似需求时再调整。
 
 ### Schema

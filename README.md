@@ -3,6 +3,9 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2024-09-29 `Enh` [二次加工，增加 section id 列][reprocessing], 支持制品2部提交
+- 2024-08-28 `Adj` RBAC. 新增: `gaDirector` 角色、`viewGroupedAbrasiveGoods` 和 `searchContainer` 权限。确保制品2部生产经理可以查看库存和相关订单；
+- 2024-08-22 `Adj` 停用仓库账号密码登陆操作, 和专用手机保持一致；
 - 2024-07-19 `Enh` [Seller 增加 'level' 列][section-purchase-supplier-level], 分 A, B 和 C 三个分类，记录供应商分类；
 - 2024-07-18 `Add` [Defect 瑕疵问题][defect], 记录检验合格且已入库物资又发现的小问题；
 - 2024-07-17 `Enh` [Company schema,][customer], 新增 `type` 和 `email`. 外贸客户邮箱为必填项;
@@ -82,6 +85,7 @@ Change Logs
 2023-06-14  | BucketItem        | Action    | 新增 | `bucket-item/tweak-quantity`, 评审后可以微调数量;
 
 [generic-withdrawal]: /models/withdrawal.md
+[Reprocessing]: /models/reprocessing.md
 [withdrawal]: /models/withdrawal.md
 [requisition]: /models/Requisition.md
 [user]: /models/user.md

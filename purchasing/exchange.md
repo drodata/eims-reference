@@ -23,7 +23,7 @@ Column                              | Type      | Null | Note
 ### 新建
 采购员可以创建调配单
 ### 取料 
-
+**调配单不支持分批交付，所有物资取料完成方可出库**。
 `exchange/pick-portal`. 借助 ExchangeItemPickup 连接通用 Pickup 模型实现。
 
 2023.12.19 之前的取料记录存储在 `ACTION_EXCHANGE` inventory 内。

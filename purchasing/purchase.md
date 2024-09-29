@@ -155,6 +155,7 @@ Role/Permission Name    | Parent
 Change Logs
 ---------------------------------------------------------------------------
 
+- 2024-08-29 `Enh` 重新启用 deadline 列，作为“预计交货期”显示；
 - 2024-07-01 `Enh` PurchaseItemFactor Schema, 增大 `base_d50` 和 `offset_d50` 精度各一位
 - 2024-06-22 `Enh` Schema, 增加 `section_id` 列，精确到小部门；
 
