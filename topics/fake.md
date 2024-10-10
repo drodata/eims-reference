@@ -1,22 +1,25 @@
 # Fake
+常规操作步骤：
+
+- fake/deal: 自动生成订单
+- fake/earnings 生成回款记录
+- fake/purchase 2024-09 采购记录(逐月)
+- fake/cost 2024-09 付款记录(逐月)
 
 Actions
 ---------------------------------------------------------------------------
 
 Command | Example | Note
 --------|----------|-------
+`earnings` | `fake/earnings` | 自动生成收款记录至当前时间
 `buyer` | `fake/buyer` |
 `seller` | `fake/seller` |
 `deal` | `fake/deal 2018-05`, `fake/deal 2018-05-01` | 以指定时间段的 Order 为蓝本，复制到五年后的 Deal 中
-`fake/scale-deal` | `fake/scale-deal 2023-01 2`, `fake/scale-deal 235 0.5` | 调整指定月份或编号的订单
-`earnings` | `fake/earnings 2022-02`, `fake/earnings 2022-02-02` | 为指定月份或日期的订单自动生成收入记录
-
+`scale-deal` | `fake/scale-deal 2023-01 2`, `fake/scale-deal 235 0.5` | 调整指定月份或编号的订单
 `purchase` | `fake/purchase 2023-01` | 以**超硬系统中**指定月份的采购单为蓝本，自动生成采购单
 `fake/scale-purchase` | `fake/scale-purchase 2023-01 8` | 调整指定月份采购单数量，次参数是调整基数，默认值是 2
-
 `cost` | `fake/cost 2023-01` | 为指定月份的采购单生成付款记录
 `fake/scale-cost` | `fake/scale-cost 2023-01 2`, `fake/scale-cost 235 10` | 调整指定月份或编号的付款记录
-
 `fake/scale-purchase` | `fake/scale-purchase 2023-01 8` | 调整指定月份采购单数量，次参数是调整基数，默认值是 2
 `fake/delete-purchase` | `fake/scale-purchase 2023-01`, `fake/scale-purchase 567` | 删除指定月份或具体某个采购单
 
@@ -64,15 +67,10 @@ Command | Example | Note
 
 这也意味着**回款记录不需要单独调整，直接调整订单即可。**
 
-回款 `fake/earnings`
+回款
 ---------------------------------------------------------------------------
 
-> 使用更方便的 `fake/quick-earnings`. 不需要带任何参数即可解决问题
-
-先生成订单，根据订单生成回款。例如先使用 `./yii fake/order 2018-05` 生成 2023 年 5 月的订单，然后使用 `fake/earnings 2023-05` 生成回款记录。
-
-- 回款时间：在订单创建时间基础上延后一到两天;
-- 如果订单已有对应的回款，或者随机生成的回款时间大于现在，则跳过，暂不生成。假如现在是 5 月，先用 `fake/deal 2018-05-03` 一天一天生成订单，然后重复执行 `fake/earnings 2023-05` 即可同步收入记录。
+无需设置任何参数,直接执行 `fake/earnings` 即可自动生成从最后一笔收入记录至当前时间内的收款记录。
 
 ### 导出客户欠款表
 
