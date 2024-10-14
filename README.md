@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2024-10-14 `Enh` [Mix 混料单增加“评审”环节][section-mix-audit];
 - 2024-09-29 `Enh` [二次加工，增加 section id 列][reprocessing], 支持制品2部提交
 - 2024-08-28 `Adj` RBAC. 新增: `gaDirector` 角色、`viewGroupedAbrasiveGoods` 和 `searchContainer` 权限。确保制品2部生产经理可以查看库存和相关订单；
 - 2024-08-22 `Adj` 停用仓库账号密码登陆操作, 和专用手机保持一致；
@@ -135,6 +136,7 @@ Change Logs
 [section-material-dedicated]: /material/material.md#定向物资
 [section-press-discard]: /production/press.md#作废
 [section-mix-toggle-press]: /production/mix.md#控制压块可见性
+[section-mix-audit]: /production/mix.md#评审
 [section-transfer-discard]: /material/transfer.md#作废
 
 [action-purchase-item-build-detection]: /purchasing/purchase.md#purchase-item/build-detection
