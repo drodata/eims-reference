@@ -38,6 +38,7 @@ Column                      | Type  | Note
 
 - 不支持用户自定义未交付数量。当前货物还未交付的数量，即要取消的数量；
 - goods 表根据之前是否有交付记录分为两种情况：之前交付过，则仅调整数量，否则删除 goods 记录；
+    - `preparation.goods_id` 已取消外键约束(#22)，因此删除 goods 并不会删除 preparation;
 - `order_end_item.specification` 有一个额外验证：确保将要删除的记录上没有最终检验结果；
 - 确定执行(`OrderEnd::apply()`)后，触发各个 handler 做如下事情：
     - 更新订单的状态和金额两列；

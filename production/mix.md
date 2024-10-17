@@ -29,7 +29,7 @@ Column                              | Type      | Null | Note
 `grinding_wheel_production_id`      | int       | No   | 生产编号
 `grinding_wheel_code`               | int       | No   | 砂轮内部编码 Lookup
 `mix_trace_id`                      | int       | Yes  | 追溯编码. `pack` scenario 时必填
-`package_amount`                    | int       | Yes  | 总袋数. `pack` scenario 时必填
+`package_amount`                    | int       | Yes  | 总袋数(1袋对应一片砂轮)
 `status`                            | int       | No   | 状态。已创建、已完成
 `need_press`                        | int       | No   | “是否需要压块”列
 `type`                              | int       | Yes  | 预留列。目前只有砂轮混料这一种类别；
@@ -40,8 +40,8 @@ Column                              | Type      | Null | Note
 
 ### 操作
 
-- 新建 `create`：确定生产编号和内部编号
-- 包装 `pack`：确定追溯码和重量；
+- 新建 `create`：确定生产编号、内部编号、包装袋数
+- 包装 `pack`：确定追溯码；
 - 取消包装 `cancel-pack`：
 
 数量异常
@@ -68,6 +68,7 @@ Column                              | Type      | Null | Note
 Change Logs
 ---------------------------------------------------------------------------
 
+- 2024-10-15 调整 `package_amount` 输入顺如：放在评审之前；
 - 2024-10-14 增加评审环节.
 - 2024-01-19 改进 Mix, 增加 `need_press` 布尔列，控制压块页面混料单的显示；
 - 2023-07-22 新增 `mix_lapse` 表，数量上报
