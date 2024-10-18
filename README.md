@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2024-10-17 `Add` [订单选料][judge], 放在取料操作前，指导仓库取料工作;
 - 2024-10-14 `Enh` [Mix 混料单增加“评审”环节][section-mix-audit];
 - 2024-09-29 `Enh` [二次加工，增加 section id 列][reprocessing], 支持制品2部提交
 - 2024-08-28 `Adj` RBAC. 新增: `gaDirector` 角色、`viewGroupedAbrasiveGoods` 和 `searchContainer` 权限。确保制品2部生产经理可以查看库存和相关订单；
@@ -98,6 +99,7 @@ Change Logs
 [allotment]: /material/allotment.md
 [defect]: /material/defect.md
 [coating]: /order/coating.md
+[judge]: /order/judge.md
 [match-hoard]: /order/match-hoard.md
 [console-monitor]: /console/monitor.md
 [company-hoard]: /purchasing/hoard.md
