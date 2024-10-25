@@ -15,7 +15,7 @@ Column                              | Type      | Null | Note
 `id`                                | int       | No   | 
 `goods_id`                          | int       | No   | 
 `content`                           | string    | Yes  | 
-`first_candidate_id`                | int       | Yes  | 
+`first_candidate_id`                | int       | Yes  | 预留
 `second_candidate_id`               | int       | Yes  | 
 `third_candidate_id`                | int       | Yes  | 
 `status`                            | int       | No   | Lookup 状态：已创建、已确认
@@ -25,7 +25,11 @@ Column                              | Type      | Null | Note
 
 ### 新建
 
-`content` 和 `first_candidate_id` 两者至少填写一个，即要么确定批次，要么填写怎么做；
+质检员在 `content` 栏填写取料要求。
 
 ### 确定
 confirm 操作仅改变状态为“已确认”。
+
+变更
+--------------------------------------------------------------------------
+- 2024-10-24 调整 新建逻辑，不再输入备选批次栏,质检只需要录入质量要求

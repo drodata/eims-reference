@@ -25,6 +25,7 @@
     * [Outflow 流失](customer/outflow.md)
     * [Statement 单笔帐单](customer/statement.md)
     * [Billing 月结帐单](customer/billing.md)
+    * [Industry 行业](customer/industry.md)
 * [订单](order/README.md)
     * [明细](order/goods.md)
     * [选料](order/judge.md)

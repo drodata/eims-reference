@@ -3,6 +3,9 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2024-10-25 `Add` [客户行业][industry]上新增[设置行业备注][section-industry-set-judge-note]操作；
+- 2024-03-15 `Add` RBAC 权限 `viewIndustryJudgeNote` (查看客户行业备注), 授权给生产经理和仓管员；
+- 2024-10-24 `Enh` [订单选料][judge]填写表单，质检只需要录入质量方面的要求；
 - 2024-10-17 `Add` [订单选料][judge], 放在取料操作前，指导仓库取料工作;
 - 2024-10-14 `Enh` [Mix 混料单增加“评审”环节][section-mix-audit];
 - 2024-09-29 `Enh` [二次加工，增加 section id 列][reprocessing], 支持制品2部提交
@@ -111,6 +114,7 @@ Change Logs
 [deal]: /sale/deal.md
 [outflow]: /customer/outflow.md
 [customer]: /customer/customer.md
+[industry]: /customer/industry.md
 
 [topic-user-domain-filter]: /topics/user-domain-filter.md
 [topic-rbac-holder-rule]: /topics/rbac-holder-rule.md
@@ -130,6 +134,7 @@ Change Logs
 [section-order-delivery-detection]: /order/delivery.md#检测
 [section-material-sku-additional-property]: /material/sku.md#附加属性
 [section-customer-billing-modern-billing]: /customer/billing.md#modern-billing
+[section-industry-set-judge-note]: /customer/industry.md#设置取料备注
 [section-bucket-item-toggle-pickness]: /models/bucket.md#无需取料
 [section-bucket-discard]: /models/bucket.md#作废
 [section-trace-usage]: /models/trace.md#使用
