@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2024-11-21 `Enh` [二次加工，增加特分类”去除杂质“][reprocessing], 供制品中心混料员使用
 - 2024-10-25 `Add` [客户行业][industry]上新增[设置行业备注][section-industry-set-judge-note]操作；
 - 2024-03-15 `Add` RBAC 权限 `viewIndustryJudgeNote` (查看客户行业备注), 授权给生产经理和仓管员；
 - 2024-10-24 `Enh` [订单选料][judge]填写表单，质检只需要录入质量方面的要求；
@@ -90,7 +91,6 @@ Change Logs
 2023-06-14  | BucketItem        | Action    | 新增 | `bucket-item/tweak-quantity`, 评审后可以微调数量;
 
 [generic-withdrawal]: /models/withdrawal.md
-[Reprocessing]: /models/reprocessing.md
 [withdrawal]: /models/withdrawal.md
 [requisition]: /models/Requisition.md
 [user]: /models/user.md
@@ -100,6 +100,7 @@ Change Logs
 [material]: /material/material.md
 [transfer]: /material/transfer.md
 [allotment]: /material/allotment.md
+[reprocessing]: /material/reprocessing.md
 [defect]: /material/defect.md
 [coating]: /order/coating.md
 [judge]: /order/judge.md
