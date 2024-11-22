@@ -23,10 +23,10 @@ Column                              | Type      | Null | Note
 ### status
 Code                    | Value  | Note
 ------------------------|--------|------------
-PREPARING               |   1    | 
-DELIVERING              |   2    | 
-COMPLETED               |   3    | 
-TERMINATED              |   14   | 终止交付
+CREATED                 |   11   | 已创建
+PROCESSING              |   12   | 生产中
+COMPLETED               |   13   | 已完成
+DISCARDED               |   14   | 作废
 
 ### WarehousingProcessingInspection
 
@@ -54,3 +54,7 @@ CONFIRMED               |   5    | 已审核
 - `raw_material_supplier`;
 - `strength`;
 - `shape`;
+### 作废
+`warehousing/discard`. 一些生产单由于其它原因无法或不再需要入库时，通过此操作完成。
+
+评审顺序：质检→ 仓库 → 生产经理
