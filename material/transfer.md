@@ -3,7 +3,7 @@
 物资借调用来记录部门间物资的借调，可用于各部门成本核算。
 
 相关角色及权限：
-- `createTaansfer`: materialKeeper 拥有；
+- `createTansfer`: materialKeeper, warehouseKeeper, gaWarehouseKeeper 拥有；
 - `manageTransfer`: productionDirector, gwDirector, saleDirector, materialKeeper, cfo;
 - `viewTransfer`: createTransfer, manageTransfer;
 
