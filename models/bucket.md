@@ -127,7 +127,7 @@ Column                              | Type      | Null | Note
 ### 领料退回
 领料开始追溯的物资，会因为工艺调整等原因重新退回仓库。借助通用的 Withdrawal 模型，使用关联表 `withdraw_bucket_selection_trace` 将其和 BucketSelectionTrace 关联起来。
 
-gwMixer 根据追溯编码，在追溯详情页面发起退回申请。仓库确认入库后，自动生成一条数量变动记录 (BucketSelectionTraceSnap)
+gwMixer 在追溯码查询(`trace/find`)页面，输入需要退货的追溯编号。在详情页面点击“退回”按钮发起申请。仓库确认入库后，自动生成一条数量变动记录 (BucketSelectionTraceSnap)
 
 数量变动日志
 ---------------------------------------------------------------------------
