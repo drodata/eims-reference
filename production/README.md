@@ -2,6 +2,7 @@
 * 微粉
     * [Warehousing 微粉生产](/production/warehousing.md)
 * 砂轮
+    * [生产标准](/production/formula.md)
     * [生产计划](/production/grinding-wheel-plan.md)
     * [生产单](/production/grinding-wheel-production.md)
     * [混料](/production/mix.md)
