@@ -1,4 +1,6 @@
 # Spu
+- Sku 规格的排列顺序依据 `specification.property_id` 升序排列。
+- Sku 名称命名规格 `<sku-specification-group> + <spu-name>`, 例如 "128G 白色 iPhone 15".
 
 ### 评审
 
