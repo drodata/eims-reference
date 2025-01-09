@@ -3,6 +3,7 @@
 * [首页](README.md)
 * [生产](production/README.md)
 * [采购](purchasing/README.md)
+* [财务](finance/README.md)
 * [杂项](misc/README.md)
     * [数据导出](misc/export.md)
     * [角色权限](misc/rbac.md)
