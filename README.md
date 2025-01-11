@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-01-10 `Enh` [支出单][section-cost-evidence], 所有报销流程改为线上签字
 - 2024-11-21 `Enh` [二次加工，增加特分类”去除杂质“][reprocessing], 供制品中心混料员使用
 - 2024-10-25 `Add` [客户行业][industry]上新增[设置行业备注][section-industry-set-judge-note]操作；
 - 2024-03-15 `Add` RBAC 权限 `viewIndustryJudgeNote` (查看客户行业备注), 授权给生产经理和仓管员；
@@ -146,6 +147,8 @@ Change Logs
 [section-mix-toggle-press]: /production/mix.md#控制压块可见性
 [section-mix-audit]: /production/mix.md#评审
 [section-transfer-discard]: /material/transfer.md#作废
+
+[section-cost-evidence]: /finance/cost.md#票证
 
 [action-purchase-item-build-detection]: /purchasing/purchase.md#purchase-item/build-detection
 
