@@ -1,26 +1,26 @@
 # 购买清单
 
-使用场景
----------------------------------------------------------------------------
+此清单都是经过总经理确认、批准购买的物品。用于新建采购单时关联。
 
-### 1. 采购需求 Demand 的子条目
+### 使用场景一
+采购需求 Demand 的子条目
 新建采购需求时，`demand_item.status` 默认值为 null. 
 当采购需求被批准购买 (`Plan::decide()`)后，
 再将 status 设置为 CREATED, 正式列入清单。**对于不批准购买的记录,
 不再在 demand-item/index 显示**.
 
-### 2. in Hoard, Pile and Preparation
+### 使用场景二
 
+in Hoard, Pile and Preparation
 这类清单需要采购员通过 `plan-item/generate` 手动生成.
-
-状态
----------------------------------------------------------------------------
 
 Purchase::syncDemandItemStatus()
 新建、修改、删除、入库
 
-DemandItem
+结构
 ---------------------------------------------------------------------------
+
+### DemandItem Schema
 Column                              | Type      | Null | Note
 ------------------------------------|-----------|------|-------
 `id`                                | int       | No   | 
@@ -41,6 +41,15 @@ Column                              | Type      | Null | Note
 `supplier`                          | string    | Yes  | 选填项
 `status`                            | int       | Yes  | 已创建、采购中、已完成
 `frozen_level`                      | int       | No   | 已创建(1)、已完成(9)
+
+### 类型
+
+Type Constant           | Value     | Desc
+------------------------|-----------|------------
+`TYPE_DEMAND`           | 1         | 正常采购需求所生成
+`TYPE_PREPARATION`      | 2         | 订单备货 (PlanItem)生成
+`TYPE_PILE`             | 3         | 易耗品提前备货
+`TYPE_HOARD`            | 4         | 原材料备货申请
 
 ### 状态
 
@@ -63,6 +72,8 @@ Column                              | Type      | Null | Note
 
 ### 标记已完成
 `mark-completed` (由 Editon 承载). 评审完成后触发 `Editon::applyChanges()`. 对本操作来说，就是把 `status` 列的值更新为已完成。
+
+对于 `TYPE_PREPARATION` 类型的纪录，还需要额外的操作：将关联的需求清单状态设置为已作废。确保销售能正常修改订单。
 
 ### 删除
 类型是 `TYPE_PREPARATION` 的订单备货，在采购未创建采购单之前，有删除的需求：部分订单的需求明细生成后，还想删除订单。这个时候就需要把之前的“创建备货单、询价、生成需求明细”全部倒着执行一遍.
