@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-01-20 `Enh` [订单取料][section-selection-ga2], 组团磨料研磨液交由制品2部仓管取料；
 - 2025-01-10 `Enh` [支出单][section-cost-evidence], 所有报销流程改为线上签字
 - 2024-11-21 `Enh` [二次加工，增加特分类”去除杂质“][reprocessing], 供制品中心混料员使用
 - 2024-10-25 `Add` [客户行业][industry]上新增[设置行业备注][section-industry-set-judge-note]操作；
@@ -134,6 +135,7 @@ Change Logs
 [section-goods-grinding-paste-via]: /order/goods.md#研磨膏制作途径
 [section-reject-concession]: /order/reject.md#处理不合格品
 [section-order-delivery-detection]: /order/delivery.md#检测
+[section-selection-ga2]: /order/selection.md#制品2部取料
 [section-material-sku-additional-property]: /material/sku.md#附加属性
 [section-customer-billing-modern-billing]: /customer/billing.md#modern-billing
 [section-industry-set-judge-note]: /customer/industry.md#设置取料备注
@@ -147,7 +149,6 @@ Change Logs
 [section-mix-toggle-press]: /production/mix.md#控制压块可见性
 [section-mix-audit]: /production/mix.md#评审
 [section-transfer-discard]: /material/transfer.md#作废
-
 [section-cost-evidence]: /finance/cost.md#票证
 
 [action-purchase-item-build-detection]: /purchasing/purchase.md#purchase-item/build-detection
