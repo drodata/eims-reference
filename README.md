@@ -3,6 +3,8 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+''
+- 2025-01-21 `Enh` [组团磨料生产单][section-manufacture-discard], 支持”作废“操作；
 - 2025-01-20 `Enh` [二次加工单][reprocessing], 支持组团磨料研磨液的加工；
 - 2025-01-20 `Enh` [订单取料][section-selection-ga2], 组团磨料研磨液交由制品2部仓管取料；
 - 2025-01-10 `Enh` [支出单][section-cost-evidence], 所有报销流程改为线上签字
@@ -149,6 +151,7 @@ Change Logs
 [section-press-discard]: /production/press.md#作废
 [section-mix-toggle-press]: /production/mix.md#控制压块可见性
 [section-mix-audit]: /production/mix.md#评审
+[section-manufacture-discard]: /production/manufacture.md#作废
 [section-transfer-discard]: /material/transfer.md#作废
 [section-cost-evidence]: /finance/cost.md#票证
 
