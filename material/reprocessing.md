@@ -1,9 +1,9 @@
 # 二次加工
-相关权限：
 
-角色/权限               | 说明
-------------------------|---------------------------------
-`createReprocessing`    | 新建二次加工。gwMixer 和 materialKeeper 拥有
+分为三大类：
+1. 制品1部的 gwMixer 可以提交类型为“去除杂质“的加工单；
+2. 制品2部的 materialKeeper 可以提交类型为“组团磨料研磨液“的加工单；
+3. 微粉部的 materialKeeper 可以提交其它常见类型的单子；
 
 结构
 --------------------------------------------------------------------------
@@ -16,6 +16,14 @@ Column                              | Type      | Null | Note
 `type`                              | bool      | No   |
 `status`                            | int       | No   | Lookup 状态：
 
+### 权限
+角色/权限               | Children                  | Assignment
+------------------------|---------------------------|-----------------------
+`createReprocessing`    | `handleReprocessing`      | materialKeeper, gwMixer
+`handleReprocessing`    | `viewReprocessing`        | qualityChecker
+`manageReprocessing`    | `viewReprocessing`        | productionDirector, gwDirector
+`viewReprocessing`      |                           |
+
 交付单操作
 --------------------------------------------------------------------------
 ### 新建
@@ -24,3 +32,7 @@ Column                              | Type      | Null | Note
 ### 快速检测
 `reprocessing/send-insepect`. 专用于“去除杂质“类的单子，相当于送检和检测二合一。
 ### 入库
+
+变更
+--------------------------------------------------------------------------
+- 2025-01-20 改进 新增”组团磨料研磨液“类型，承载制品2部研磨液加工；
