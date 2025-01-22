@@ -3,7 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
-''
+- 2025-01-22 `Enh` [Fake][fake], 增加全局布尔常量 `FAKE`;
 - 2025-01-21 `Enh` [组团磨料生产单][section-manufacture-discard], 支持”作废“操作；
 - 2025-01-20 `Enh` [二次加工单][reprocessing], 支持组团磨料研磨液的加工；
 - 2025-01-20 `Enh` [订单取料][section-selection-ga2], 组团磨料研磨液交由制品2部仓管取料；
@@ -125,6 +125,7 @@ Change Logs
 [topic-user-domain-filter]: /topics/user-domain-filter.md
 [topic-rbac-holder-rule]: /topics/rbac-holder-rule.md
 [topic-adminlte]: /topics/adminlte.md
+[fake]: /topics/fake.md
 
 [section-purchase-handover-hoard-newbie]: /purchasing/README.md#hoard-newbie
 [section-purchase-specimen]: /purchasing/purchase.md#留样
