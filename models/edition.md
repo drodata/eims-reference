@@ -29,6 +29,7 @@ Column                      | Type      | Null | Note
 - **终止交付** `TYPE_TERMINATE` = 14
 - **取消留样** `TYPE_REVOKE_SPECIMEN` = 21
 - **变更备注** `TYPE_TWEAK_NOTE` = 51
+- **变更订单明细中商品规格** `TYPE_SUBSTITUTE_GOODS_PRODUCT` = 52
 
 ### 状态
 

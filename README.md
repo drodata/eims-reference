@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-02-06 `Enh` [Goods][section-goods-substitute-product], 支持修改特定客户订单或明细中的商品规格；
 - 2025-01-22 `Enh` [Fake][fake], 增加全局布尔常量 `FAKE`;
 - 2025-01-21 `Enh` [组团磨料生产单][section-manufacture-discard], 支持”作废“操作；
 - 2025-01-20 `Enh` [二次加工单][reprocessing], 支持组团磨料研磨液的加工；
@@ -137,6 +138,7 @@ Change Logs
 [section-demand-discard]: /purchasing/purchase.md#作废
 [section-demand-item-inquire]: /purchasing/demand-item.md#询价
 [section-goods-grinding-paste-via]: /order/goods.md#研磨膏制作途径
+[section-goods-substitute-product]: /order/goods.md#变更规格
 [section-reject-concession]: /order/reject.md#处理不合格品
 [section-order-delivery-detection]: /order/delivery.md#检测
 [section-selection-ga2]: /order/selection.md#制品2部取料
