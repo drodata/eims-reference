@@ -4,6 +4,7 @@
 * [订单](order/README.md)
 * [生产](production/README.md)
 * [采购](purchasing/README.md)
+* [产品](product/README.md)
 * [物资](material/README.md)
 * [财务](finance/README.md)
 * [杂项](misc/README.md)

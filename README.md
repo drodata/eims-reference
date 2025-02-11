@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-02-10 `Add` [产品属性 Property][property], 新增规格须经过评审,杜绝不规范规格名称；
 - 2025-02-06 `Enh` [Goods][section-goods-substitute-product], 支持修改特定客户订单或明细中的商品规格；
 - 2025-01-22 `Enh` [Fake][fake], 增加全局布尔常量 `FAKE`;
 - 2025-01-21 `Enh` [组团磨料生产单][section-manufacture-discard], 支持”作废“操作；
@@ -122,6 +123,7 @@ Change Logs
 [outflow]: /customer/outflow.md
 [customer]: /customer/customer.md
 [industry]: /customer/industry.md
+[property]: /product/property.md
 
 [topic-user-domain-filter]: /topics/user-domain-filter.md
 [topic-rbac-holder-rule]: /topics/rbac-holder-rule.md

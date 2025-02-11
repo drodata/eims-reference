@@ -1,4 +1,13 @@
 # 采购
+角色：
+- `hoardNewbie`
+- `pilePurchaser`
+- `hoardPurchaser`
+- `purchaseDirector`
+
+权限：
+- `handlePurchasing`
+
 * [采购单付款](/purchasing/purchase-payment.md)
 * [Payable 金额往来表](/purchasing/payable.md)
 * [对账单 PayableStatement](/purchasing/payable-statement.md)
