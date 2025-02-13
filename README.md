@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-02-13 `Enh` [订单取料][selection], 增加 `section_id` 列，方便制品2部查看自己的记录；
 - 2025-02-10 `Add` [产品属性 Property][property], 新增规格须经过评审,杜绝不规范规格名称；
 - 2025-02-06 `Enh` [Goods][section-goods-substitute-product], 支持修改特定客户订单或明细中的商品规格；
 - 2025-01-22 `Enh` [Fake][fake], 增加全局布尔常量 `FAKE`;
@@ -111,6 +112,7 @@ Change Logs
 [defect]: /material/defect.md
 [coating]: /order/coating.md
 [judge]: /order/judge.md
+[selection]: /order/selection.md
 [match-hoard]: /order/match-hoard.md
 [console-monitor]: /console/monitor.md
 [company-hoard]: /purchasing/hoard.md
