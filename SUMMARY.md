@@ -45,7 +45,6 @@
     * [Detection 检测记录](models/detection.md)
     * [Inspection 检验报告](models/inspection.md)
     * [Seller 卖家](models/seller.md)
-    * [分装](models/package.md)
 * [专题](topics/README.md)
     * [AdminLTE](topics/adminlte.md)
     * [动态拉取下拉菜单改变数据的通用解决方法](topics/fetch-change-data-generically.md)

@@ -14,6 +14,7 @@
 * [Allotment 调拨](/material/allotment.md)
 * [Defect 瑕疵](/material/defect.md)
 * [Relocation 移位](/material/relocation.md)
+* [分装 Package](material/package.md)
 
 角色权限
 --------------------------------------------------------------------------

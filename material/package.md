@@ -11,7 +11,7 @@ Role/Permission Name                | Description           |  Parents
 Column                              | Type      | Null | Note
 ------------------------------------|-----------|------|-------
 `id`                                | int       | No   | 
-`type`                              | string    | No   | 'warehousing', 'manufacture', 'bundle'
+`type`                              | string    | No   | 'warehousing', 'manufacture', 'detection', 'bundle'
 `box`                               | int       | No   | Lookup 类型：桶(1)、袋子(2)
 `quantity`                          | int       | Yes  | type 为 'bundle' 时不需要
 `position`                          | int       | Yes  | 序号
@@ -19,19 +19,7 @@ Column                              | Type      | Null | Note
 `parent_id`                         | int       | Yes  | 父 ID
 `warehousing_id`                    | int       | Yes  | 关联生产单
 `manufacture_id`                    | int       | Yes  | 关联生产单
+`detection_id`                      | int       | Yes  | 关联 detection
 `bundle_id`                         | int       | Yes  | 关联生产单
-
-`sku_id`                            | int       | No   | 
-`container_id`                      | int       | No   | 容器编号。自产
- * @property integer $id
- * @property string $type
- * @property integer $box
- * @property integer $quantity
- * @property integer $position
- * @property integer $status
- * @property integer $parent_id
- * @property integer $warehousing_id
- * @property integer $manufacture_id
- * @property integer $bundle_id
- * @property integer $warehouse_id
- * @property integer $unit_id
+`warehouse_id`                      | int       | Yes  | 'bundle' type 时必须
+`unit_id`                           | int       | Yes  | 'bundle' type 时必须

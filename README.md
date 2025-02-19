@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-02-19 `Enh` [二次加工交付单][section-reprocessing-package], 支持自产微粉入库前分装；
 - 2025-02-13 `Enh` [订单取料][selection], 增加 `section_id` 列，方便制品2部查看自己的记录；
 - 2025-02-10 `Add` [产品属性 Property][property], 新增规格须经过评审,杜绝不规范规格名称；
 - 2025-02-06 `Enh` [Goods][section-goods-substitute-product], 支持修改特定客户订单或明细中的商品规格；
@@ -110,6 +111,7 @@ Change Logs
 [allotment]: /material/allotment.md
 [reprocessing]: /material/reprocessing.md
 [defect]: /material/defect.md
+[package]: /material/package.md
 [coating]: /order/coating.md
 [judge]: /order/judge.md
 [selection]: /order/selection.md
@@ -155,11 +157,12 @@ Change Logs
 [section-oem-delivery-concession]: /purchasing/oem.md#处理不合格品
 [section-oem-delivery-refuse]: /purchasing/oem.md#退货
 [section-material-dedicated]: /material/material.md#定向物资
+[section-reprocessing-package]: /material/reprocessing.md#分装
+[section-transfer-discard]: /material/transfer.md#作废
 [section-press-discard]: /production/press.md#作废
 [section-mix-toggle-press]: /production/mix.md#控制压块可见性
 [section-mix-audit]: /production/mix.md#评审
 [section-manufacture-discard]: /production/manufacture.md#作废
-[section-transfer-discard]: /material/transfer.md#作废
 [section-cost-evidence]: /finance/cost.md#票证
 
 [action-purchase-item-build-detection]: /purchasing/purchase.md#purchase-item/build-detection
