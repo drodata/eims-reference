@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-02-21 `Enh` [生产单][section-warehousing-settle], 增加 'warehousing.flag' 列，处理老旧物资分装问题； 
 - 2025-02-19 `Enh` [二次加工交付单][section-reprocessing-package], 支持自产微粉入库前分装；
 - 2025-02-13 `Enh` [订单取料][selection], 增加 `section_id` 列，方便制品2部查看自己的记录；
 - 2025-02-10 `Add` [产品属性 Property][property], 新增规格须经过评审,杜绝不规范规格名称；
@@ -163,6 +164,7 @@ Change Logs
 [section-mix-toggle-press]: /production/mix.md#控制压块可见性
 [section-mix-audit]: /production/mix.md#评审
 [section-manufacture-discard]: /production/manufacture.md#作废
+[section-warehousing-settle]: /production/warehousing.md#标记完成
 [section-cost-evidence]: /finance/cost.md#票证
 
 [action-purchase-item-build-detection]: /purchasing/purchase.md#purchase-item/build-detection

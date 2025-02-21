@@ -19,6 +19,7 @@ Column                              | Type      | Null | Note
 `quantity`                          | int       | No   | 入库数量
 `stock`                             | int       | No   | 当前库存
 `status`                            | int       | No   | Lookup 状态：
+`flag`                              | bool      | Yes  | 通用标记列
 
 ### status
 Code                    | Value  | Note
@@ -46,6 +47,13 @@ CONFIRMED               |   5    | 已审核
 `inspectin/inspect` 后会自动生成批号 `generateUnit()`, 在这里会自动查询最新尚未激活的容器号并写入系统。
 ### 分装
 `warehousing/package-portal`. 标签打印人口页面。
+
+为了处理已经入库的物资，单独做了一个 `warehousing/package-report` 页面来处理。
+为了使返回按钮能正常工作，分装操作新增 'scene' 参数：
+
+- 'default': 正常渠道，即入库前分装；
+- 'patch': 处理已存在的记录，返回 'warehousing/package-report' 页面；
+
 ### 入库
 ### 变更内容
 
@@ -62,7 +70,13 @@ CONFIRMED               |   5    | 已审核
 
 评审顺序：质检→ 仓库 → 生产经理
 
+### 标记完成
+`warehousing/mark-as-settled`. 提前预设 `flag` 值，通过操作改变该列值，
+达到监测工作进度的目的。
+
+
 变更
 --------------------------------------------------------------------------
+- 2025-02-21 `Schema` 增加 'flag' 列，处理类似分装操作等临时问题；
 - 2024-12-03 调整 成品检验逻辑。标签改为自动打印，自动获取可用的容器编号
 - 2024-12-02 新增 分装操作
