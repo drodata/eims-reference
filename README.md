@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-02-22 `Enh` [商品附加属性][sku-additional-property], 增加 CBN 单晶 (`Cbn`, `CbnUnit`);
 - 2025-02-21 `Enh` [生产单][section-warehousing-settle], 增加 'warehousing.flag' 列，处理老旧物资分装问题； 
 - 2025-02-19 `Enh` [二次加工交付单][section-reprocessing-package], 支持自产微粉入库前分装；
 - 2025-02-13 `Enh` [订单取料][selection], 增加 `section_id` 列，方便制品2部查看自己的记录；
@@ -107,6 +108,7 @@ Change Logs
 [generic-review]: /models/review.md
 [review]: /models/review.md
 [section]: /models/section.md
+[sku-additional-property]: /product/sku-additional-property.md
 [material]: /material/material.md
 [transfer]: /material/transfer.md
 [allotment]: /material/allotment.md
@@ -149,7 +151,6 @@ Change Logs
 [section-reject-concession]: /order/reject.md#处理不合格品
 [section-order-delivery-detection]: /order/delivery.md#检测
 [section-selection-ga2]: /order/selection.md#制品2部取料
-[section-material-sku-additional-property]: /material/sku.md#附加属性
 [section-customer-billing-modern-billing]: /customer/billing.md#modern-billing
 [section-industry-set-judge-note]: /customer/industry.md#设置取料备注
 [section-bucket-item-toggle-pickness]: /models/bucket.md#无需取料
@@ -166,6 +167,7 @@ Change Logs
 [section-manufacture-discard]: /production/manufacture.md#作废
 [section-warehousing-settle]: /production/warehousing.md#标记完成
 [section-cost-evidence]: /finance/cost.md#票证
+[section-material-sku-additional-property]: /product/sku.md#附加属性
 
 [action-purchase-item-build-detection]: /purchasing/purchase.md#purchase-item/build-detection
 

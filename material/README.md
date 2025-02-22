@@ -1,8 +1,6 @@
 # 物资
 * [Material](/material/material.md)
 * [Product](/material/product.md)
-* [Spu](/material/spu.md)
-* [Sku](/material/sku.md)
 * [批次](/material/unit.md)
 * [定向物资](/material/dedicated-unit.md)
 * [提前备货](/material/pile.md)
