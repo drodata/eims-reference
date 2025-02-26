@@ -3,6 +3,8 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-02-26 `Add` [物资单位转换][conversion], 实现结合剂单位的自动转换；
+- 2025-02-25 `End` [食谱 Recipe][recipe], 存储物资单位转换的对应关系；
 - 2025-02-22 `Enh` [商品附加属性][sku-additional-property], 增加 CBN 单晶 (`Cbn`, `CbnUnit`);
 - 2025-02-21 `Enh` [生产单][section-warehousing-settle], 增加 'warehousing.flag' 列，处理老旧物资分装问题； 
 - 2025-02-19 `Enh` [二次加工交付单][section-reprocessing-package], 支持自产微粉入库前分装；
@@ -109,12 +111,14 @@ Change Logs
 [review]: /models/review.md
 [section]: /models/section.md
 [sku-additional-property]: /product/sku-additional-property.md
+[recipe]: /product/recipe.md
 [material]: /material/material.md
 [transfer]: /material/transfer.md
 [allotment]: /material/allotment.md
 [reprocessing]: /material/reprocessing.md
 [defect]: /material/defect.md
 [package]: /material/package.md
+[conversion]: /material/conversion.md
 [coating]: /order/coating.md
 [judge]: /order/judge.md
 [selection]: /order/selection.md

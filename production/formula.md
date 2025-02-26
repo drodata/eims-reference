@@ -24,7 +24,7 @@ Column                              | Type      | Null | Note
 ------------------------------------|-----------|------|-------
 `id`                                | int       | No   | 
 `formula_id`                        | int       | No   | 
-`name`                              | int       | No   | 原生料、微粉、破碎料、结合剂
+`name`                              | int       | No   | 原生料、微粉、破碎料、CBN, 结合剂
 `code`                              | string    | Yes  | 磨料标准粒度中的 ID 或 Lookup code
 `specification`                     | string    | Yes  | 规格
 `quantity`                          | int       | No   | 
