@@ -104,7 +104,11 @@ Column                      | Type      | Null | Note
 `delivery_way`              | int       | Yes  | foreign 时必填
 `fetched_by`                | int       | Yes  | foreign 时必填
 `delivered_at`              | int       | Yes  | foreign 时必填
-`status`                    | int       | No   | 已创建、已领取、已完成
+`status`                    | int       | No   | 已创建(1)、已领取(3)、已完成(9)
+
+### 操作
+#### 新建
+选择交付人，更新状态为“已领取“。
 
 追溯
 ---------------------------------------------------------------------------

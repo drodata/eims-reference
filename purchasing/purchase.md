@@ -23,7 +23,25 @@ Column                              | Type      | Null | Note
 
 - `section_id`: 采购明细内关联的需求单对应的申请部门，必须和采购单的所属部门一致；
 
+### DetectPurchaseItem Schema
+Column                              | Type      | Null | Note
+------------------------------------|-----------|------|-------
+`purchase_item_id`                  | int       | No   | 
+`detection_id`                      | int       | No   | 
+`opinion`                           | int       | Yes  | 处理意见 Lookup `detect-purchase-item-opinion`
+
+处理意见：
+
+Code    | Name         | Note
+--------|--------------|-------
+1       | PASS         | 合格。`confirmInspection()` 内赋值
+2       | REFUSE       |
+3       | REPLACE      |
+4       | CONCEDE      |
+5       | DISMISS      |
+
 ### Schema PurchaseItemFactor
+
 类似微粉这些特定的商品，需要搜集更精确的数据要求，而不是简单地写在备注栏内。单独创建一个表进行扩展。
 
 Column                              | Type      | Null | Note
@@ -90,7 +108,9 @@ Column                              | Type      | Null | Note
 
 签收
 ---------------------------------------------------------------------------
+
 `purchase/recieve` 由采购员完成。在此会检查商品附加属性设置 (`Purchase::checkSkuAdditionalProperty()`)。
+
 检测
 ---------------------------------------------------------------------------
 采购单的检测以采购明细为单位，签收以后进行。根据 `purchase_item.inspection_methods` 的值，分为两种情况：
@@ -98,7 +118,17 @@ Column                              | Type      | Null | Note
 1. 值为 null: 普通物资，采购员可以快速检验（`purchase-item/check`）完成检测；
 2. 值不是 null: 需要质检员录入检测结果. 录入完成后，通过 `purchase-item/confirm-inspection` 完成检测；
 
-不管那种情况, 都会将 `purchase_item.was_inspected` 设置为 0, 标记检测完成，同时触发 `PurchaseItem::EVENT_INSPECTION_CONFIRMED` 事件，进而动态判断采购单状态是否可以设置为“已检测”。
+不管那种情况, 都会将 `purchase_item.was_inspected` 设置为 1, 标记检测完成，同时触发 `PurchaseItem::EVENT_INSPECTION_CONFIRMED` 事件，进而动态判断采购单状态是否可以设置为“已检测”。
+
+确认检测结果
+---------------------------------------------------------------------------
+建立在 PurchaseItem 上，`purchase-item/confirm-inspection`. 逻辑要点：
+
+- 更新 `purchase_item.was_inspected` 值为 1;
+- 生成批号, 并触发 `EVENT_INSPECTION_CONFIRMED` 事件, 此事件关联 handler 做两件事：
+    1. 更新 purchase status 为“已检测”
+    2. 若含有不合格品，给**采购单创建人**发送工单待处理通知, 完成不合格品的处理工作；
+- 对合格品的记录，更新 `detect_purchase_item.opinion` 值为 PASS;
 
 让步接收
 ---------------------------------------------------------------------------
@@ -134,7 +164,7 @@ Role/Permission Name    | Parent
 - `unit/enable-specimen`
 - `unit/revoke-specimen` (Edition 承载, 评审：质检员 → 采购员 → 生产经理)
 
-操作列表
+操作
 ---------------------------------------------------------------------------
 
 ### 变更备注
