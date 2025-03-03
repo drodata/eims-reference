@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-03-03 `Add` [固定资产注销][section-device-archive], 正式通过评审注销；
 - 2025-02-26 `Add` [物资单位转换][conversion], 实现结合剂单位的自动转换；
 - 2025-02-25 `End` [食谱 Recipe][recipe], 存储物资单位转换的对应关系；
 - 2025-02-22 `Enh` [商品附加属性][sku-additional-property], 增加 CBN 单晶 (`Cbn`, `CbnUnit`);
@@ -119,6 +120,7 @@ Change Logs
 [defect]: /material/defect.md
 [package]: /material/package.md
 [conversion]: /material/conversion.md
+[device]: /material/device.md
 [coating]: /order/coating.md
 [judge]: /order/judge.md
 [selection]: /order/selection.md
@@ -165,6 +167,7 @@ Change Logs
 [section-material-dedicated]: /material/material.md#定向物资
 [section-reprocessing-package]: /material/reprocessing.md#分装
 [section-transfer-discard]: /material/transfer.md#作废
+[section-device-archive]: /material/device.md#注销
 [section-press-discard]: /production/press.md#作废
 [section-mix-toggle-press]: /production/mix.md#控制压块可见性
 [section-mix-audit]: /production/mix.md#评审

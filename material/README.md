@@ -14,6 +14,7 @@
 * [Relocation 移位](/material/relocation.md)
 * [分装 Package](material/package.md)
 * [单位转换](/material/conversion.md)
+* [固定资产](/material/device.md)
 
 角色权限
 --------------------------------------------------------------------------
@@ -25,3 +26,9 @@
 - `viewAllMaterial`: 查看所有物资 (material/index)
 - `searchContainer`: 查看 container/index 页面；
 - `handleSpu`: 用来处理 Spu, Sku, Brand 几个模型的权限汇总, 通过这个权限，可以轻松控制这三个模型的新建和显示；
+
+固定资产类：
+
+- `deviceKeeper`: 设备保管员，负责填写设备维保记录；
+- `handleDevice` (deviceKeeper 子权限): 新建维保记录
+- `manageDevice`: 查看设备及维保记录；
