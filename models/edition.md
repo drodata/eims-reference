@@ -24,6 +24,7 @@ Column                      | Type      | Null | Note
 - **作废** `TYPE_DISCARD` = 4
 - **变更检测项目** `TYPE_CHANGE_INSPECTION_METHODS` = 5
 - **设置无需取料** `TYPE_TOGGLE_PICKNESS` = 6
+- **调整单价** `TYPE_ADJUST_PRICE` = 7
   
   BucketItem 和 OemItem 设置为无需取料；
 - **终止交付** `TYPE_TERMINATE` = 14
@@ -64,6 +65,8 @@ Column                      | Type      | Null | Note
 - 原辅料清单明细支持修改数量；
 - 订单交付明细中变更检测项目；
 - `address/edit`: 变更客户地址中联系人、电话等关键字段；
+- 采购单
+    - 调整价格：`purchase-item/edit-price`
 
 ### 实现步骤
 

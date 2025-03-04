@@ -120,19 +120,6 @@ Column                              | Type      | Null | Note
 
 不管那种情况, 都会将 `purchase_item.was_inspected` 设置为 1, 标记检测完成，同时触发 `PurchaseItem::EVENT_INSPECTION_CONFIRMED` 事件，进而动态判断采购单状态是否可以设置为“已检测”。
 
-确认检测结果
----------------------------------------------------------------------------
-建立在 PurchaseItem 上，`purchase-item/confirm-inspection`. 逻辑要点：
-
-- 更新 `purchase_item.was_inspected` 值为 1;
-- 生成批号, 并触发 `EVENT_INSPECTION_CONFIRMED` 事件, 此事件关联 handler 做两件事：
-    1. 更新 purchase status 为“已检测”
-    2. 若含有不合格品，给**采购单创建人**发送工单待处理通知, 完成不合格品的处理工作；
-- 对合格品的记录，更新 `detect_purchase_item.opinion` 值为 PASS;
-
-让步接收
----------------------------------------------------------------------------
-质检检测发现不合格品后，采购员应对不合格品做出决定。如果选择”让步接收“，则需要进行评审，评审过程由[通用不合格品让步接收][generic-detection-concession]模型承载。本质上就是创建一条 `DetectionConcession` 记录.
 
 退换货
 ---------------------------------------------------------------------------
@@ -167,14 +154,29 @@ Role/Permission Name    | Parent
 操作
 ---------------------------------------------------------------------------
 
+### 确认检测结果
+建立在 PurchaseItem 上，`purchase-item/confirm-inspection`. 逻辑要点：
+
+- 更新 `purchase_item.was_inspected` 值为 1;
+- 生成批号, 并触发 `EVENT_INSPECTION_CONFIRMED` 事件, 此事件关联 handler 做两件事：
+    1. 更新 purchase status 为“已检测”
+    2. 若含有不合格品，给**采购单创建人**发送工单待处理通知, 完成不合格品的处理工作；
+- 对合格品的记录，更新 `detect_purchase_item.opinion` 值为 PASS;
+
+### 让步接收
+质检检测发现不合格品后，采购员应对不合格品做出决定。如果选择”让步接收“，则需要进行评审，评审过程由[通用不合格品让步接收][generic-detection-concession]模型承载。本质上就是创建一条 `DetectionConcession` 记录.
+
+### 调价
+`purchase-item/edit-price` (Edition 承载). hoardNewbie 和 hoadPurchaser 允许操作。
+
+评审顺序：申请人 → 采购主管；
+
 ### 变更备注
 `purchase/tweak-note` (Edition 承载).
 
 对于已经开始检测的采购单，采购员无法修改。此时可以申请对备注变更。
 
 评审顺序：采购主管 → 质检主管；
-### purchase-item/inspection-portal
-质检员的检测入口页面。
 
 ### purchase-item/confirm-inspection
 
@@ -188,6 +190,7 @@ Role/Permission Name    | Parent
 Change Logs
 ---------------------------------------------------------------------------
 
+- 2025-03-04 `Enh` 调整单价操作改用 Edition 承载；
 - 2024-08-29 `Enh` 重新启用 deadline 列，作为“预计交货期”显示；
 - 2024-07-01 `Enh` PurchaseItemFactor Schema, 增大 `base_d50` 和 `offset_d50` 精度各一位
 - 2024-06-22 `Enh` Schema, 增加 `section_id` 列，精确到小部门；

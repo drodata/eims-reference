@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-03-04 `Enh` [采购单调价][section-purchase-edit-price], 改用 Edition 承载；
 - 2025-03-03 `Add` [固定资产注销][section-device-archive], 正式通过评审注销；
 - 2025-02-26 `Add` [物资单位转换][conversion], 实现结合剂单位的自动转换；
 - 2025-02-25 `End` [食谱 Recipe][recipe], 存储物资单位转换的对应关系；
@@ -150,6 +151,7 @@ Change Logs
 [section-purchase-concession]: /purchasing/purchase.md#让步接收
 [section-purchase-supplier-level]: /purchasing/supplier.md#类别
 [section-purchase-audit]: /purchasing/purchase.md#评审
+[section-purchase-edit-price]: /purchasing/purchase.md#调价
 [section-demand-discard]: /purchasing/purchase.md#作废
 [section-demand-item-inquire]: /purchasing/demand-item.md#询价
 [section-goods-grinding-paste-via]: /order/goods.md#研磨膏制作途径
