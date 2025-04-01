@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-04-01 `Enh` [产品新增规格][section-property-append-specification], 支持一次新增多个规格；
 - 2025-03-04 `Enh` [采购单调价][section-purchase-edit-price], 改用 Edition 承载；
 - 2025-03-03 `Add` [固定资产注销][section-device-archive], 正式通过评审注销；
 - 2025-02-26 `Add` [物资单位转换][conversion], 实现结合剂单位的自动转换；
@@ -177,6 +178,7 @@ Change Logs
 [section-warehousing-settle]: /production/warehousing.md#标记完成
 [section-cost-evidence]: /finance/cost.md#票证
 [section-material-sku-additional-property]: /product/sku.md#附加属性
+[section-property-append-specification]: /product/property.md#新增规格
 
 [action-purchase-item-build-detection]: /purchasing/purchase.md#purchase-item/build-detection
 
