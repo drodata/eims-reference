@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-04-04 `Enh` [订单交付单][section-order-delivery-change-address], 通过评审实现收货人的变更；
 - 2025-04-01 `Enh` [产品新增规格][section-property-append-specification], 支持一次新增多个规格；
 - 2025-03-04 `Enh` [采购单调价][section-purchase-edit-price], 改用 Edition 承载；
 - 2025-03-03 `Add` [固定资产注销][section-device-archive], 正式通过评审注销；
@@ -159,6 +160,7 @@ Change Logs
 [section-goods-substitute-product]: /order/goods.md#变更规格
 [section-reject-concession]: /order/reject.md#处理不合格品
 [section-order-delivery-detection]: /order/delivery.md#检测
+[section-order-delivery-change-address]: /order/delivery.md#变更收货人
 [section-selection-ga2]: /order/selection.md#制品2部取料
 [section-customer-billing-modern-billing]: /customer/billing.md#modern-billing
 [section-industry-set-judge-note]: /customer/industry.md#设置取料备注
