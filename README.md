@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-04-08 `Add` [离职业务员名下客户再分配][section-user-handover-customer];
 - 2025-04-04 `Enh` [订单交付单][section-order-delivery-change-address], 通过评审实现收货人的变更；
 - 2025-04-01 `Enh` [产品新增规格][section-property-append-specification], 支持一次新增多个规格；
 - 2025-03-04 `Enh` [采购单调价][section-purchase-edit-price], 改用 Edition 承载；
@@ -167,6 +168,7 @@ Change Logs
 [section-bucket-item-toggle-pickness]: /models/bucket.md#无需取料
 [section-bucket-discard]: /models/bucket.md#作废
 [section-trace-usage]: /models/trace.md#使用
+[section-user-handover-customer]: /models/user.md#分配客户
 [section-oem-delivery-concession]: /purchasing/oem.md#处理不合格品
 [section-oem-delivery-refuse]: /purchasing/oem.md#退货
 [section-material-dedicated]: /material/material.md#定向物资
