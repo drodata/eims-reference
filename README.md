@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-04-25 `Enh` [DemandItem][demand-item] 增加单位列;
 - 2025-04-08 `Add` [离职业务员名下客户再分配][section-user-handover-customer];
 - 2025-04-04 `Enh` [订单交付单][section-order-delivery-change-address], 通过评审实现收货人的变更；
 - 2025-04-01 `Enh` [产品新增规格][section-property-append-specification], 支持一次新增多个规格；
