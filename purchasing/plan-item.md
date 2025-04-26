@@ -63,6 +63,8 @@ HOARD | 客户备货 | 跟随 Hoard 创建，`micro-diamond-hoard/create` 等
 `plan-item/inquire`. 采购员填写询价内容后更新状态为“已询价”。
 PlanItem 中有专门的 `SCENARIO_INQUIRE` 控制必填项。
 
+对于采购备货询价时，系统会和关联的订单销售价进行比对，避免出现采购价高于销售价的情况。
+
 接下来，采购通过创建采购计划让总经理审批。
 
 总经理通过 `plan/decide` 更新需求清单状态：
