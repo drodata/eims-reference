@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-04-25 `Enh` 自动备货类型的需求清单[支持作废操作][section-plan-item-discard];
 - 2025-04-25 `Enh` [DemandItem][demand-item] 增加单位列;
 - 2025-04-08 `Add` [离职业务员名下客户再分配][section-user-handover-customer];
 - 2025-04-04 `Enh` [订单交付单][section-order-delivery-change-address], 通过评审实现收货人的变更；
@@ -158,6 +159,7 @@ Change Logs
 [section-purchase-edit-price]: /purchasing/purchase.md#调价
 [section-demand-discard]: /purchasing/purchase.md#作废
 [section-demand-item-inquire]: /purchasing/demand-item.md#询价
+[section-plan-item-discard]: /purchasing/plan-item.md#作废
 [section-goods-grinding-paste-via]: /order/goods.md#研磨膏制作途径
 [section-goods-substitute-product]: /order/goods.md#变更规格
 [section-reject-concession]: /order/reject.md#处理不合格品

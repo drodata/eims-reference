@@ -59,6 +59,15 @@ HOARD | 客户备货 | 跟随 Hoard 创建，`micro-diamond-hoard/create` 等
 `plan-item/deny`. 采购员有权利拒绝仓库提交的备货申请。更新单据状态为“已作废”. 作废的单据无法修改，
 如果需要再次备货, 仓库提交一条新纪录即可。
 
+### 作废
+`plan-item/discard`. 
+
+- pile: 在仓库确认后、创建采购计划前的这段时间，可以作废。作废需要仓管员评审；
+  采购计划评审通过后将无法作废，此时采购员可以先生成购买清单，而后通过"标记完成"操作实现作废；
+- hoard: 评审通过后可以作废；
+- demand: 无需作废，在购买清单上进行“标记完成”操作；
+- preparation: 无需作废，可直接”拒绝“ (deny)；
+
 ### 询价
 `plan-item/inquire`. 采购员填写询价内容后更新状态为“已询价”。
 PlanItem 中有专门的 `SCENARIO_INQUIRE` 控制必填项。
@@ -89,6 +98,7 @@ Route                           |   名称    | 说明
 
 Change Logs
 --------------------------------------------------------------------------
+- 2025-04-25 `Enh` 作废操作。pile 类型在新建计划前可以作废；
 - 2023-10-24 `Enh` DetectRejectItem schema: xxx
 
 [demand-item]: /purchasing/demand-item.md
