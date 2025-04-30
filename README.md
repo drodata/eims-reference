@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-04-30 `Enh` RBAC. 增加 `viewProfit` 权限，控制订单备货毛利润的显示. 仅对销售经理和总经理可见；
 - 2025-04-25 `Enh` 自动备货类型的需求清单[支持作废操作][section-plan-item-discard];
 - 2025-04-25 `Enh` [DemandItem][demand-item] 增加单位列;
 - 2025-04-08 `Add` [离职业务员名下客户再分配][section-user-handover-customer];
