@@ -3,6 +3,9 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+''
+- 2025-05-06 `Add` [关闭采购备货单价检查][section-goods-turn-off-profit-check] (`goods/turn-off-profit-check`),
+  应对特殊订单无法提交询价和采购单的情况;
 - 2025-04-30 `Enh` RBAC. 增加 `viewProfit` 权限，控制订单备货毛利润的显示. 仅对销售经理和总经理可见；
 - 2025-04-25 `Enh` 自动备货类型的需求清单[支持作废操作][section-plan-item-discard];
 - 2025-04-25 `Enh` [DemandItem][demand-item] 增加单位列;
@@ -162,6 +165,7 @@ Change Logs
 [section-demand-item-inquire]: /purchasing/demand-item.md#询价
 [section-plan-item-discard]: /purchasing/plan-item.md#作废
 [section-goods-grinding-paste-via]: /order/goods.md#研磨膏制作途径
+[section-goods-turn-off-profit-check]: /order/goods.md#关闭采购备货单价检查
 [section-goods-substitute-product]: /order/goods.md#变更规格
 [section-reject-concession]: /order/reject.md#处理不合格品
 [section-order-delivery-detection]: /order/delivery.md#检测
