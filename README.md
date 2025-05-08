@@ -3,7 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
-''
+- 2025-05-08 `Add` GrindingWheelProduction [关闭标准检查操作][section-gwp-turn-off-formula-check], 应对特殊情况下的混料单创建； 
 - 2025-05-06 `Add` [关闭采购备货单价检查][section-goods-turn-off-profit-check] (`goods/turn-off-profit-check`),
   应对特殊订单无法提交询价和采购单的情况;
 - 2025-04-30 `Enh` RBAC. 增加 `viewProfit` 权限，控制订单备货毛利润的显示. 仅对销售经理和总经理可见；
@@ -188,6 +188,7 @@ Change Logs
 [section-mix-audit]: /production/mix.md#评审
 [section-manufacture-discard]: /production/manufacture.md#作废
 [section-warehousing-settle]: /production/warehousing.md#标记完成
+[section-gwp-turn-off-formula-check]: /production/grinding-wheel-production.md#关闭标准检查
 [section-cost-evidence]: /finance/cost.md#票证
 [section-material-sku-additional-property]: /product/sku.md#附加属性
 [section-property-append-specification]: /product/property.md#新增规格
