@@ -61,10 +61,12 @@ CONFIRMED               |   5    | 已审核
 
 生产单在过程检验确认后，不允许修改。通过此操作可以修改以下列内容：
 
+- `sku_id`, `product_id` (随着前者变更自动变更);
 - `level`;
 - `raw_material_supplier`;
 - `strength`;
 - `shape`;
+
 ### 作废
 `warehousing/discard`. 一些生产单由于其它原因无法或不再需要入库时，通过此操作完成。
 
