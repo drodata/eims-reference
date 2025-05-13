@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-05-13 `Add` Company [批量移交操作][section-customer-batch-transfer];
 - 2025-05-08 `Add` GrindingWheelProduction [关闭标准检查操作][section-gwp-turn-off-formula-check], 应对特殊情况下的混料单创建； 
 - 2025-05-06 `Add` [关闭采购备货单价检查][section-goods-turn-off-profit-check] (`goods/turn-off-profit-check`),
   应对特殊订单无法提交询价和采购单的情况;
@@ -173,6 +174,7 @@ Change Logs
 [section-selection-ga2]: /order/selection.md#制品2部取料
 [section-customer-billing-modern-billing]: /customer/billing.md#modern-billing
 [section-industry-set-judge-note]: /customer/industry.md#设置取料备注
+[section-customer-batch-transfer]: /customer/customer.md#批量移交
 [section-bucket-item-toggle-pickness]: /models/bucket.md#无需取料
 [section-bucket-discard]: /models/bucket.md#作废
 [section-trace-usage]: /models/trace.md#使用
