@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-05-27 `Enh` Outflow [放弃客户][section-outflow-discard];
 - 2025-05-13 `Add` Company [批量移交操作][section-customer-batch-transfer];
 - 2025-05-08 `Add` GrindingWheelProduction [关闭标准检查操作][section-gwp-turn-off-formula-check], 应对特殊情况下的混料单创建； 
 - 2025-05-06 `Add` [关闭采购备货单价检查][section-goods-turn-off-profit-check] (`goods/turn-off-profit-check`),
@@ -175,6 +176,7 @@ Change Logs
 [section-customer-billing-modern-billing]: /customer/billing.md#modern-billing
 [section-industry-set-judge-note]: /customer/industry.md#设置取料备注
 [section-customer-batch-transfer]: /customer/customer.md#批量移交
+[section-outflow-discard]: /customer/outflow.md#放弃客户
 [section-bucket-item-toggle-pickness]: /models/bucket.md#无需取料
 [section-bucket-discard]: /models/bucket.md#作废
 [section-trace-usage]: /models/trace.md#使用
