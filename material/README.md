@@ -15,7 +15,7 @@
 * [分装 Package](material/package.md)
 * [单位转换](/material/conversion.md)
 * [固定资产](/material/device.md)
-* [领料申请](material/bucket.md)
+* [领料申请](/material/bucket.md)
 
 角色权限
 --------------------------------------------------------------------------
