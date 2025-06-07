@@ -37,7 +37,6 @@
     * [Lapse 数量异常上报](models/lapse.md)
     * [Pickup 取料](models/pickup.md)
     * [Withdraw 取料退回](models/withdrawal.md)
-    * [Bucket 领料申请](models/bucket.md)
     * [Business 往来单位](models/business.md)
     * [Review 台帐一致性检查](models/review.md)
     * [联系地址](models/shipping-address.md)

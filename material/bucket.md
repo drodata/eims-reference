@@ -99,16 +99,25 @@ Column                      | Type      | Null | Note
 `id`                        | int       | No   | 
 `bucket_id`                 | int       | Yes  | 
 `is_foreign`                | int       | No   | 标记是外用还是自用，前者有发货的功能；
-`received_by`               | int       | Yes  |
-`received_at`               | int       | Yes  |
+`received_by`               | int       | Yes  | non-foreign 使用，需要接收人签收
+`received_at`               | int       | Yes  | 
 `delivery_way`              | int       | Yes  | foreign 时必填
-`fetched_by`                | int       | Yes  | foreign 时必填
+`fetched_by`                | int       | Yes  | foreign 使用，需要进行“发货”操作
 `delivered_at`              | int       | Yes  | foreign 时必填
 `status`                    | int       | No   | 已创建(1)、已领取(3)、已完成(9)
 
 ### 操作
+
 #### 新建
-选择交付人，更新状态为“已领取“。
+`bucket-delivery/create`. 仓管员取料后创建交付单。
+选择交付人，保存后交付单状态更新为“已领取“ (FETCHED)。
+
+#### 签收
+`bucket-delivery/receive`. 自用领料单的申请人操作，签收后交付单状态更新为”已完成“。
+
+#### 发货
+`bucket-delivery/deliver`. 针对外用领料单, 由发货员 (fetcher)操作，录入单号。
+发货后，领料单申请人将收到微信提醒。
 
 追溯
 ---------------------------------------------------------------------------

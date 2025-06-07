@@ -177,8 +177,6 @@ Change Logs
 [section-industry-set-judge-note]: /customer/industry.md#设置取料备注
 [section-customer-batch-transfer]: /customer/customer.md#批量移交
 [section-outflow-discard]: /customer/outflow.md#放弃客户
-[section-bucket-item-toggle-pickness]: /models/bucket.md#无需取料
-[section-bucket-discard]: /models/bucket.md#作废
 [section-trace-usage]: /models/trace.md#使用
 [section-user-handover-customer]: /models/user.md#分配客户
 [section-oem-delivery-concession]: /purchasing/oem.md#处理不合格品
@@ -187,6 +185,8 @@ Change Logs
 [section-reprocessing-package]: /material/reprocessing.md#分装
 [section-transfer-discard]: /material/transfer.md#作废
 [section-device-archive]: /material/device.md#注销
+[section-bucket-item-toggle-pickness]: /material/bucket.md#无需取料
+[section-bucket-discard]: /material/bucket.md#作废
 [section-press-discard]: /production/press.md#作废
 [section-mix-toggle-press]: /production/mix.md#控制压块可见性
 [section-mix-audit]: /production/mix.md#评审
@@ -199,7 +199,7 @@ Change Logs
 
 [action-purchase-item-build-detection]: /purchasing/purchase.md#purchase-item/build-detection
 
-[schema-bucket-selection-trace-snap]: /models/bucket.md#bucketselectiontracesnap-schema
+[schema-bucket-selection-trace-snap]: /material/bucket.md#bucketselectiontracesnap-schema
 [schema-mix-lapse]: /production/mix.md#mixlapse-schema
 [schema-purchase-item-factor]: /purchasing/purchase.md#schema-purchaseitemfactor
 
