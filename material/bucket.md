@@ -1,11 +1,12 @@
 # 通用领料申请
 
-涉及到的权限有：
+涉及到的权限有(和 RBAC 层级关系刚好相反, viewBucket 是最基础的权限)：
 
 - `viewBucket`
     - `manageBucket`: materialKeeper
-    - `receiveBucket`: “自用”领料交付后签收
-    - `deliverBucket`: “他用”领料交付后发货
+    - `handleBucketDelivery`: base permission
+        - `receiveBucket`: “自用”领料交付后签收
+        - `deliverBucket`: “他用”领料交付后发货
     - `createBucket`
         - `createPersonalBucket`
         - `createForeignBucket`
@@ -192,6 +193,7 @@ Column                              | Type      | Null | Note
 
 Change Logs
 
+- 2025-06-10 Enh Schema, 新增 'handleBucketDelivery' 权限,专用于 index tab;
 - 2024-07-17 Add 增加“作废"操作；
 - 2024-06-13 Enh BucketSelectionTraceSnap. 增加 `withdrawal_id` 列，新增退货动作；
 - 2024-05-28 Enh 增加 `section_id` 列，区分使用部门；

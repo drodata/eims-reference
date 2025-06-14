@@ -7,6 +7,7 @@
 * [产品](product/README.md)
 * [物资](material/README.md)
 * [财务](finance/README.md)
+* [工具](tools/README.md)
 * [杂项](misc/README.md)
     * [数据导出](misc/export.md)
     * [角色权限](misc/rbac.md)
