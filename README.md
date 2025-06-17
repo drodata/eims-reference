@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-06-17 `Enh` OemDelivery, 增加[调价操作][section-oem-delivery-edit-price];
 - 2025-05-27 `Enh` Outflow [放弃客户][section-outflow-discard];
 - 2025-05-13 `Add` Company [批量移交操作][section-customer-batch-transfer];
 - 2025-05-08 `Add` GrindingWheelProduction [关闭标准检查操作][section-gwp-turn-off-formula-check], 应对特殊情况下的混料单创建； 
@@ -179,8 +180,9 @@ Change Logs
 [section-outflow-discard]: /customer/outflow.md#放弃客户
 [section-trace-usage]: /models/trace.md#使用
 [section-user-handover-customer]: /models/user.md#分配客户
-[section-oem-delivery-concession]: /purchasing/oem.md#处理不合格品
-[section-oem-delivery-refuse]: /purchasing/oem.md#退货
+[section-oem-delivery-concession]: /purchasing/oem-delivery.md#处理不合格品
+[section-oem-delivery-refuse]: /purchasing/oem-delivery.md#退货
+[section-oem-delivery-edit-price]: /purchasing/oem-delivery.md#调价
 [section-material-dedicated]: /material/material.md#定向物资
 [section-reprocessing-package]: /material/reprocessing.md#分装
 [section-transfer-discard]: /material/transfer.md#作废

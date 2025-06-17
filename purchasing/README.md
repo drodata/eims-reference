@@ -19,4 +19,3 @@
 * [调配](/purchasing/exchange.md)
 * [供应商](/purchasing/supplier.md)
 * [代加工](/purchasing/oem.md)
-
