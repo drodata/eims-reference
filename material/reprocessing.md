@@ -32,7 +32,7 @@ Column                              | Type      | Null | Note
 ### 快速检测
 `reprocessing/send-insepect`. 专用于“去除杂质“类的单子，相当于送检和检测二合一。
 ### 分装
-`reprocessing/package-portal`. 目前**自产的微粉**需要分装(via `needPack()`)。
+`reprocessing/package-portal`. 目前**自产的(即品牌是“亚龙”)微粉、整形料和破碎料**需要分装(via `needPack()`)。
 
 通过 `checkPackage()` 判断分装操作是否完毕，作为入库的前置条件。
 
