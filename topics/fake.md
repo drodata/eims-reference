@@ -95,9 +95,10 @@ Command | Example | Note
 在 DownloadForm 内创建 `SCENARIO_NATIVE_PURCHASE_ITEM` 加以区分。
 
 ### 调整金额
-`fake/scale-purchase $slug $base`
+> `fake/scale-purchase $slug $base`
 
-`slug` 为月份，例如 `2024-01`
+- 指定月份： `scale-purchase 2024-02 2` (将 2024年2月所有采购单金额翻倍)
+- 指定单号： `scale-purchase 2356 2` (将采购单 2356 金额翻倍)
 
 此命令用来批量调整采购单的金额（内部通过调整数量实现）. 参数用法同订单金额调整.
 
@@ -109,10 +110,15 @@ Command | Example | Note
 - `$yearMonth` (Required): e.g.'2023-05': 这里的月份指的是采购单的时间，也就是说，将指定时间内的采购单按供应商汇总出来，在之后的某个时间集中付款, 目前的延迟期限是 三个月，即5月的采购单集中在8月付清。
 
 ### 调整金额
-两种形式：
+`./fake scale-cost` 两种形式：
 
 - 指定月份： `scale-cost 2024-02 2` (将 2024年2月所有付款金额翻倍)
 - 指定单号： `scale-cost 2356 2` (将付款记录 2356 金额翻倍)
+
+### 修改金额
+>  `./fake update-cost-amount <id> <value>`
+可将指定付款单的金额设置为任意值。`<id>` 是单号，`<value>` 是新值.
+
 
 付款金额
 ---------------------------------------------------------------------------

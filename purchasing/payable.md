@@ -7,4 +7,8 @@
 
 只有管理员可操作。
 
+变更日志
+--------------------------------------------------------------------------
+- 2025-06-18 `Enh` Schema, 增加 `is_fake` 列，标记假记录。
+
 [fault-duplicate-payable]: /faults/one-purchase-multiple-payables.md
