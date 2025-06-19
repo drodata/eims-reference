@@ -1,5 +1,5 @@
 # 订单
-* [订单](/order/order.md)
+* [订单](/order/order.md), [Deal](/order/deal.md)
 * [明细](/order/goods.md)
 * [选料](/order/judge.md)
 * [取料](/order/selection.md)

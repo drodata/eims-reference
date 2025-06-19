@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-06-19 `Enh` Deal, 增加[生成付款记录操作 (ONLY for CBN)][section-deal-generate-fake-earnings];
 - 2025-06-17 `Enh` OemDelivery, 增加[调价操作][section-oem-delivery-edit-price];
 - 2025-05-27 `Enh` Outflow [放弃客户][section-outflow-discard];
 - 2025-05-13 `Add` Company [批量移交操作][section-customer-batch-transfer];
@@ -138,6 +139,7 @@ Change Logs
 [judge]: /order/judge.md
 [selection]: /order/selection.md
 [match-hoard]: /order/match-hoard.md
+[deal]: /order/deal.md
 [console-monitor]: /console/monitor.md
 [company-hoard]: /purchasing/hoard.md
 [demand]: /purchasing/demand.md
@@ -145,7 +147,6 @@ Change Logs
 [exchange]: /purchasing/exchange.md
 [gwp]: /production/grinding-wheel-production.md
 [warehousing]: /production/warehousing.md
-[deal]: /sale/deal.md
 [outflow]: /customer/outflow.md
 [customer]: /customer/customer.md
 [industry]: /customer/industry.md
@@ -174,6 +175,7 @@ Change Logs
 [section-order-delivery-detection]: /order/delivery.md#检测
 [section-order-delivery-change-address]: /order/delivery.md#变更收货人
 [section-selection-ga2]: /order/selection.md#制品2部取料
+[section-deal-generate-fake-earnings]: /order/deal.md#生成付款记录
 [section-customer-billing-modern-billing]: /customer/billing.md#modern-billing
 [section-industry-set-judge-note]: /customer/industry.md#设置取料备注
 [section-customer-batch-transfer]: /customer/customer.md#批量移交
