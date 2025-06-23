@@ -28,6 +28,13 @@ Column                              | Type      | Null | Note
 - 全部选择后 toggle `.table-active` 类;
 - GridView 内每次选择发生变化后，将选择的 keys 以 `data-keys` 形式存储在 `.batch-btn` 按钮中；
 
+### 回收
+等级为 C, D 的客户会通过 `customer/recycle` 定期自动回收。回收做以下事情：
+
+1. 将当前负责人写入 `former_own_id`;
+2. 将 `own_id` 设置为 0 (回收站);
+3. 将当前时间写入 `recysles_at`, 记录回收时间；
+
 客户地址
 ---------------------------------------------------------------------
 ### 操作

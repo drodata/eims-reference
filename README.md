@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-06-23 `Enh` Order, 业务员角色细分[内贸外贸角色][section-order-role], 用来个性化显示回收站客户;
 - 2025-06-19 `Enh` Deal, 增加[生成付款记录操作 (ONLY for CBN)][section-deal-generate-fake-earnings];
 - 2025-06-17 `Enh` OemDelivery, 增加[调价操作][section-oem-delivery-edit-price];
 - 2025-05-27 `Enh` Outflow [放弃客户][section-outflow-discard];
@@ -168,6 +169,7 @@ Change Logs
 [section-demand-discard]: /purchasing/purchase.md#作废
 [section-demand-item-inquire]: /purchasing/demand-item.md#询价
 [section-plan-item-discard]: /purchasing/plan-item.md#作废
+[section-order-role]: /order/order.md#角色权限
 [section-goods-grinding-paste-via]: /order/goods.md#研磨膏制作途径
 [section-goods-turn-off-profit-check]: /order/goods.md#关闭采购备货单价检查
 [section-goods-substitute-product]: /order/goods.md#变更规格

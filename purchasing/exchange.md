@@ -18,18 +18,19 @@ Column                              | Type      | Null | Note
 操作列表
 ---------------------------------------------------------------------------
 ### 评审
-和[采购单评审][purchase-audit]一样。
+> purchaseNewbie → purchaseDirector
 
 ### 新建
 采购员可以创建调配单
+### 记账
+`exchange/pay` 记账。将单子标记为“已付款”,同时写入 payable 记录。
+由于供应商账户有预付款和应付款的区分，所以用 `pay-portal` 页面引导。内部使用 `exchange/pay` 操作.
 ### 取料 
 **调配单不支持分批交付，所有物资取料完成方可出库**。
 `exchange/pick-portal`. 借助 ExchangeItemPickup 连接通用 Pickup 模型实现。
 
 2023.12.19 之前的取料记录存储在 `ACTION_EXCHANGE` inventory 内。
 
-### 记账
-记账。由于供应商账户有预付款和应付款的区分，所以用 `pay-portal` 页面引导。内部使用 `exchange/pay` 操作.
 ### 出库
 `exchange/fetch`. 出库前会检查是否已付款。
 ### 交付
