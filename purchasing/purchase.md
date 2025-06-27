@@ -184,6 +184,12 @@ Role/Permission Name    | Parent
 对于已经开始检测的采购单，采购员无法修改。此时可以申请对备注变更。
 
 评审顺序：采购主管 → 质检主管；
+### 变更供应商
+`purchase/alter-seller` (Edition 承载).
+
+采购单入库后， hoardNebie 可以变更供应商，以应对新建采购单时供应商选错的情况。
+
+评审顺序：申请人 → 采购主管
 
 ### purchase-item/confirm-inspection
 
@@ -197,6 +203,7 @@ Role/Permission Name    | Parent
 Change Logs
 ---------------------------------------------------------------------------
 
+- 2025-06-27 `Add` "变更供应商"操作
 - 2025-03-04 `Enh` 调整单价操作改用 Edition 承载；
 - 2024-08-29 `Enh` 重新启用 deadline 列，作为“预计交货期”显示；
 - 2024-07-01 `Enh` PurchaseItemFactor Schema, 增大 `base_d50` 和 `offset_d50` 精度各一位

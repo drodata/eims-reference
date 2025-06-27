@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-06-27 `Enh` Purchase, 重构[变更供应商][section-purchase-alter-seller]操作, 改用 Edition 承载；
 - 2025-06-23 `Enh` Order, 业务员角色细分[内贸外贸角色][section-order-role], 用来个性化显示回收站客户;
 - 2025-06-19 `Enh` Deal, 增加[生成付款记录操作 (ONLY for CBN)][section-deal-generate-fake-earnings];
 - 2025-06-17 `Enh` OemDelivery, 增加[调价操作][section-oem-delivery-edit-price];
@@ -166,6 +167,7 @@ Change Logs
 [section-purchase-supplier-level]: /purchasing/supplier.md#类别
 [section-purchase-audit]: /purchasing/purchase.md#评审
 [section-purchase-edit-price]: /purchasing/purchase.md#调价
+[section-purchase-alter-seller]: /purchasing/purchase.md#变更供应商
 [section-demand-discard]: /purchasing/purchase.md#作废
 [section-demand-item-inquire]: /purchasing/demand-item.md#询价
 [section-plan-item-discard]: /purchasing/plan-item.md#作废
