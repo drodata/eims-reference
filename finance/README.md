@@ -7,5 +7,5 @@
 `accountant`            | 会计 (负责收款)
 `finance`               | 上面三个角色的共有子权限
 
+* [收款](/finance/income.md)
 * [支出单](/finance/cost.md)
-

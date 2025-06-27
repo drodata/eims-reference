@@ -2,7 +2,9 @@
 [Summary](SUMMARY.md)
 
 Change Logs
+''
 ---------------------------------------------------------------------------
+- 2025-06-28 `Enh` Income, 改进[修改操作][section-income-update]逻辑，确保修改已对账的收款单正常；
 - 2025-06-27 `Enh` Purchase, 重构[变更供应商][section-purchase-alter-seller]操作, 改用 Edition 承载；
 - 2025-06-23 `Enh` Order, 业务员角色细分[内贸外贸角色][section-order-role], 用来个性化显示回收站客户;
 - 2025-06-19 `Enh` Deal, 增加[生成付款记录操作 (ONLY for CBN)][section-deal-generate-fake-earnings];
@@ -202,6 +204,7 @@ Change Logs
 [section-warehousing-settle]: /production/warehousing.md#标记完成
 [section-gwp-turn-off-formula-check]: /production/grinding-wheel-production.md#关闭标准检查
 [section-cost-evidence]: /finance/cost.md#票证
+[section-income-update]: /finance/income.md#修改
 [section-material-sku-additional-property]: /product/sku.md#附加属性
 [section-property-append-specification]: /product/property.md#新增规格
 
