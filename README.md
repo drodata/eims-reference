@@ -4,6 +4,7 @@
 Change Logs
 ''
 ---------------------------------------------------------------------------
+- 2025-06-30 `Enh` Fake, 增加订单明细[调整单价数量比例][section-fake-shift-deal-item]操作，满足财务需求；
 - 2025-06-28 `Enh` Income, 改进[修改操作][section-income-update]逻辑，确保修改已对账的收款单正常；
 - 2025-06-27 `Enh` Purchase, 重构[变更供应商][section-purchase-alter-seller]操作, 改用 Edition 承载；
 - 2025-06-23 `Enh` Order, 业务员角色细分[内贸外贸角色][section-order-role], 用来个性化显示回收站客户;
@@ -207,6 +208,7 @@ Change Logs
 [section-income-update]: /finance/income.md#修改
 [section-material-sku-additional-property]: /product/sku.md#附加属性
 [section-property-append-specification]: /product/property.md#新增规格
+[section-fake-shift-deal-item]: /topics/fake.md#调整单价数量比例
 
 [action-purchase-item-build-detection]: /purchasing/purchase.md#purchase-item/build-detection
 
