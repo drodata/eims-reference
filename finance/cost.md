@@ -2,7 +2,7 @@
 三种 types:
 
 - purchase: 供应商付款申请
-- service: 服务商付款申请
+- service: [服务商付款申请][cost-server]
 - expense: 费用报销单
 
 结构
@@ -16,9 +16,6 @@
 `handleExpense`         | 报销单
 `manageExpense`         |               
 `viewExpense`           |               
-`handleServer`          | 服务商申请单              
-`manageServer`          |               
-`viewServer`            |               
 
 操作
 --------------------------------------------------------------------------
@@ -36,3 +33,5 @@
 --------------------------------------------------------------------------
 - 2025-01-17 调整 支持财务人员申请报销；
 - 2025-01-10 调整 所有报销流程改为线上签字，开始上传票证；
+
+[cost-server]: /finance/cost-server.md
