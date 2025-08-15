@@ -22,6 +22,7 @@ Column                              | Type      | Null | Note
 `sku_id`                            | int       | Yes  | 商品编号
 `name`                              | bool      | No   | 品名
 `specification`                     | string    | Yes  | 规格
+`price`                             | decimal   | Yes  | 加工单价 (仅针对镀覆类加工)
 `quantity`                          | int       | No   | 数量
 `measurement_unit`                  | bool      | Yes  |
 `need_pick`                         | bool      | No   | 是否需要取料
@@ -46,6 +47,7 @@ Column                              | Type      | Null | Note
 
 Change Logs
 ---------------------------------------------------------------------
+- 2025-08-15 改进 Schema, 增加 `oem_item.price`, 镀覆类加工单需录入加工单价；
 - 2023-12-12 新增 无需取料操作（借助 Edition 承载）；
 - 2023-12-06 改进 状态: 新增“镀覆”类型 (值是 0), 专用于[订单镀覆加工][coating]
 - 2023-11-21 新增 Logic: 不合格品退货；

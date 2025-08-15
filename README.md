@@ -2,8 +2,8 @@
 [Summary](SUMMARY.md)
 
 Change Logs
-''
 ---------------------------------------------------------------------------
+- 2025-08-15 `Enh` Oem, [镀覆订单加工][section-coating-build]允许录入单价，方便评审人了解单价；
 - 2025-06-30 `Enh` Fake, 增加订单明细[调整单价数量比例][section-fake-shift-deal-item]操作，满足财务需求；
 - 2025-06-28 `Enh` Income, 改进[修改操作][section-income-update]逻辑，确保修改已对账的收款单正常；
 - 2025-06-27 `Enh` Purchase, 重构[变更供应商][section-purchase-alter-seller]操作, 改用 Edition 承载；
@@ -175,6 +175,7 @@ Change Logs
 [section-demand-item-inquire]: /purchasing/demand-item.md#询价
 [section-plan-item-discard]: /purchasing/plan-item.md#作废
 [section-order-role]: /order/order.md#角色权限
+[section-coating-build]: /order/coating.md#加工
 [section-goods-grinding-paste-via]: /order/goods.md#研磨膏制作途径
 [section-goods-turn-off-profit-check]: /order/goods.md#关闭采购备货单价检查
 [section-goods-substitute-product]: /order/goods.md#变更规格
