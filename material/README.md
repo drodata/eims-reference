@@ -16,6 +16,7 @@
 * [单位转换](/material/conversion.md)
 * [固定资产](/material/device.md)
 * [领料申请](/material/bucket.md)
+* [Rename 改名](/material/rename.md)
 
 角色权限
 --------------------------------------------------------------------------
