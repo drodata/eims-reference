@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-10-21 `Enh` Material, 支持基于物资的[新建损耗][section-material-normal-loss], 无需二次确认，库存变化实时生效；
 - 2025-08-15 `Enh` Oem, [镀覆订单加工][section-coating-build]允许录入单价，方便评审人了解单价；
 - 2025-06-30 `Enh` Fake, 增加订单明细[调整单价数量比例][section-fake-shift-deal-item]操作，满足财务需求；
 - 2025-06-28 `Enh` Income, 改进[修改操作][section-income-update]逻辑，确保修改已对账的收款单正常；
@@ -194,6 +195,7 @@ Change Logs
 [section-oem-delivery-refuse]: /purchasing/oem-delivery.md#退货
 [section-oem-delivery-edit-price]: /purchasing/oem-delivery.md#调价
 [section-material-dedicated]: /material/material.md#定向物资
+[section-material-normal-loss]: /material/material.md#新建损耗
 [section-reprocessing-package]: /material/reprocessing.md#分装
 [section-transfer-discard]: /material/transfer.md#作废
 [section-device-archive]: /material/device.md#注销
