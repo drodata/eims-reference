@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2025-10-22 `Enh` Goods, 增加 `measurement_unit` 列，规范订单明细中的单位。从此开始，订单中的单位强制录入；
 - 2025-10-21 `Enh` Material, 支持基于物资的[新建损耗][section-material-normal-loss], 无需二次确认，库存变化实时生效；
 - 2025-08-15 `Enh` Oem, [镀覆订单加工][section-coating-build]允许录入单价，方便评审人了解单价；
 - 2025-06-30 `Enh` Fake, 增加订单明细[调整单价数量比例][section-fake-shift-deal-item]操作，满足财务需求；

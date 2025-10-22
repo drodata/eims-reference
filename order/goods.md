@@ -10,6 +10,11 @@ Column                              | Type      | Null | Note
 `grinding_paste_via`                | int       | Yes  | 研磨膏制作途径 Lookup: 自制和外协
 `need_coat`                         | bool      | Yes  | 是否需要镀覆
 `need_pick`                         | bool      | Yes  | 是否需要取料
+`measurement_unit`                  | bool      | Yes  | 单位
+
+部分列的说明：
+
+- `measurement_unit`: 由于 product 表中 name 列使用的是 Lookup 记录，因此在 `Product::measurementUnitsMap()` 内定义了每种产品和对应单位的映射。**每当新增一个产品名称时，需要手动在映射中增加单位**;
 
 ### 研磨膏制作途径
 由于历史原因,订单中研磨膏取料没有单独新建二次加工单，而是通过系统自动转换取料微粉的方式实现。外协研磨膏出现后，会以采购的形式直接采购研磨膏成品，这就导致一个问题：这些采购的研磨膏无法以订单取料的方式出库，只能盘出去。
@@ -39,5 +44,6 @@ Column                              | Type      | Null | Note
 
 Change Logs
 --------------------------------------------------------------------------
+- 2025-10-22 Enh `Schema` 新增 `measurement_unit` 列，规范订单中货物的单位；
 - 2025-02-06 Add 变更商品规格 (`substitute-product`)操作,应对特殊客户的需求；
 - 2023-11-28 Enh `Schema` 新增 `need_coat` 布尔列，以订货明细为单位记录是否需要镀覆；
