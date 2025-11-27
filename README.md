@@ -3,6 +3,8 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+''
+- 2025-11-27 `Enh` Goods, 增加[取料入口][section-goods-pick-portal]操作，制品2部有备货需求。
 - 2025-10-22 `Enh` Goods, 增加 `measurement_unit` 列，规范订单明细中的单位。从此开始，订单中的单位强制录入；
 - 2025-10-21 `Enh` Material, 支持基于物资的[新建损耗][section-material-normal-loss], 无需二次确认，库存变化实时生效；
 - 2025-08-15 `Enh` Oem, [镀覆订单加工][section-coating-build]允许录入单价，方便评审人了解单价；
@@ -181,6 +183,7 @@ Change Logs
 [section-goods-grinding-paste-via]: /order/goods.md#研磨膏制作途径
 [section-goods-turn-off-profit-check]: /order/goods.md#关闭采购备货单价检查
 [section-goods-substitute-product]: /order/goods.md#变更规格
+[section-goods-pick-portal]: /order/goods.md#取料入口
 [section-reject-concession]: /order/reject.md#处理不合格品
 [section-order-delivery-detection]: /order/delivery.md#检测
 [section-order-delivery-change-address]: /order/delivery.md#变更收货人

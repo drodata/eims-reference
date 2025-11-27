@@ -30,6 +30,8 @@ Column                              | Type      | Null | Note
 对于一些无法取料的特殊情况，管理员可通过 `goods/toggle-pickness` 将订货明细设置为无需取料，从而跳过取料环节。
 ### 变更规格
 `goods/substitute-product`. 一些特殊客户需要在评审通过后，更改商品规格，以便正确显示交付单内容。
+### 取料入口
+`goods/pick-portal`. 制品2部在订单明细的基础上的取料入口，可在此页面完成实际取料操作和订单备货两个操作。
 
 ### 关闭采购备货单价检查
 `goods/turn-off-profit-check`. 订单备货询价和新建采购单时，会对采购价和关联的销售价进行比对，
@@ -44,6 +46,7 @@ Column                              | Type      | Null | Note
 
 Change Logs
 --------------------------------------------------------------------------
+- 2025-11-27 Add 取料入口(`pick-portal`) 操作，制品2部在订单明细上取料的同时，还需要订单备货；
 - 2025-10-22 Enh `Schema` 新增 `measurement_unit` 列，规范订单中货物的单位；
 - 2025-02-06 Add 变更商品规格 (`substitute-product`)操作,应对特殊客户的需求；
 - 2023-11-28 Enh `Schema` 新增 `need_coat` 布尔列，以订货明细为单位记录是否需要镀覆；

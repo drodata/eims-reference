@@ -10,3 +10,4 @@
 * [收款](/finance/income.md)
 * [支出单](/finance/cost.md)
 * [服务商付款](/finance/cost-server.md)
+* [承兑](/finance/acceptance.md) 及[交易](/finance/transit.md)
