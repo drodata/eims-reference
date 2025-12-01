@@ -3,13 +3,15 @@
 
 Change Logs
 ---------------------------------------------------------------------------
-''
+- 2025-12-01 `Enh` GrindingWheelWork, 新增[退回工单][section-gww-refuse-mix], 混料员可重新交付；
+- 2025-12-01 `Enh` Income, [修改操作][section-income-tweak]逻辑，改用 GeneralForm 承载数据验证；
 - 2025-11-27 `Enh` Goods, 增加[取料入口][section-goods-pick-portal]操作，制品2部有备货需求。
+- 2025-11-25 `Add` Transit, 承兑[支持分批交易][transit]操作
 - 2025-10-22 `Enh` Goods, 增加 `measurement_unit` 列，规范订单明细中的单位。从此开始，订单中的单位强制录入；
 - 2025-10-21 `Enh` Material, 支持基于物资的[新建损耗][section-material-normal-loss], 无需二次确认，库存变化实时生效；
 - 2025-08-15 `Enh` Oem, [镀覆订单加工][section-coating-build]允许录入单价，方便评审人了解单价；
 - 2025-06-30 `Enh` Fake, 增加订单明细[调整单价数量比例][section-fake-shift-deal-item]操作，满足财务需求；
-- 2025-06-28 `Enh` Income, 改进[修改操作][section-income-update]逻辑，确保修改已对账的收款单正常；
+- 2025-06-28 `Enh` Income, 改进[修改操作][section-income-tweak]逻辑，确保修改已对账的收款单正常；
 - 2025-06-27 `Enh` Purchase, 重构[变更供应商][section-purchase-alter-seller]操作, 改用 Edition 承载；
 - 2025-06-23 `Enh` Order, 业务员角色细分[内贸外贸角色][section-order-role], 用来个性化显示回收站客户;
 - 2025-06-19 `Enh` Deal, 增加[生成付款记录操作 (ONLY for CBN)][section-deal-generate-fake-earnings];
@@ -155,11 +157,13 @@ Change Logs
 [demand-item]: /purchasing/demand-item.md
 [exchange]: /purchasing/exchange.md
 [gwp]: /production/grinding-wheel-production.md
+[gww]: /production/grinding-wheel-work.md
 [warehousing]: /production/warehousing.md
 [outflow]: /customer/outflow.md
 [customer]: /customer/customer.md
 [industry]: /customer/industry.md
 [property]: /product/property.md
+[transit]: /finance/transit.md
 
 [topic-user-domain-filter]: /topics/user-domain-filter.md
 [topic-rbac-holder-rule]: /topics/rbac-holder-rule.md
@@ -211,8 +215,9 @@ Change Logs
 [section-manufacture-discard]: /production/manufacture.md#作废
 [section-warehousing-settle]: /production/warehousing.md#标记完成
 [section-gwp-turn-off-formula-check]: /production/grinding-wheel-production.md#关闭标准检查
+[section-gww-refuse-mix]: /production/grinding-wheel-work.md#退回
 [section-cost-evidence]: /finance/cost.md#票证
-[section-income-update]: /finance/income.md#修改
+[section-income-tweak]: /finance/income.md#修改
 [section-material-sku-additional-property]: /product/sku.md#附加属性
 [section-property-append-specification]: /product/property.md#新增规格
 [section-fake-shift-deal-item]: /topics/fake.md#调整单价数量比例

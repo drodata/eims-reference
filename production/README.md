@@ -5,6 +5,7 @@
     * [生产标准](/production/formula.md)
     * [生产计划](/production/grinding-wheel-plan.md)
     * [生产单](/production/grinding-wheel-production.md)
+    * [砂轮工单](/production/grinding-wheel-work.md)
     * [混料](/production/mix.md)
     * [压块](/production/press.md)
     * [磨料块](/production/abrasive-block.md)
