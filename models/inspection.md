@@ -21,7 +21,6 @@
     - `actionUpdate()`: 更新跳转链接
 - `inspection/_field-purchase`: 增加入口链接和结果展示
 - `inspection/_detail-table` 新增项目表格详情
-
 外观尺寸检测
 ---------------------------------------------------------------------------
 ### InspectionExterior Schema
@@ -62,3 +61,16 @@ Column                              | Type      | Null | Note
 `inspection_id`                     | int       | No   | 
 `value`                             | string    | No   | 
 `media_id`                          | int       | No   | 图片（单张）
+
+操作
+--------------------------------------------------------------------------
+### 追加检测项目
+
+`inspection/append-methods`. 有的物资在检测完成后会增加检测项目，
+让检测报告更加完整，方便查看。**质检员**通过此操作完成。
+
+本质：更改 `inspection.methods` 列值。
+
+变更
+--------------------------------------------------------------------------
+- 2026-01-04 新增追加检测项目(append-methods)操作；

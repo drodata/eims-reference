@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2026-01-04 `Enh` Inspection, 新增[追加检测项目][section-inspection-append-methods]操作。质检员可以在物资详情页面，追加新的检测项目并上传附件；
 - 2025-12-01 `Enh` GrindingWheelWork, 新增[退回工单][section-gww-refuse-mix], 混料员可重新交付；
 - 2025-12-01 `Enh` Income, [修改操作][section-income-tweak]逻辑，改用 GeneralForm 承载数据验证；
 - 2025-11-27 `Enh` Goods, 增加[取料入口][section-goods-pick-portal]操作，制品2部有备货需求。
@@ -198,6 +199,7 @@ Change Logs
 [section-customer-batch-transfer]: /customer/customer.md#批量移交
 [section-outflow-discard]: /customer/outflow.md#放弃客户
 [section-trace-usage]: /models/trace.md#使用
+[section-inspection-append-methods]: /models/inspection.md#追加检测项目
 [section-user-handover-customer]: /models/user.md#分配客户
 [section-oem-delivery-concession]: /purchasing/oem-delivery.md#处理不合格品
 [section-oem-delivery-refuse]: /purchasing/oem-delivery.md#退货
