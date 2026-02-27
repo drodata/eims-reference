@@ -43,5 +43,6 @@
     * [Fake](topics/fake.md)
     * [新增模型后上传附件的两种方式](topics/model-attachment-workflow.md)
     * [内存耗尽往往意味着代码有问题](topics/memory-exhausted.md)
+    * [通用的AJAX Modal](topics/generic-fetch-modal.md)
 * [Faults](faults/README.md)
 * [Upgrade](upgrade/README.md)

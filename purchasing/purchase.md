@@ -173,6 +173,13 @@ Role/Permission Name    | Parent
 ### 让步接收
 质检检测发现不合格品后，采购员应对不合格品做出决定。如果选择”让步接收“，则需要进行评审，评审过程由[通用不合格品让步接收][generic-detection-concession]模型承载。本质上就是创建一条 `DetectionConcession` 记录.
 
+### 降级使用
+替代“让步接受”操作。使用 DetectionDowngrade 模型承载。详细参见 [downgrade][降级使用].
+
+主要作用：记录采购单中数据标准的变动过程。让质检员直接将 inspection.result 改为合格。
+
+> 评审顺序：采购员→ 采购主管→ 质检员
+
 ### 调价
 `purchase-item/edit-price` (Edition 承载). hoardNewbie 和 hoadPurchaser 允许操作。
 
@@ -217,3 +224,4 @@ Change Logs
 2023-08-11  | Scheme    | 新增 |`purchase_item.was_inspected`;
 
 [generic-detection-concession]: /models/detection-concession.md
+[downgrade]: /purchasing/detection-downgrade.md
