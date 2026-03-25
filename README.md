@@ -3,6 +3,7 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2026-03-25 `Enh` Specimen, 改进[specimen schema][specimen], 增加 `section_id`列
 - 2026-01-08 `Enh` Inspection, 改进[修改检测项目][section-inspection-update-methods]操作。质检员可修改组团磨料成品检测项目；
 - 2026-01-04 `Enh` Inspection, 新增[追加检测项目][section-inspection-append-methods]操作。质检员可以在物资详情页面，追加新的检测项目并上传附件；
 - 2025-12-01 `Enh` GrindingWheelWork, 新增[退回工单][section-gww-refuse-mix], 混料员可重新交付；
@@ -148,6 +149,7 @@ Change Logs
 [package]: /material/package.md
 [conversion]: /material/conversion.md
 [device]: /material/device.md
+[specimen]: /material/specimen.md
 [coating]: /order/coating.md
 [judge]: /order/judge.md
 [selection]: /order/selection.md
