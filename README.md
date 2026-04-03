@@ -3,6 +3,8 @@
 
 Change Logs
 ---------------------------------------------------------------------------
+- 2026-04-03 `Add` [Defer][defer]: 处理新账单 Receivable 的批量延期操作
+- 2026-08-28 `enh` Reprocessing, `gaMixer` 可以新建二次加工单（组团磨料的结合剂再处理）
 - 2026-03-25 `Enh` Specimen, 改进[specimen schema][specimen], 增加 `section_id`列
 - 2026-01-08 `Enh` Inspection, 改进[修改检测项目][section-inspection-update-methods]操作。质检员可修改组团磨料成品检测项目；
 - 2026-01-04 `Enh` Inspection, 新增[追加检测项目][section-inspection-append-methods]操作。质检员可以在物资详情页面，追加新的检测项目并上传附件；
@@ -166,6 +168,7 @@ Change Logs
 [outflow]: /customer/outflow.md
 [customer]: /customer/customer.md
 [industry]: /customer/industry.md
+[defer]: /customer/defer.md
 [property]: /product/property.md
 [transit]: /finance/transit.md
 

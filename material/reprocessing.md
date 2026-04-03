@@ -1,9 +1,10 @@
 # 二次加工
 
-分为三大类：
-1. 制品1部的 gwMixer 可以提交类型为“去除杂质“的加工单；
+分为四大类：
+1. 微粉部的 materialKeeper 可以提交常见类型的单子；
 2. 制品2部的 materialKeeper 可以提交类型为“组团磨料研磨液“的加工单；
-3. 微粉部的 materialKeeper 可以提交其它常见类型的单子；
+3. 制品1部的 gwMixer 可以提交类型为“去除杂质“的加工单；
+4. 制品2部的 gaMixer 可以提交结合剂加工的单子（类似1部的原材料去除杂质.不同点是这里需要质检参与，1部的杂质去除不需要质检）；
 
 结构
 --------------------------------------------------------------------------
@@ -19,7 +20,7 @@ Column                              | Type      | Null | Note
 ### 权限
 角色/权限               | Children                  | Assignment
 ------------------------|---------------------------|-----------------------
-`createReprocessing`    | `handleReprocessing`      | materialKeeper, gwMixer
+`createReprocessing`    | `handleReprocessing`      | materialKeeper, gwMixer, gaMixer
 `handleReprocessing`    | `viewReprocessing`        | qualityChecker
 `manageReprocessing`    | `viewReprocessing`        | productionDirector, gwDirector
 `viewReprocessing`      |                           |
@@ -42,5 +43,6 @@ Column                              | Type      | Null | Note
 
 变更
 --------------------------------------------------------------------------
+- 2026-08-28 `enh` `gaMixer` 可以新建二次加工单（组团磨料的结合剂再处理）
 - 2025-02-19 `Add` 交付单分装操作；
 - 2025-01-20 改进 新增”组团磨料研磨液“类型，承载制品2部研磨液加工；
