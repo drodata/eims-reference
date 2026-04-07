@@ -2,7 +2,9 @@
 [Summary](SUMMARY.md)
 
 Change Logs
+''
 ---------------------------------------------------------------------------
+- 2026-04-07 `add` GrindingWheelProduction [标记已完成][section-gwp-mark-as-completed]操作, 将特殊的工单直接消掉；
 - 2026-04-03 `Add` [Defer][defer]: 处理新账单 Receivable 的批量延期操作
 - 2026-08-28 `enh` Reprocessing, `gaMixer` 可以新建二次加工单（组团磨料的结合剂再处理）
 - 2026-03-25 `Enh` Specimen, 改进[specimen schema][specimen], 增加 `section_id`列
@@ -224,6 +226,7 @@ Change Logs
 [section-manufacture-discard]: /production/manufacture.md#作废
 [section-warehousing-settle]: /production/warehousing.md#标记完成
 [section-gwp-turn-off-formula-check]: /production/grinding-wheel-production.md#关闭标准检查
+[section-gwp-mark-as-completed]: /production/grinding-wheel-production.md#标记已完成
 [section-gww-refuse-mix]: /production/grinding-wheel-work.md#退回
 [section-cost-evidence]: /finance/cost.md#票证
 [section-income-tweak]: /finance/income.md#修改

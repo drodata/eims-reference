@@ -49,6 +49,8 @@ Column                              | Type      | Null | Note
 
 ### 关闭标准检查
 `grinding-wheel-production/turn-off-formula-check`. 由生产经理操作.
+### 标记已完成
+`grinding-wheel-production/mark-as-completed`. 由生产经理操作. 将特殊的工单直接消掉.
 
 新建混料单时，系统会对混料员选取的物料和生产单关联的生产标准进行校验：
 从粒度、数量等方面逐一核对,发现问题后禁止保存混料单。
@@ -61,6 +63,7 @@ Column                              | Type      | Null | Note
 
 Change Logs
 --------------------------------------------------------------------------
+- 2026-04-07 `Add` 标记已完成(mark-as-completed)操作,针对生产标准是“磨块“的生产单（混料后因无需交付而一直挂着）
 - 2025-05-08 `Add` `grinding-wheel-production/turn-off-formula-check`. 通过此开关，在混料单新建环节允许绕过标准检查；
 - 2025-05-08 `Schema` 新增 `grinding_wheel_production.formula_check_switch`
 - 2025-01-03 `Enh` 新建操作，允许创建当天开始的生产单（会在确认操作时自动创建领料单）；
