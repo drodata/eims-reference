@@ -7,9 +7,11 @@
     * [生产单](/production/grinding-wheel-production.md)
     * [砂轮工单](/production/grinding-wheel-work.md)
     * [混料](/production/mix.md)
-    * [压块](/production/press.md)
-    * [磨料块](/production/abrasive-block.md)
-    * [半成品](/production/rough.md)
+    * [压块](/production/grinding-wheel-work-press.md)
+    * [烧结](/production/grinding-wheel-work-burn.md)
+    * Legacy
+        * [磨料块](/production/abrasive-block.md)
+        * [半成品](/production/rough.md)
 * 通用
     * [Manufacture 通用生产单](/production/manufacture.md)
     * [自加工](/production/machining.md)
